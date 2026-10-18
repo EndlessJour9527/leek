@@ -1,0 +1,46 @@
+name: H001 price-path diagnostic (unvalidated)
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/h001-backtest-validation]
+    paths:
+      - 'leek/ma_confirmation.py'
+      - 'leek/price_proxy.py'
+      - 'research/pinned_price_sources.json'
+      - 'research/download_pinned_sources.py'
+      - 'tests/test_ma_confirmation.py'
+      - 'tests/test_price_proxy.py'
+      - '.github/workflows/h001-price-diagnostic.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify all offline synthetic tests
+        run: python -m unittest discover -s tests -v
+      - name: Download pinned secondary-source CSVs (no dataset upload)
+        run: |
+          mkdir -p "$RUNNER_TEMP/leek-input"
+          python -m research.download_pinned_sources --dest "$RUNNER_TEMP/leek-input"
+      - name: Execute UNVALIDATED PRICE PROXY diagnostics
+        run: |
+          mkdir -p "$RUNNER_TEMP/h001-results"
+          for id in 2016_2022 2025_2026; do
+            python -m leek.price_proxy --manifest research/pinned_price_sources.json --source-id "$id" --csv "$RUNNER_TEMP/leek-input/$id.csv" --output "$RUNNER_TEMP/h001-results/$id.json"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h001-unvalidated-price-proxy-${{ matrix.python-version }}
+          path: ${{ runner.temp }}/h001-results/*.json
+          retention-days: 14
