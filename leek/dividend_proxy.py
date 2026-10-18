@@ -43,6 +43,8 @@ def _validate_events(payload: dict, bars: list) -> list[dict]:
     included = []
     all_ids = set()
     all_ex = set()
+    all_record = set()
+    all_pay = set()
     for event in events:
         expected = {"id", "published_on", "record_date", "ex_date", "pay_date",
                     "cash_per_share", "source_url", "source_grade"}
@@ -59,6 +61,10 @@ def _validate_events(payload: dict, bars: list) -> list[dict]:
         if ex in all_ex:
             raise ProxyBlocked("overlapping ex-date unsupported")
         all_ex.add(ex)
+        if rec in all_record or pay in all_pay:
+            raise ProxyBlocked("overlapping record or pay date unsupported")
+        all_record.add(rec)
+        all_pay.add(pay)
         try:
             div = dec(event["cash_per_share"])
         except (ValueError, TypeError) as exc:
@@ -66,7 +72,7 @@ def _validate_events(payload: dict, bars: list) -> list[dict]:
         if div <= 0 or div >= D("100"):
             raise ProxyBlocked("out-of-range dividend amount")
         url = event["source_url"]
-        if not isinstance(url, str) or not url.startswith("https://") or not isinstance(event["source_grade"], str):
+        if not isinstance(url, str) or not url.startswith("https://") or event["source_grade"] not in ("issuer_notice_mirrored", "secondary_dividend_schedule", "synthetic"):
             raise ProxyBlocked("dividend source missing")
         if rec in sessions or ex in sessions or pay in sessions:
             # Partial overlap is a hard failure, not a dividend silently skipped.
