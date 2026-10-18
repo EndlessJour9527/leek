@@ -1,0 +1,19 @@
+{
+  "hypothesis_id": "H001",
+  "model": "MA120_H001_3D",
+  "status": "UNVALIDATED",
+  "mode": "paper_research_only",
+  "lookback": 120,
+  "confirm_sessions": 3,
+  "baseline": "MA120 confirmation=1",
+  "real_market_backtest_completed": false,
+  "validated_win_rate": null,
+  "validated_return": null,
+  "broker_execution": false,
+  "required_evidence": [
+    "point-in-time data",
+    "verified corporate actions",
+    "paired continuous-ledger simulation",
+    "locked holdout and forward paper trading"
+  ]
+}
