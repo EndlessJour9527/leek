@@ -221,3 +221,23 @@ execution state machine or establish a qualifying live-trading backtest.
   exchange bar quality, historic dividends, tradeability, or a stable edge.
 
 **No strategy promotion, broker connection, or automated order execution.**
+
+## Dividend-aware H001 research follow-up (still unvalidated)
+
+The separate `feat/h001-dividend-aware-replay` research branch adds
+`leek.dividend_proxy`. It **does not replace** the older raw-price comparison:
+dividend events are provisional, market-price files are from external GitHub
+research sources, and no historical tradeability or full corporate-action
+certificate is present.
+
+- [Chinese report and adverse findings](research/H001_DIVIDEND_DIAGNOSTIC_20261019.md)
+- [Immutable machine-readable diagnostic](research/results/H001_dividend_proxy_20261019.json)
+- [Sourced provisional distribution timeline](research/510300_provisional_dividend_events.json)
+- CI checks on Python 3.10 and 3.12: [GitHub Actions](https://github.com/EndlessJour9527/leek/actions/runs/39146036106)
+
+Accounting uses the position at record-day close, receivables on ex-day, and
+conservative spendable cash recognition only after payment-day trading.
+The strategy signal uses a *forward* dividend-adjusted total-return level;
+execution continues to use a raw next-session open proxy. All results remain
+**UNVALIDATED_CA_PROXY** with win rate unqualified and strategy promotion blocked.
+The newer sample is a negative example for H001, not evidence to hide.
