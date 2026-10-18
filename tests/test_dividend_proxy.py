@@ -95,6 +95,21 @@ class TestDividendProxy(unittest.TestCase):
         evidence["coverage"]="COMPLETE"
         with self.assertRaises(ProxyBlocked):compare(raw,src,evidence)
 
+    def test_overlapping_event_calendar_fails_closed(self):
+        raw,src,evidence,days=fixture()
+        other=copy.deepcopy(evidence["events"][0])
+        other["id"]="510300:"+days[124]
+        other["ex_date"]=days[124]
+        other["pay_date"]=days[129]
+        # Equal record dates would silently overwrite a dict value if not rejected.
+        evidence["events"].append(other)
+        with self.assertRaises(ProxyBlocked):compare(raw,src,evidence)
+
+    def test_unknown_source_grade_fails(self):
+        raw,src,evidence,_=fixture()
+        evidence["events"][0]["source_grade"]="trust_me"
+        with self.assertRaises(ProxyBlocked):compare(raw,src,evidence)
+
     def test_broken_market_file_fails(self):
         raw,src,evidence,_=fixture()
         with self.assertRaises(ProxyBlocked):
