@@ -1,0 +1,186 @@
+{
+  "status": "UNVALIDATED_CA_PROXY",
+  "revision": "H001_CA_V1",
+  "created_on": "2026-10-19",
+  "source_branch": "feat/h001-dividend-aware-replay",
+  "verification": "Python 3.10 and Python 3.12 identical GitHub Actions output; 84 tests each",
+  "workflow_run_url": "https://github.com/EndlessJour9527/leek/actions/runs/39145888416",
+  "notes": [
+    "Secondary-source prices and provisional distribution schedule; company-action completeness not established.",
+    "Historical signal levels: forward dividend-adjusted total return without future ex events; execution raw open.",
+    "No executed trade or claim of return reliability."
+  ],
+  "samples": [
+    {
+      "comparison": {
+        "buy_hold_20pct": {
+          "adverse_slippage_cny": 4.99,
+          "cash_cny": 40924.61,
+          "closed_round_trips": 0,
+          "closed_win_rate_pct": null,
+          "commission_cny": 5,
+          "dividend_receivable_cny": 0,
+          "dividends_earned_cny": 910.6,
+          "fill_count": 1,
+          "max_close_drawdown_pct": -9.85,
+          "open_qty": 2900,
+          "portfolio": "buy_hold",
+          "position_cost_basis_cny": 9985.99,
+          "qualifying_event_count": 6,
+          "rejected_count": 0,
+          "terminal_nav_cny": 52234.61,
+          "total_nav_return_pct": 4.469
+        },
+        "cash_0pct": {
+          "max_close_drawdown_pct": 0,
+          "terminal_nav_cny": 50000,
+          "total_nav_return_pct": 0
+        },
+        "h001_3d": {
+          "adverse_slippage_cny": 121.75,
+          "cash_cny": 51946.25,
+          "closed_round_trips": 12,
+          "closed_win_rate_pct": null,
+          "commission_cny": 120,
+          "dividend_receivable_cny": 0,
+          "dividends_earned_cny": 470,
+          "fill_count": 24,
+          "max_close_drawdown_pct": -6.933,
+          "open_qty": 0,
+          "portfolio": "trend",
+          "position_cost_basis_cny": 0,
+          "qualifying_event_count": 6,
+          "rejected_count": 0,
+          "terminal_nav_cny": 51946.25,
+          "total_nav_return_pct": 3.893
+        },
+        "ma120_1d": {
+          "adverse_slippage_cny": 305.35,
+          "cash_cny": 51142.45,
+          "closed_round_trips": 30,
+          "closed_win_rate_pct": null,
+          "commission_cny": 300,
+          "dividend_receivable_cny": 0,
+          "dividends_earned_cny": 480.8,
+          "fill_count": 60,
+          "max_close_drawdown_pct": -8.175,
+          "open_qty": 0,
+          "portfolio": "trend",
+          "position_cost_basis_cny": 0,
+          "qualifying_event_count": 6,
+          "rejected_count": 0,
+          "terminal_nav_cny": 51142.45,
+          "total_nav_return_pct": 2.285
+        }
+      },
+      "events": [
+        {
+          "cash_per_share": "0.055",
+          "ex_date": "2017-01-23",
+          "id": "510300:2017-01-23"
+        },
+        {
+          "cash_per_share": "0.046",
+          "ex_date": "2018-01-23",
+          "id": "510300:2018-01-23"
+        },
+        {
+          "cash_per_share": "0.059",
+          "ex_date": "2019-01-16",
+          "id": "510300:2019-01-16"
+        },
+        {
+          "cash_per_share": "0.062",
+          "ex_date": "2019-12-11",
+          "id": "510300:2019-12-11"
+        },
+        {
+          "cash_per_share": "0.072",
+          "ex_date": "2021-01-18",
+          "id": "510300:2021-01-18"
+        },
+        {
+          "cash_per_share": "0.075",
+          "ex_date": "2022-01-19",
+          "id": "510300:2022-01-19"
+        }
+      ],
+      "from": "2016-09-19",
+      "status": "UNVALIDATED_CA_PROXY",
+      "to": "2022-10-14"
+    },
+    {
+      "comparison": {
+        "buy_hold_20pct": {
+          "adverse_slippage_cny": 4.75,
+          "cash_cny": 40744.25,
+          "closed_round_trips": 0,
+          "closed_win_rate_pct": null,
+          "commission_cny": 5,
+          "dividend_receivable_cny": 0,
+          "dividends_earned_cny": 246,
+          "fill_count": 1,
+          "max_close_drawdown_pct": -1.454,
+          "open_qty": 2000,
+          "portfolio": "buy_hold",
+          "position_cost_basis_cny": 9501.75,
+          "qualifying_event_count": 1,
+          "rejected_count": 0,
+          "terminal_nav_cny": 50496.25,
+          "total_nav_return_pct": 0.993
+        },
+        "cash_0pct": {
+          "max_close_drawdown_pct": 0,
+          "terminal_nav_cny": 50000,
+          "total_nav_return_pct": 0
+        },
+        "h001_3d": {
+          "adverse_slippage_cny": 14.68,
+          "cash_cny": 39619.42,
+          "closed_round_trips": 1,
+          "closed_win_rate_pct": null,
+          "commission_cny": 15,
+          "dividend_receivable_cny": 0,
+          "dividends_earned_cny": 258.3,
+          "fill_count": 3,
+          "max_close_drawdown_pct": -1.589,
+          "open_qty": 2100,
+          "portfolio": "trend",
+          "position_cost_basis_cny": 9947.17,
+          "qualifying_event_count": 1,
+          "rejected_count": 0,
+          "terminal_nav_cny": 49859.02,
+          "total_nav_return_pct": -0.282
+        },
+        "ma120_1d": {
+          "adverse_slippage_cny": 23.95,
+          "cash_cny": 40189.95,
+          "closed_round_trips": 2,
+          "closed_win_rate_pct": null,
+          "commission_cny": 25,
+          "dividend_receivable_cny": 0,
+          "dividends_earned_cny": 246,
+          "fill_count": 5,
+          "max_close_drawdown_pct": -1.151,
+          "open_qty": 2100,
+          "portfolio": "trend",
+          "position_cost_basis_cny": 9730.76,
+          "qualifying_event_count": 1,
+          "rejected_count": 0,
+          "terminal_nav_cny": 50429.55,
+          "total_nav_return_pct": 0.859
+        }
+      },
+      "events": [
+        {
+          "cash_per_share": "0.123",
+          "ex_date": "2026-01-19",
+          "id": "510300:2026-01-19"
+        }
+      ],
+      "from": "2025-07-07",
+      "status": "UNVALIDATED_CA_PROXY",
+      "to": "2026-07-03"
+    }
+  ]
+}
