@@ -202,3 +202,22 @@ checkpoints; outputs contain no runtime timestamp or machine path. Repeating a
 resume into another new directory replays the same virtual history, with one
 execution per event inside each report. There is no global exactly-once broker
 transaction claim and no external side effect to duplicate.
+
+## H001: MA120 three-session confirmation research (unvalidated)
+
+The `feat/h001-backtest-validation` branch integrates the frozen H001 signal
+(`leek.ma_confirmation`) with an **independent, limited price-path diagnostic**
+(`leek.price_proxy`). It does **not** wire H001 into the synthetic replay's
+execution state machine or establish a qualifying live-trading backtest.
+
+- Read [H001 research protocol](research/H001.md), [price diagnostic and limitations](research/H001_PRICE_DIAGNOSTIC_20261019.md), and [machine-readable evidence](research/results/H001_price_proxy_20261019.json).
+- Run `python -m unittest discover -s tests -v` (offline, synthetic only).
+- To reproduce archived public CSV price diagnostics locally on Mac, run
+  `python -m research.download_pinned_sources --dest /tmp/leek-h001-source`
+  after creating the destination directory, then use
+  `python -m leek.price_proxy --help`. The source commits and Git blob hashes
+  are frozen in `research/pinned_price_sources.json`.
+- Third-party raw CSVs are not checked in. These files do not establish original
+  exchange bar quality, historic dividends, tradeability, or a stable edge.
+
+**No strategy promotion, broker connection, or automated order execution.**
