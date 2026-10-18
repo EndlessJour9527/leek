@@ -1,7 +1,7 @@
 # leek
 
-Paper-only quantitative research primitives. This first increment is a small,
-stdlib-only accounting and data-contract foundation, not a trading system or a
+Paper-only quantitative research primitives and an offline synthetic replay.
+This is a small stdlib-only accounting and data-contract foundation, not a trading system or a
 claim of investment performance. No market data, account information, broker
 adapter, credentials, network calls, or third-party framework code is included.
 
@@ -65,8 +65,9 @@ separate specifications and tests. Receivables contribute to NAV but cannot fund
 purchases. Valuation needs a raw close for every nonzero position; never send an
 adjusted price to the fill or valuation interface.
 
-This is an in-memory research component, with no persistent audit journal,
-reconciliation, production release qualification, or real-trading safety case.
+The ledger itself is an in-memory research component. The synthetic replay below
+adds an immutable report and checkpoint, but neither component has production
+release qualification or a real-trading safety case.
 Do not mutate ledger internals directly. Provider timestamps and input hashes
 must be established by an independently trusted ingestion layer; this package
 cannot prove that a provider's claimed availability time is true.
@@ -81,7 +82,8 @@ future-path independence, and signal availability timestamps.
 
 The suite does not establish historical profitability, validate a real data
 vendor, or replace a full execution simulator. It exercises only the modules
-included here; research batch runners and strategy selection are outside scope.
+included here; real historical data ingestion, portfolio strategy selection, and
+research batch orchestration are outside scope.
 
 ## Future framework adapters
 
@@ -106,3 +108,97 @@ The project uses the [MIT License](LICENSE) supplied by the maintainers. This
 contribution preserves that license unchanged. Check the exact version and
 license of any future third-party dependency; the repository's MIT license does
 not relicense external code or market data.
+
+
+## Deterministic synthetic replay (second increment)
+
+`leek.replay` connects strict input validation, one causal signal, next-session
+open-price model fills, the existing Decimal ledger, and daily JSON reporting.
+It is deliberately **one synthetic instrument, one SIM currency, long-only,
+fixed whole-share quantity**. It does not migrate an existing historical engine,
+run the separate 60-return volatility strategy, or enable live/paper brokerage.
+
+Run from the checkout root, using new output directories each time:
+
+```sh
+python -m leek.replay --config examples/fixtures/replay-config.json \
+  --input examples/fixtures/replay-bars.json --output /tmp/leek-full
+python -m leek.replay --config examples/fixtures/replay-config.json \
+  --input examples/fixtures/replay-bars.json --output /tmp/leek-part --stop-after 3
+python -m leek.replay --config examples/fixtures/replay-config.json \
+  --input examples/fixtures/replay-bars.json --output /tmp/leek-resumed \
+  --resume /tmp/leek-part/checkpoint.json
+cmp /tmp/leek-full/report.json /tmp/leek-resumed/report.json
+```
+
+### Contract and event order
+
+- Input and configuration require exact fields, version `synthetic-replay.v1`,
+  finite bounded decimal strings, and unique JSON keys. The fixtures are the
+  complete wire-format examples. Unknown fields are rejected, including extra
+  adjustment or corporate-action fields on bars.
+- The calendar is an explicit, sorted unique list of session dates. Exactly one
+  matching OHLC bar is required for every session, in the same order. There is
+  no inferred weekday/holiday calendar, forward fill, or skipped missing bar.
+  It does not establish that supplied synthetic dates match any exchange.
+  The fixture intentionally skips a weekday to exercise calendar-based timing.
+- `synthetic` must be true, `currency` must be `SIM`, `adjustment` must be `raw`,
+  and `corporate_actions` must be an empty list. Any corporate action is rejected
+  before creating output. The ledger's standalone CA helpers are **not** wired
+  into this replay; do not remove or hide events to make real data pass.
+- At close t, the signal compares close[t] to close[t-lookback]. Strictly greater
+  selects the configured quantity; otherwise the target is zero. No signal
+  exists during warmup. Quantity delta is fixed at t, never sized from a future
+  open, high, low or close. Signal availability is modeled at 23:59:59 UTC on t.
+- A nonzero delta is attempted at the *next listed session's open*. Execution
+  reads that open only. Daily high/low are validation constraints, never fill
+  or order inputs. Daily close then values holdings and forms the next signal.
+  The last signal may remain pending with `execute_on: null`; it is never filled
+  at the terminal close or on an invented extra session. `complete` means all
+  input sessions were consumed, not that the last pending signal was executed.
+- Every attempt has a deterministic instrument/signal-date/side event ID.
+  Buys/sells get adverse `slippage_bps`, plus the configured flat commission
+  per filled order. Insufficient cash rejects the whole order without fees or
+  partial fills. All modeled fees are commission and embedded slippage; taxes,
+  spread beyond that slippage, impact, liquidity, volume, lot-size rules, venue
+  price limits, currencies and corporate actions are unsupported. These fills
+  are unconstrained research proxies, never claims about executable prices.
+
+### Reports, recovery, and safety boundaries
+
+`report.json` contains signals, every filled/rejected execution attempt, pending
+order, processed event IDs, and each session's cash, quantity, cost basis, market
+value, NAV, realized/unrealized/total P&L, cumulative commission and slippage.
+Slippage is reported separately but embedded once in price. The included full
+fixture ends at synthetic NAV `9933.920`, with commission `3` and slippage
+`3.080`; these are test arithmetic, not investment results.
+
+`checkpoint.json` binds the processed prefix to the exact input/configuration
+bytes (SHA-256), all package Python source files, model/version and Decimal
+precision. The replay isolates arithmetic in a fixed 64-digit, half-even Decimal
+context. Formatting-only input changes also invalidate recovery.
+
+Checkpointing occurs at a successful requested stop (`--stop-after N`, an
+absolute session count) or at completion, not continuously during each session.
+Resume replays the saved prefix from the bound inputs and compares every report
+field and digest before proceeding. It never imports untrusted cash/position
+state, and needs the original entire input bundle. This O(N) replay-prefix
+verification favors reviewability over fast restoration of large histories;
+reports/checkpoints hold the entire prefix in memory. Hashes detect changes,
+not malicious authorship; they are not signatures or data-vendor certification.
+
+Every invocation requires a **new output directory**, including resume and
+repeat resume. Existing directories and files are never overwritten. Completed
+file bytes are fsynced and published with an atomic exclusive hard link on a
+local filesystem supporting hard links. Concurrent publication cannot clobber
+a winner. This is file-level atomicity, not a transactional multi-file database
+or a portable power-loss durability guarantee. A crash before checkpoint
+publication requires rerunning from an earlier checkpoint or from the start;
+a crash after checkpoint publication but before report publication can recover
+to a new output directory. Never repair a checkpoint by editing its cursor.
+
+The same inputs/source/config yield byte-identical full and resumed reports and
+checkpoints; outputs contain no runtime timestamp or machine path. Repeating a
+resume into another new directory replays the same virtual history, with one
+execution per event inside each report. There is no global exactly-once broker
+transaction claim and no external side effect to duplicate.

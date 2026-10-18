@@ -1,0 +1,13 @@
+{
+  "version": "synthetic-replay.v1", "synthetic": true,
+  "instrument": "SYNTH", "currency": "SIM", "adjustment": "raw", "corporate_actions": [],
+  "calendar": ["2025-01-02", "2025-01-03", "2025-01-06", "2025-01-08", "2025-01-09", "2025-01-10"],
+  "bars": [
+    {"date":"2025-01-02","open":"100","high":"102","low":"99","close":"100"},
+    {"date":"2025-01-03","open":"100","high":"103","low":"99","close":"102"},
+    {"date":"2025-01-06","open":"104","high":"105","low":"100","close":"101"},
+    {"date":"2025-01-08","open":"99","high":"103","low":"98","close":"103"},
+    {"date":"2025-01-09","open":"105","high":"108","low":"104","close":"107"},
+    {"date":"2025-01-10","open":"107","high":"108","low":"103","close":"104"}
+  ]
+}

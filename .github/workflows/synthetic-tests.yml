@@ -15,3 +15,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python -m unittest discover -s tests -v
       - run: python -m examples.paper_demo
+      - name: Verify synthetic replay and checkpoint recovery
+        run: |
+          python -m leek.replay --config examples/fixtures/replay-config.json --input examples/fixtures/replay-bars.json --output "$RUNNER_TEMP/leek-full"
+          python -m leek.replay --config examples/fixtures/replay-config.json --input examples/fixtures/replay-bars.json --output "$RUNNER_TEMP/leek-part" --stop-after 3
+          python -m leek.replay --config examples/fixtures/replay-config.json --input examples/fixtures/replay-bars.json --output "$RUNNER_TEMP/leek-resumed" --resume "$RUNNER_TEMP/leek-part/checkpoint.json"
+          cmp "$RUNNER_TEMP/leek-full/report.json" "$RUNNER_TEMP/leek-resumed/report.json"
+          cmp "$RUNNER_TEMP/leek-full/checkpoint.json" "$RUNNER_TEMP/leek-resumed/checkpoint.json"
