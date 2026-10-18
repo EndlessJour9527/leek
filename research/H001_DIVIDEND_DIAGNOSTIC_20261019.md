@@ -44,7 +44,7 @@
 
 ## 复现与下一步
 
-- Actions: https://github.com/EndlessJour9527/leek/actions/runs/39145888416 （Python 3.10 和 3.12 均成功，原始输出一致）。
+- Actions: https://github.com/EndlessJour9527/leek/actions/runs/39146036106 （Python 3.10 和 3.12 均成功，各 86 项测试，结果一致）。
 - 机器报告：`research/results/H001_dividend_proxy_20261019.json`。
 - 原始历史数据：`research/pinned_price_sources.json` 固定第三方文件版本；本轮只是按已知分红表进行“候选分红感知诊断”。
 
