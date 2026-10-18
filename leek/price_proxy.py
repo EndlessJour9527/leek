@@ -163,6 +163,41 @@ def run_strategy(bars: list[Bar], confirmation: int, *,
     )
 
 
+
+def buy_hold_20pct_price_proxy(bars: list[Bar]) -> dict:
+    """Cash-funded one-time 20% buy at first executable post-warmup open.
+
+    Uses previous session close to size the intention. No terminal liquidation,
+    dividends, exit costs, or position rebalancing; not a risk-adjusted alpha
+    comparator. The benchmark is itself UNVALIDATED_PRICE_PROXY.
+    """
+    capital, budget, lot = 50000.0, 0.2, 100
+    cash, qty, peak, min_dd = capital, 0, capital, 0.0
+    fee_paid = 0.0
+    if len(bars) < 121:
+        raise ProxyBlocked("benchmark warmup missing")
+    target = int((capital * budget / bars[119].close) // lot) * lot
+    if target <= 0:
+        raise ProxyBlocked("buy-and-hold unable to reach minimum trading unit")
+    first_open = bars[120].open * (1.0 + 0.0005)
+    fee_paid = max(5.0, target * first_open * 0.0002)
+    if target * first_open + fee_paid > cash:
+        raise ProxyBlocked("buy-and-hold initial fill unaffordable")
+    for i, bar in enumerate(bars):
+        if i == 120:
+            qty = target
+            cash -= target * first_open + fee_paid
+        nav = cash + qty * bar.close
+        peak = max(peak, nav)
+        min_dd = min(min_dd, nav / peak - 1)
+    return dict(
+        total_return_pct=round((nav / capital - 1) * 100, 3),
+        max_close_drawdown_pct=round(100 * min_dd, 3),
+        terminal_nav=round(nav, 2),
+        open_position_qty=qty, commission_paid=round(fee_paid, 2),
+        note="one-time 20% entry after 120-session warmup; terminal exit cost not deducted",
+    )
+
 def run_diagnostic(raw: bytes, source: dict) -> dict:
     for field in ("repository", "path", "commit", "blob_sha", "first", "last", "count"):
         if field not in source:
@@ -187,6 +222,8 @@ def run_diagnostic(raw: bytes, source: dict) -> dict:
                             "limit_up_down", "order_book", "spread_outside_slippage",
                             "taxes", "exchange_calendar_verification"],
         },
+        "cash_0pct": {"total_return_pct": 0.0, "max_close_drawdown_pct": 0.0, "terminal_nav": 50000.0},
+        "buy_hold_20pct": buy_hold_20pct_price_proxy(bars),
         "baseline_ma120_1d": run_strategy(bars, 1),
         "challenger_h001_3d": run_strategy(bars, 3),
     }
@@ -207,7 +244,7 @@ def main() -> None:
     if output.exists():
         ap.error("output exists; refusing overwrite")
     output.write_text(json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
-    print(json.dumps({k: report[k] for k in ("status", "sessions", "from", "to", "baseline_ma120_1d", "challenger_h001_3d")},
+    print(json.dumps({k: report[k] for k in ("status", "sessions", "from", "to", "cash_0pct", "buy_hold_20pct", "baseline_ma120_1d", "challenger_h001_3d")},
                      ensure_ascii=False, sort_keys=True))
 
 
