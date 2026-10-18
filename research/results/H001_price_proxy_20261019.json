@@ -1,0 +1,107 @@
+{
+  "status": "UNVALIDATED_PRICE_PROXY",
+  "generated_from": "GitHub Actions Python 3.10 and 3.12 concordant outputs",
+  "workflow_run": "https://github.com/EndlessJour9527/leek/actions/runs/39144034796",
+  "closed_trades_win_rate_not_predictive": true,
+  "do_not_promote_to_live": true,
+  "results": [
+    {
+      "baseline_ma120_1d": {
+        "closed_trade_win_rate_pct": 13.33,
+        "closed_trades": 30,
+        "commission_paid": 300,
+        "fill_events": 60,
+        "losing_trades": 26,
+        "max_close_drawdown_pct": -7.831,
+        "open_position_qty": 0,
+        "realized_pnl": 234.27,
+        "rejected_events": 0,
+        "terminal_nav": 50234.27,
+        "total_return_pct": 0.469,
+        "unrealized_pnl": 0,
+        "winning_trades": 4
+      },
+      "buy_hold_20pct": {
+        "commission_paid": 5,
+        "max_close_drawdown_pct": -10.353,
+        "note": "one-time 20% entry after 120-session warmup; terminal exit cost not deducted",
+        "open_position_qty": 2900,
+        "terminal_nav": 51324.01,
+        "total_return_pct": 2.648
+      },
+      "cash_0pct": {
+        "max_close_drawdown_pct": 0,
+        "terminal_nav": 50000,
+        "total_return_pct": 0
+      },
+      "challenger_h001_3d": {
+        "closed_trade_win_rate_pct": 36.36,
+        "closed_trades": 11,
+        "commission_paid": 110,
+        "fill_events": 22,
+        "losing_trades": 7,
+        "max_close_drawdown_pct": -7.063,
+        "open_position_qty": 0,
+        "realized_pnl": 1671.59,
+        "rejected_events": 0,
+        "terminal_nav": 51671.59,
+        "total_return_pct": 3.343,
+        "unrealized_pnl": 0,
+        "winning_trades": 4
+      },
+      "from": "2016-09-19",
+      "sessions": 1474,
+      "status": "UNVALIDATED_PRICE_PROXY",
+      "to": "2022-10-14"
+    },
+    {
+      "baseline_ma120_1d": {
+        "closed_trade_win_rate_pct": 33.33,
+        "closed_trades": 6,
+        "commission_paid": 65,
+        "fill_events": 13,
+        "losing_trades": 4,
+        "max_close_drawdown_pct": -1.8,
+        "open_position_qty": 2000,
+        "realized_pnl": -482.19,
+        "rejected_events": 0,
+        "terminal_nav": 49680.02,
+        "total_return_pct": -0.64,
+        "unrealized_pnl": 162.21,
+        "winning_trades": 2
+      },
+      "buy_hold_20pct": {
+        "commission_paid": 5,
+        "max_close_drawdown_pct": -1.943,
+        "note": "one-time 20% entry after 120-session warmup; terminal exit cost not deducted",
+        "open_position_qty": 2000,
+        "terminal_nav": 50250.25,
+        "total_return_pct": 0.501
+      },
+      "cash_0pct": {
+        "max_close_drawdown_pct": 0,
+        "terminal_nav": 50000,
+        "total_return_pct": 0
+      },
+      "challenger_h001_3d": {
+        "closed_trade_win_rate_pct": 0,
+        "closed_trades": 1,
+        "commission_paid": 15,
+        "fill_events": 3,
+        "losing_trades": 1,
+        "max_close_drawdown_pct": -1.332,
+        "open_position_qty": 2000,
+        "realized_pnl": -320.19,
+        "rejected_events": 0,
+        "terminal_nav": 49894.04,
+        "total_return_pct": -0.212,
+        "unrealized_pnl": 214.24,
+        "winning_trades": 0
+      },
+      "from": "2025-07-07",
+      "sessions": 241,
+      "status": "UNVALIDATED_PRICE_PROXY",
+      "to": "2026-07-03"
+    }
+  ]
+}
