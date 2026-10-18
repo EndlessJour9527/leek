@@ -1,0 +1,51 @@
+name: H001 dividend-adjusted diagnostic (unvalidated)
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/h001-dividend-aware-replay]
+    paths:
+      - 'leek/dividend_proxy.py'
+      - 'leek/price_proxy.py'
+      - 'research/510300_provisional_dividend_events.json'
+      - 'research/pinned_price_sources.json'
+      - 'research/download_pinned_sources.py'
+      - 'tests/test_dividend_proxy.py'
+      - '.github/workflows/h001-dividend-diagnostic.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  dividend-diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify synthetic and accounting contract tests
+        run: python -m unittest discover -s tests -v
+      - name: Fetch pinned price-only inputs
+        run: |
+          mkdir -p "$RUNNER_TEMP/leek-input"
+          python -m research.download_pinned_sources --dest "$RUNNER_TEMP/leek-input"
+      - name: Run provisional dividend-aware comparisons
+        run: |
+          mkdir -p "$RUNNER_TEMP/dividend-results"
+          for id in 2016_2022 2025_2026; do
+            python -m leek.dividend_proxy \
+              --sources research/pinned_price_sources.json \
+              --events research/510300_provisional_dividend_events.json \
+              --source-id "$id" \
+              --csv "$RUNNER_TEMP/leek-input/$id.csv" \
+              --output "$RUNNER_TEMP/dividend-results/$id.json"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h001-unvalidated-dividend-proxy-${{ matrix.python-version }}
+          path: ${{ runner.temp }}/dividend-results/*.json
+          retention-days: 14
