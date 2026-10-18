@@ -3,8 +3,8 @@
   "revision": "H001_CA_V1",
   "created_on": "2026-10-19",
   "source_branch": "feat/h001-dividend-aware-replay",
-  "verification": "Python 3.10 and Python 3.12 identical GitHub Actions output; 84 tests each",
-  "workflow_run_url": "https://github.com/EndlessJour9527/leek/actions/runs/39145888416",
+  "verification": "Python 3.10 and Python 3.12 identical GitHub Actions output; 86 tests each",
+  "workflow_run_url": "https://github.com/EndlessJour9527/leek/actions/runs/39146036106",
   "notes": [
     "Secondary-source prices and provisional distribution schedule; company-action completeness not established.",
     "Historical signal levels: forward dividend-adjusted total return without future ex events; execution raw open.",
@@ -182,5 +182,6 @@
       "status": "UNVALIDATED_CA_PROXY",
       "to": "2026-07-03"
     }
-  ]
+  ],
+  "verification_commit": "fc7aa469758773bd69ca2bd67ea419895adf19c7"
 }
