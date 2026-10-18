@@ -15,5 +15,13 @@
     "verified corporate actions",
     "paired continuous-ledger simulation",
     "locked holdout and forward paper trading"
-  ]
+  ],
+  "latest_research_date": "2026-10-19",
+  "latest_diagnostic": "research/H001_DIVIDEND_DIAGNOSTIC_20261019.md",
+  "latest_machine_report": "research/results/H001_dividend_proxy_20261019.json",
+  "dividend_adjusted_price_proxy_completed": true,
+  "corporate_actions_complete": false,
+  "strategy_automatic_promotion_allowed": false,
+  "evidence_status": "UNVALIDATED_CA_PROXY",
+  "known_counterexample": "2025-07-07..2026-07-03: H001 -0.282%, MA120 +0.859%, passive 20% +0.993% (provisional dividend-aware proxy; not qualified backtest)"
 }
