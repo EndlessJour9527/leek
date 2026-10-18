@@ -1,0 +1,77 @@
+{
+  "version": "provisional-dividend.v1",
+  "symbol": "510300",
+  "coverage": "UNVERIFIED_SECONDARY_CROSSCHECK",
+  "events": [
+    {
+      "id": "510300:2017-01-23",
+      "published_on": "2017-01-17",
+      "record_date": "2017-01-20",
+      "ex_date": "2017-01-23",
+      "pay_date": "2017-01-26",
+      "cash_per_share": "0.055",
+      "source_url": "https://fund.stockstar.com/funds/f10/fundfh_510300.html",
+      "source_grade": "secondary_dividend_schedule"
+    },
+    {
+      "id": "510300:2018-01-23",
+      "published_on": "2018-01-17",
+      "record_date": "2018-01-22",
+      "ex_date": "2018-01-23",
+      "pay_date": "2018-01-26",
+      "cash_per_share": "0.046",
+      "source_url": "https://fund.stockstar.com/funds/f10/fundfh_510300.html",
+      "source_grade": "secondary_dividend_schedule"
+    },
+    {
+      "id": "510300:2019-01-16",
+      "published_on": "2019-01-10",
+      "record_date": "2019-01-15",
+      "ex_date": "2019-01-16",
+      "pay_date": "2019-01-21",
+      "cash_per_share": "0.059",
+      "source_url": "https://fund.stockstar.com/funds/f10/fundfh_510300.html",
+      "source_grade": "secondary_dividend_schedule"
+    },
+    {
+      "id": "510300:2019-12-11",
+      "published_on": "2019-12-05",
+      "record_date": "2019-12-10",
+      "ex_date": "2019-12-11",
+      "pay_date": "2019-12-16",
+      "cash_per_share": "0.062",
+      "source_url": "https://fund.stockstar.com/funds/f10/fundfh_510300.html",
+      "source_grade": "secondary_dividend_schedule"
+    },
+    {
+      "id": "510300:2021-01-18",
+      "published_on": "2021-01-11",
+      "record_date": "2021-01-15",
+      "ex_date": "2021-01-18",
+      "pay_date": "2021-01-21",
+      "cash_per_share": "0.072",
+      "source_url": "https://fund.stockstar.com/funds/f10/fundfh_510300.html",
+      "source_grade": "secondary_dividend_schedule"
+    },
+    {
+      "id": "510300:2022-01-19",
+      "published_on": "2022-01-12",
+      "record_date": "2022-01-18",
+      "ex_date": "2022-01-19",
+      "pay_date": "2022-01-24",
+      "cash_per_share": "0.075",
+      "source_url": "https://fund.stockstar.com/funds/f10/fundfh_510300.html",
+      "source_grade": "secondary_dividend_schedule"
+    },
+    {
+      "id": "510300:2026-01-19",
+      "published_on": "2026-01-12",
+      "record_date": "2026-01-16",
+      "ex_date": "2026-01-19",
+      "pay_date": "2026-01-27",
+      "cash_per_share": "0.123",
+      "source_url": "https://data.eastmoney.com/notices/detail/510300/AN202601111816921512.html",
+      "source_grade": "issuer_notice_mirrored"
+    }
+  ]
+}
