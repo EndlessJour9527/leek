@@ -44,7 +44,7 @@ class ProxyTests(unittest.TestCase):
             run_diagnostic(raw + b"\n", manifest)
 
     def test_signal_requires_next_open(self):
-        bars = read_csv(sample([100] * 120 + [110] * 3)[0])
+        bars = read_csv(sample([4.0] * 120 + [4.4] * 3)[0])
         baseline = run_strategy(bars, 1)
         challenger = run_strategy(bars, 3)
         self.assertEqual(baseline["fill_events"], 1)
@@ -52,7 +52,7 @@ class ProxyTests(unittest.TestCase):
         self.assertEqual(challenger["open_position_qty"], 0)
 
     def test_h001_chops_less_in_synthetic_whipsaw(self):
-        prices = [100] * 120 + [110, 90] * 20
+        prices = [4.0] * 120 + [4.4, 3.6] * 20
         bars = read_csv(sample(prices)[0])
         fast = run_strategy(bars, 1)
         confirm = run_strategy(bars, 3)
