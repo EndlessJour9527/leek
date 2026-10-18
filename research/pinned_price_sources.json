@@ -1,0 +1,20 @@
+{
+  "2016_2022": {
+    "repository": "JPL-JUNO/Quantitative",
+    "path": "510300.csv",
+    "commit": "46e5d4e49552d2e4e0fc8a899fea0b0e7919768b",
+    "blob_sha": "809ff80c73402127d544f1dedb8122a7feac1c99",
+    "first": "2016-09-19",
+    "last": "2022-10-14",
+    "count": 1474
+  },
+  "2025_2026": {
+    "repository": "CoooperKK/NJU_FE",
+    "path": "data/510300ETF历史数据.csv",
+    "commit": "4e755c222264713bc6b538c75d91fbeb93a52886",
+    "blob_sha": "3efad2e82ddbe1d00b088e374030a26d40cafc6e",
+    "first": "2025-07-07",
+    "last": "2026-07-03",
+    "count": 241
+  }
+}
