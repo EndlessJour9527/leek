@@ -1,0 +1,109 @@
+{
+  "version": "synthetic-portfolio-replay.v1",
+  "synthetic": true,
+  "instruments": [
+    "ALPHA",
+    "BETA"
+  ],
+  "currency": "SIM",
+  "adjustment": "raw",
+  "corporate_actions": [],
+  "calendar": [
+    "2025-01-02",
+    "2025-01-03",
+    "2025-01-06",
+    "2025-01-08",
+    "2025-01-09",
+    "2025-01-10"
+  ],
+  "bars": {
+    "ALPHA": [
+      {
+        "date": "2025-01-02",
+        "open": "10",
+        "close": "10",
+        "high": "11",
+        "low": "9"
+      },
+      {
+        "date": "2025-01-03",
+        "open": "10",
+        "close": "11",
+        "high": "12",
+        "low": "9"
+      },
+      {
+        "date": "2025-01-06",
+        "open": "10",
+        "close": "12",
+        "high": "13",
+        "low": "9"
+      },
+      {
+        "date": "2025-01-08",
+        "open": "10",
+        "close": "13",
+        "high": "14",
+        "low": "9"
+      },
+      {
+        "date": "2025-01-09",
+        "open": "10",
+        "close": "12",
+        "high": "13",
+        "low": "9"
+      },
+      {
+        "date": "2025-01-10",
+        "open": "10",
+        "close": "11",
+        "high": "12",
+        "low": "9"
+      }
+    ],
+    "BETA": [
+      {
+        "date": "2025-01-02",
+        "open": "10",
+        "close": "10",
+        "high": "11",
+        "low": "9"
+      },
+      {
+        "date": "2025-01-03",
+        "open": "10",
+        "close": "11",
+        "high": "12",
+        "low": "9"
+      },
+      {
+        "date": "2025-01-06",
+        "open": "10",
+        "close": "9",
+        "high": "11",
+        "low": "8"
+      },
+      {
+        "date": "2025-01-08",
+        "open": "10",
+        "close": "8",
+        "high": "11",
+        "low": "7"
+      },
+      {
+        "date": "2025-01-09",
+        "open": "10",
+        "close": "9",
+        "high": "11",
+        "low": "8"
+      },
+      {
+        "date": "2025-01-10",
+        "open": "10",
+        "close": "10",
+        "high": "11",
+        "low": "9"
+      }
+    ]
+  }
+}
