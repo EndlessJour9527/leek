@@ -29,3 +29,10 @@ jobs:
           python -m leek.portfolio_replay --config examples/fixtures/portfolio-config.json --input examples/fixtures/portfolio-bars.json --output "$RUNNER_TEMP/portfolio-resumed" --resume "$RUNNER_TEMP/portfolio-part/checkpoint.json"
           cmp "$RUNNER_TEMP/portfolio-full/report.json" "$RUNNER_TEMP/portfolio-resumed/report.json"
           cmp "$RUNNER_TEMP/portfolio-full/checkpoint.json" "$RUNNER_TEMP/portfolio-resumed/checkpoint.json"
+      - name: Verify synthetic cash-dividend phases and recovery
+        run: |
+          python -m leek.cash_dividend_replay --config examples/fixtures/cash-dividend-config.json --input examples/fixtures/cash-dividend-bars.json --output "$RUNNER_TEMP/cash-dividend-full"
+          python -m leek.cash_dividend_replay --config examples/fixtures/cash-dividend-config.json --input examples/fixtures/cash-dividend-bars.json --output "$RUNNER_TEMP/cash-dividend-part" --stop-after 4
+          python -m leek.cash_dividend_replay --config examples/fixtures/cash-dividend-config.json --input examples/fixtures/cash-dividend-bars.json --output "$RUNNER_TEMP/cash-dividend-resumed" --resume "$RUNNER_TEMP/cash-dividend-part/checkpoint.json"
+          cmp "$RUNNER_TEMP/cash-dividend-full/report.json" "$RUNNER_TEMP/cash-dividend-resumed/report.json"
+          cmp "$RUNNER_TEMP/cash-dividend-full/checkpoint.json" "$RUNNER_TEMP/cash-dividend-resumed/checkpoint.json"

@@ -1,0 +1,17 @@
+{
+  "version": "synthetic-cash-dividend-replay.v1",
+  "initial_cash": "1000",
+  "quantities": {
+    "AAA": "10",
+    "BBB": "10"
+  },
+  "commission": "0",
+  "slippage_bps": "0",
+  "lookback": 1,
+  "symbol_priority": [
+    "AAA",
+    "BBB"
+  ],
+  "execution_policy": "sells-first.priority-order.all-or-reject.v1",
+  "corporate_action_policy": "record-close.ex-before-open.pay-after-trading.gross-no-tax.v1"
+}

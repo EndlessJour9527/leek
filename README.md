@@ -212,3 +212,14 @@ rejections/costs/per-symbol NAV contributions and floating P&L, and verifies
 byte-identical checkpoint recovery. See the [versioned contract and runnable
 example](docs/synthetic-portfolio-replay-v1.md). This is synthetic-only framework
 infrastructure, not historical strategy validation or live trading support.
+
+### Cash-dividend-aware synthetic portfolio replay
+
+An additive `python -m leek.cash_dividend_replay` entry point connects the
+existing Ledger's record/ex/pay phases to multi-instrument synthetic replay.
+It separates gross income, unpaid receivables and spendable cash, uses causal
+forward total-return signals, and verifies every phase on checkpoint recovery.
+Only exact cash dividends are supported; splits, tax, complex actions and real
+data are explicitly rejected. The old replay entry points are unchanged.
+See the [contract, limitations and runnable fixtures](docs/synthetic-cash-dividend-replay-v1.md).
+This is accounting infrastructure, not a profitable strategy or live-trading qualification.
