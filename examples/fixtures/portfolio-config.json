@@ -1,0 +1,16 @@
+{
+  "version": "synthetic-portfolio-replay.v1",
+  "initial_cash": "25",
+  "quantities": {
+    "ALPHA": "2",
+    "BETA": "2"
+  },
+  "commission": "1",
+  "slippage_bps": "0",
+  "lookback": 1,
+  "symbol_priority": [
+    "BETA",
+    "ALPHA"
+  ],
+  "execution_policy": "sells-first.priority-order.all-or-reject.v1"
+}

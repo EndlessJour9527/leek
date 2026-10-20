@@ -22,3 +22,10 @@ jobs:
           python -m leek.replay --config examples/fixtures/replay-config.json --input examples/fixtures/replay-bars.json --output "$RUNNER_TEMP/leek-resumed" --resume "$RUNNER_TEMP/leek-part/checkpoint.json"
           cmp "$RUNNER_TEMP/leek-full/report.json" "$RUNNER_TEMP/leek-resumed/report.json"
           cmp "$RUNNER_TEMP/leek-full/checkpoint.json" "$RUNNER_TEMP/leek-resumed/checkpoint.json"
+      - name: Verify synthetic portfolio shared-cash recovery
+        run: |
+          python -m leek.portfolio_replay --config examples/fixtures/portfolio-config.json --input examples/fixtures/portfolio-bars.json --output "$RUNNER_TEMP/portfolio-full"
+          python -m leek.portfolio_replay --config examples/fixtures/portfolio-config.json --input examples/fixtures/portfolio-bars.json --output "$RUNNER_TEMP/portfolio-part" --stop-after 3
+          python -m leek.portfolio_replay --config examples/fixtures/portfolio-config.json --input examples/fixtures/portfolio-bars.json --output "$RUNNER_TEMP/portfolio-resumed" --resume "$RUNNER_TEMP/portfolio-part/checkpoint.json"
+          cmp "$RUNNER_TEMP/portfolio-full/report.json" "$RUNNER_TEMP/portfolio-resumed/report.json"
+          cmp "$RUNNER_TEMP/portfolio-full/checkpoint.json" "$RUNNER_TEMP/portfolio-resumed/checkpoint.json"

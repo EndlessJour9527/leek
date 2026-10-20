@@ -202,3 +202,13 @@ checkpoints; outputs contain no runtime timestamp or machine path. Repeating a
 resume into another new directory replays the same virtual history, with one
 execution per event inside each report. There is no global exactly-once broker
 transaction claim and no external side effect to duplicate.
+
+### Synthetic multi-asset shared-cash replay
+
+An additive `python -m leek.portfolio_replay` CLI demonstrates multiple synthetic
+instruments sharing one Ledger cash balance. It fixes sell-before-buy allocation
+and explicit symbol priority, preserves next-session causal fills, reports
+rejections/costs/per-symbol NAV contributions and floating P&L, and verifies
+byte-identical checkpoint recovery. See the [versioned contract and runnable
+example](docs/synthetic-portfolio-replay-v1.md). This is synthetic-only framework
+infrastructure, not historical strategy validation or live trading support.
