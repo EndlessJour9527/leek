@@ -1,0 +1,43 @@
+name: H002 source disagreement audit (no strategy run)
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/h002-open-source-research]
+    paths:
+      - 'research/audit_h002_sources.py'
+      - '.github/workflows/h002-data-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -q
+      - name: Collect provider responses; never run a strategy
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from leek.replay import load
+          from research.run_real_history import acquire
+          config,h=load('research/real_history_protocol.json')
+          acquire(config,h,Path(os.environ['RUNNER_TEMP'])/'h002-audit-input',True)
+          PY
+      - name: Export derived mismatch audit, not raw vendor history
+        if: always()
+        run: python -m research.audit_h002_sources --data-dir "$RUNNER_TEMP/h002-audit-input" --output "$RUNNER_TEMP/h002-source-audit"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: h002-source-disagreement-audit
+          path: ${{ runner.temp }}/h002-source-audit/*.json
+          if-no-files-found: error
+          retention-days: 30
