@@ -20,6 +20,20 @@ BASE_CONFIG_SHA256 = 'f05c7f0fb34ee7d1e73fd57f2f85c2a19758979ae26aed35140a300cef
 PREREGISTRATION_COMMIT = 'ab34ceb9578aa4dcecf99f437d542c5700054aaf'
 
 
+def require_data_issue_resolution(registry):
+    if not isinstance(registry,dict) or registry.get('version')!='data-conflicts.v1':
+        raise DataBlocked('missing data-conflict registry')
+    issues=registry.get('issues')
+    if not isinstance(issues,list): raise DataBlocked('invalid data-conflict list')
+    # DQ001 cannot silently disappear in order to take a single-source fallback.
+    issue=next((x for x in issues if isinstance(x,dict) and x.get('id')=='DQ001'),None)
+    if issue is None or issue.get('status')!='RESOLVED_REVIEWED':
+        raise DataBlocked('DQ001 unresolved vendor disagreement; independent review required')
+    r=issue.get('resolution')
+    if not isinstance(r,dict) or not all(r.get(k) for k in ('review_commit','evidence_urls','rationale')):
+        raise DataBlocked('reviewed resolution evidence required')
+
+
 def screen(results):
     base=results['base__'+MODEL_ID]; stress=results['stress__'+MODEL_ID]
     comparator=results['base__ma120_1d']
@@ -39,20 +53,21 @@ def screen(results):
 
 def run(data_dir, output, fetch=False, allow_single_source=False):
     root=Path(__file__).resolve().parents[1]
+    registry,_=load(root/'research/data_conflicts.json')
+    require_data_issue_resolution(registry)
     config_path=root/'research/real_history_protocol.json'
     c,config_hash=load(config_path); checked_config(c)
     if config_hash!=BASE_CONFIG_SHA256: raise DataBlocked('frozen control configuration changed')
     output=Path(output)
     if output.exists(): raise DataBlocked('refuse existing experiment output')
     if fetch: acquire(c,config_hash,data_dir,allow_single_source)
-    # execute validates real/raw flag, dates, configuration and evidence grade
-    # before creating or publishing reports. H002 consumes precisely that data.
     controls=execute(data_dir,config_path,output/'baseline',allow_single_source)
     data,data_hash=load(Path(data_dir)/'dataset.json')
     if data_hash!=controls['binding']['input_sha256']:
         raise DataBlocked('dataset changed between controls and candidate')
     binding=dict(controls['binding'],source_sha256=source_hash(),
         h002_driver_sha256=digest(Path(__file__).read_bytes()),
+        data_issue_registry_sha256=digest((root/'research/data_conflicts.json').read_bytes()),
         preregistration_sha256=digest((root/'research/H002_PROTOCOL.md').read_bytes()),
         preregistration_commit=PREREGISTRATION_COMMIT)
     results=dict(controls['results']); candidate_reports={}
