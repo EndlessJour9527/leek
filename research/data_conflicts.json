@@ -1,0 +1,19 @@
+{
+  "version": "data-conflicts.v1",
+  "issues": [
+    {
+      "id": "DQ001",
+      "instrument": "510300",
+      "status": "UNRESOLVED",
+      "scope": "2019-01-02..2025-12-31 real historical study",
+      "observed_run": "https://github.com/EndlessJour9527/leek/actions/runs/39452725948",
+      "observed_commit": "81b6665554da4b3b78cd00a001aec47d126b8f8e",
+      "total_differing_ohlc_cells": 20,
+      "first_visible_dates": ["2020-08-21", "2020-08-24", "2020-08-25"],
+      "first_visible_fields": ["open", "close", "high", "low"],
+      "first_visible_eastmoney_minus_tencent": "0.001",
+      "resolution": null,
+      "rule": "H002 must not run on a later missing-secondary-source fallback until this known conflict is independently reviewed and resolved. No tolerance relaxation or synthetic fallback."
+    }
+  ]
+}
