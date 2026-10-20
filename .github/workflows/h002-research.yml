@@ -1,0 +1,72 @@
+name: H002 real-history research
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/h002-open-source-research]
+    paths:
+      - 'leek/channel_signal.py'
+      - 'leek/real_backtest.py'
+      - 'research/run_h002.py'
+      - 'research/H002_PROTOCOL.md'
+      - 'tests/test_h002*.py'
+      - '.github/workflows/h002-research.yml'
+permissions:
+  contents: read
+jobs:
+  h002:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline tests
+        run: python -m unittest discover -s tests -q
+      - name: Real-data H002 experiment (3.12)
+        run: python -m research.run_h002 --fetch --allow-single-source --data-dir "$RUNNER_TEMP/h002-input" --output "$RUNNER_TEMP/h002-results-312"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Same snapshot, independent Python version
+        run: |
+          python -m unittest discover -s tests -q
+          python -m research.run_h002 --allow-single-source --data-dir "$RUNNER_TEMP/h002-input" --output "$RUNNER_TEMP/h002-results-310"
+          diff -r "$RUNNER_TEMP/h002-results-312" "$RUNNER_TEMP/h002-results-310"
+      - uses: actions/checkout@v4
+        with:
+          ref: '788f446e228687bbaea15290e842e06cdc6919cb'
+          path: legacy-pr5
+          persist-credentials: false
+      - name: Re-run original PR5 on identical input
+        working-directory: legacy-pr5
+        run: python -m research.run_real_history --allow-single-source --data-dir "$RUNNER_TEMP/h002-input" --output "$RUNNER_TEMP/h002-legacy-controls"
+      - name: Compare every original economic report field
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root=Path(os.environ['RUNNER_TEMP'])
+          for old in sorted((root/'h002-legacy-controls').glob('*.json')):
+              a=json.loads(old.read_bytes())
+              b=json.loads((root/'h002-results-312'/'baseline'/old.name).read_bytes())
+              a.pop('binding',None); b.pop('binding',None)
+              assert a==b, old.name
+          print('All 9 legacy control report economic contents are unchanged.')
+          PY
+      - name: Archive tracked implementation, not raw feed snapshots
+        run: git archive --format=zip --output="$RUNNER_TEMP/h002-source.zip" HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h002-derived-research-results
+          path: ${{ runner.temp }}/h002-results-312
+          retention-days: 30
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h002-tested-source
+          path: ${{ runner.temp }}/h002-source.zip
+          retention-days: 7
+          if-no-files-found: error
