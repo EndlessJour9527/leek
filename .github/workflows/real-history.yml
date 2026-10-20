@@ -1,0 +1,21 @@
+name: Real historical research
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/real-history-backtest]
+    paths:
+      - 'research/probe_history.py'
+      - '.github/workflows/real-history.yml'
+permissions:
+  contents: read
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check direct historical data feeds
+        run: python -m research.probe_history
