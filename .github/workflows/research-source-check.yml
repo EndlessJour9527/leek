@@ -1,0 +1,27 @@
+name: Research source review snapshot
+on:
+  push:
+    branches: [feat/h002-open-source-research]
+    paths: ['.github/workflows/research-source-check.yml']
+permissions:
+  contents: read
+jobs:
+  source-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -q
+      - name: Export tracked source only (no credentials or market data)
+        run: git archive --format=zip --output="$RUNNER_TEMP/leek-source.zip" HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leek-source-review-snapshot
+          path: ${{ runner.temp }}/leek-source.zip
+          retention-days: 7
+          if-no-files-found: error
