@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "title": "Paper signal envelope v1",
+  "required": [
+    "instrument",
+    "asof",
+    "available_at",
+    "target_weight",
+    "model_id",
+    "dataset_hash"
+  ],
+  "properties": {
+    "instrument": {
+      "type": "string",
+      "minLength": 1
+    },
+    "asof": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "available_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "target_weight": {
+      "type": "string",
+      "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+    },
+    "model_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}
