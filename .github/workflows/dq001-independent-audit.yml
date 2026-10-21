@@ -1,0 +1,32 @@
+name: DQ001 third-provider evidence (not backtest)
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/dq001-independent-source-audit]
+    paths:
+      - 'research/dq001_independent_probe.py'
+      - 'tests/test_dq001_independent_probe.py'
+      - '.github/workflows/dq001-independent-audit.yml'
+permissions:
+  contents: read
+jobs:
+  independent-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline regression suite
+        run: python -m unittest discover -s tests -q
+      - name: One bounded read of disputed historical sessions
+        run: python -m research.dq001_independent_probe --output "$RUNNER_TEMP/dq001-third-provider.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dq001-third-provider-evidence-not-backtest
+          path: ${{ runner.temp }}/dq001-third-provider.json
+          retention-days: 30
+          if-no-files-found: error
