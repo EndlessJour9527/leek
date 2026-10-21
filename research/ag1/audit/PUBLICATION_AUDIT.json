@@ -1,0 +1,53 @@
+{
+  "status": "PASS_PUBLICATION_SCOPE",
+  "created_at_utc": "2026-10-21T15:58:13.599186+00:00",
+  "reviewer": "independent-publication-review",
+  "base_commit": "d2fdfcc1bf5d59ce6d1abce2259969bac5ee4fdd",
+  "scope": [
+    "public capsule privacy and redistribution boundary",
+    "compatibility with unchanged core",
+    "preservation of all eight registered result paths",
+    "source pins and documented replay prerequisites",
+    "derived output transformation correctness"
+  ],
+  "checks": {
+    "core_unit_tests": 108,
+    "focused_public_tests": 57,
+    "legacy_checks_explicitly_excluded": 5,
+    "original_release_implementation_pins": "ALL_MATCH",
+    "public_result_verifier": "PASS",
+    "optimized_python_verifier": "REFUSES_TO_RUN",
+    "derived_rows_independently_compared_to_archived_original": 6744,
+    "derived_fields_verified": [
+      "date",
+      "cash",
+      "nav",
+      "commission",
+      "slippage",
+      "risk_asset_value",
+      "actual_exposure"
+    ],
+    "both_cost_decisions": "STOP_RESEARCH_VARIANT",
+    "private_links_credentials_or_actual_account_records_found": false,
+    "raw_input_archives_redistributed": false,
+    "core_modules_modified": false
+  },
+  "resolved_findings": [
+    {
+      "finding": "Historical replay release pinned two test source files initially omitted from public capsule",
+      "resolution": "Restored unchanged test sources and verified all original release source hashes. Explicit public runner excludes five evidence-dependent legacy checks."
+    },
+    {
+      "finding": "Assertion-based public verifier could claim success under optimized Python",
+      "resolution": "Added explicit non-debug rejection; normal verification passes and python -O exits unsuccessfully."
+    }
+  ],
+  "limitations": [
+    "No new market-dependent backtest was run during publication review.",
+    "Historical economic audit is archived prior evidence, not a certificate for substituted inputs.",
+    "Full historical replay requires all six lawfully obtained frozen input archives; public checkout alone is insufficient.",
+    "Public derived daily data omit vendor marks and position-level daily state; no raw-data redistribution permission is granted.",
+    "Local tests passed; remote CI is a separate subsequent verification.",
+    "This review does not lift DQ001, authorize live trading, or establish profitability."
+  ]
+}

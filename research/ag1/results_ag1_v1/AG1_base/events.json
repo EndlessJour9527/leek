@@ -1,0 +1,311 @@
+[
+  {
+    "date": "2021-01-15",
+    "event_id": "510300_2021",
+    "phase": "close",
+    "symbol": "510300",
+    "type": "record"
+  },
+  {
+    "date": "2021-01-18",
+    "event_id": "510300_2021",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510300",
+    "type": "effective"
+  },
+  {
+    "amount": "0.000",
+    "date": "2021-01-21",
+    "event_id": "510300_2021",
+    "phase": "after_close",
+    "symbol": "510300",
+    "type": "payment"
+  },
+  {
+    "date": "2022-01-18",
+    "event_id": "510300_2022",
+    "phase": "close",
+    "symbol": "510300",
+    "type": "record"
+  },
+  {
+    "date": "2022-01-19",
+    "event_id": "510300_2022",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510300",
+    "type": "effective"
+  },
+  {
+    "amount": "0.000",
+    "date": "2022-01-24",
+    "event_id": "510300_2022",
+    "phase": "after_close",
+    "symbol": "510300",
+    "type": "payment"
+  },
+  {
+    "date": "2022-08-26",
+    "event_id": "510500_SPLIT_20220826",
+    "phase": "close",
+    "symbol": "510500",
+    "type": "record"
+  },
+  {
+    "date": "2022-08-26",
+    "event_id": "510500_SPLIT_20220826",
+    "phase": "after_close",
+    "ratio": "1.14539",
+    "rounding_nav_delta": "0E-54",
+    "rounding_quantity": "0.00000",
+    "symbol": "510500",
+    "type": "effective"
+  },
+  {
+    "date": "2022-09-01",
+    "event_id": "512100_MERGE_20220902",
+    "phase": "close",
+    "symbol": "512100",
+    "type": "record"
+  },
+  {
+    "date": "2022-09-02",
+    "event_id": "512100_MERGE_20220902",
+    "phase": "before_open",
+    "ratio": "0.36555",
+    "rounding_nav_delta": "0E-54",
+    "rounding_quantity": "0.00000",
+    "symbol": "512100",
+    "type": "effective"
+  },
+  {
+    "date": "2023-01-13",
+    "event_id": "510300_2023",
+    "phase": "close",
+    "symbol": "510300",
+    "type": "record"
+  },
+  {
+    "date": "2023-01-16",
+    "event_id": "510300_2023",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510300",
+    "type": "effective"
+  },
+  {
+    "amount": "0.000",
+    "date": "2023-01-19",
+    "event_id": "510300_2023",
+    "phase": "after_close",
+    "symbol": "510300",
+    "type": "payment"
+  },
+  {
+    "date": "2024-01-17",
+    "event_id": "510300_2024",
+    "phase": "close",
+    "symbol": "510300",
+    "type": "record"
+  },
+  {
+    "date": "2024-01-18",
+    "event_id": "510300_2024",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510300",
+    "type": "effective"
+  },
+  {
+    "amount": "0.000",
+    "date": "2024-01-23",
+    "event_id": "510300_2024",
+    "phase": "after_close",
+    "symbol": "510300",
+    "type": "payment"
+  },
+  {
+    "date": "2024-05-16",
+    "event_id": "510500_2024-05-17",
+    "phase": "close",
+    "symbol": "510500",
+    "type": "record"
+  },
+  {
+    "date": "2024-05-17",
+    "event_id": "510500_2024-05-17",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510500",
+    "type": "effective"
+  },
+  {
+    "amount": "0.000",
+    "date": "2024-05-22",
+    "event_id": "510500_2024-05-17",
+    "phase": "after_close",
+    "symbol": "510500",
+    "type": "payment"
+  },
+  {
+    "date": "2025-01-14",
+    "event_id": "512100_2025-01-15",
+    "phase": "close",
+    "symbol": "512100",
+    "type": "record"
+  },
+  {
+    "date": "2025-01-15",
+    "event_id": "512100_2025-01-15",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "512100",
+    "type": "effective"
+  },
+  {
+    "date": "2025-01-15",
+    "event_id": "510500_2025-01-16",
+    "phase": "close",
+    "symbol": "510500",
+    "type": "record"
+  },
+  {
+    "date": "2025-01-16",
+    "event_id": "510500_2025-01-16",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510500",
+    "type": "effective"
+  },
+  {
+    "amount": "0.000",
+    "date": "2025-01-20",
+    "event_id": "512100_2025-01-15",
+    "phase": "after_close",
+    "symbol": "512100",
+    "type": "payment"
+  },
+  {
+    "amount": "0.000",
+    "date": "2025-01-21",
+    "event_id": "510500_2025-01-16",
+    "phase": "after_close",
+    "symbol": "510500",
+    "type": "payment"
+  },
+  {
+    "date": "2025-06-17",
+    "event_id": "510300_2025",
+    "phase": "close",
+    "symbol": "510300",
+    "type": "record"
+  },
+  {
+    "date": "2025-06-18",
+    "event_id": "510300_2025",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510300",
+    "type": "effective"
+  },
+  {
+    "amount": "0.000",
+    "date": "2025-06-27",
+    "event_id": "510300_2025",
+    "phase": "after_close",
+    "symbol": "510300",
+    "type": "payment"
+  },
+  {
+    "date": "2026-01-15",
+    "event_id": "510500_2026-01-16",
+    "phase": "close",
+    "symbol": "510500",
+    "type": "record"
+  },
+  {
+    "date": "2026-01-16",
+    "event_id": "510500_2026-01-16",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510500",
+    "type": "effective"
+  },
+  {
+    "date": "2026-01-16",
+    "event_id": "510300_2026",
+    "phase": "close",
+    "symbol": "510300",
+    "type": "record"
+  },
+  {
+    "date": "2026-01-16",
+    "event_id": "512100_2026-01-19",
+    "phase": "close",
+    "symbol": "512100",
+    "type": "record"
+  },
+  {
+    "date": "2026-01-19",
+    "event_id": "510300_2026",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "510300",
+    "type": "effective"
+  },
+  {
+    "date": "2026-01-19",
+    "event_id": "512100_2026-01-19",
+    "phase": "before_open",
+    "ratio": "1",
+    "rounding_nav_delta": "0.000",
+    "rounding_quantity": "0",
+    "symbol": "512100",
+    "type": "effective"
+  },
+  {
+    "amount": "241.800",
+    "date": "2026-01-21",
+    "event_id": "510500_2026-01-16",
+    "phase": "after_close",
+    "symbol": "510500",
+    "type": "payment"
+  },
+  {
+    "amount": "0.000",
+    "date": "2026-01-22",
+    "event_id": "512100_2026-01-19",
+    "phase": "after_close",
+    "symbol": "512100",
+    "type": "payment"
+  },
+  {
+    "amount": "0.000",
+    "date": "2026-01-27",
+    "event_id": "510300_2026",
+    "phase": "after_close",
+    "symbol": "510300",
+    "type": "payment"
+  }
+]

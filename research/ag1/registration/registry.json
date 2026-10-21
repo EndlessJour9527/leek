@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "E4_MONTHLY_MOMENTUM_20261018",
+  "registered_at_utc": "2026-10-18T06:02:36.696340+00:00",
+  "status": "DESIGN_FROZEN_DATA_BLOCKED",
+  "simulation_only": true,
+  "performance_run_authorized_by_this_file": false,
+  "authoritative_semantics": "PROTOCOL.md (all execution edge cases are mandatory; JSON is a machine-readable index, not permission to omit prose rules)",
+  "universe": [
+    "510300",
+    "510500",
+    "512100",
+    "159915"
+  ],
+  "universe_change_on_data_failure": false,
+  "initial_cash_cny": 50000,
+  "equity_target": 0.95,
+  "cash_rate": 0,
+  "leverage": false,
+  "initial_signal_date": "2021-10-15",
+  "initial_formation_month": "2021-09",
+  "requested_window": [
+    "2021-10-18",
+    "2026-10-16"
+  ],
+  "required_history_start": "2020-09-30",
+  "fallback_window_rule": "2022-02 first exchange trading session through 2026-10-16, only when all four fully qualified since 2021-01-04; freeze window selection before returns",
+  "historical_label": "ALL_PRE_20261017_HISTORY_IS_TOUCHED_DEVELOPMENT_DATA",
+  "strategies": [
+    {
+      "id": "M12_PRIMARY",
+      "kind": "cross_sectional_total_return_momentum",
+      "formation_month_lag_end": 1,
+      "formation_month_lag_start": 12,
+      "top_k": 2,
+      "selected_weight": 0.475,
+      "negative_scores_still_invest": true
+    },
+    {
+      "id": "EQUAL4_PRIMARY_CONTROL",
+      "kind": "monthly_static_equal_weight",
+      "weights": {
+        "510300": 0.2375,
+        "510500": 0.2375,
+        "512100": 0.2375,
+        "159915": 0.2375
+      }
+    },
+    {
+      "id": "M6_SENSITIVITY",
+      "kind": "cross_sectional_total_return_momentum",
+      "formation_month_lag_end": 1,
+      "formation_month_lag_start": 6,
+      "top_k": 2,
+      "selected_weight": 0.475,
+      "may_replace_primary": false
+    },
+    {
+      "id": "BH300_CONTEXT",
+      "kind": "buy_hold_no_dividend_reinvestment",
+      "symbol": "510300",
+      "initial_weight": 0.95
+    },
+    {
+      "id": "CASH_CONTEXT",
+      "kind": "cash",
+      "annual_rate": 0
+    }
+  ],
+  "cost_scenarios": [
+    {
+      "id": "base",
+      "commission_rate": 0.001,
+      "minimum_commission_cny": 5,
+      "adverse_slippage_rate": 0.001
+    },
+    {
+      "id": "double",
+      "commission_rate": 0.002,
+      "minimum_commission_cny": 10,
+      "adverse_slippage_rate": 0.002
+    },
+    {
+      "id": "severe",
+      "commission_rate": 0.002,
+      "minimum_commission_cny": 10,
+      "adverse_slippage_rate": 0.003
+    }
+  ],
+  "account_path_budget": 15,
+  "economic_signal_variants": 2,
+  "tie_break": "score descending; abs difference <=1e-12 ties code ascending",
+  "rebalance": "exchange month-end closing signal; next exchange-session open proxy; special initial signal as above",
+  "order_lifetime": "DAY_ONLY_NO_RETRY_UNTIL_NEXT_SCHEDULE",
+  "planned_target_shares": "floor(weight * signal_NAV / signal_raw_close / 100) * 100",
+  "buy_affordability": "common maximal scalar in [0,1], include actual minimum commissions; floor each lot; do not redistribute remainder",
+  "buy_can_increase_from_original_plan": false,
+  "sell_proceeds": "actual fills only; same-open proceeds assumed available and disclosed",
+  "dividend_cash_availability": "after payment-day close; next trading open",
+  "corporate_action_ratio_source": "official exact ratio plus entitlement rounding/cash-in-lieu rules required",
+  "tax_treatment": "official instrument/date evidence required; no guessed tax",
+  "price_limits": "instrument/date specific verified metadata; never blanket 10%",
+  "gate_order": [
+    "G0_DATA",
+    "G1_ENGINE",
+    "G2_DEVELOPMENT_PROFILE",
+    "G3_PROSPECTIVE_NOT_RUN"
+  ],
+  "g2": {
+    "primary": "M12_PRIMARY",
+    "comparator": "EQUAL4_PRIMARY_CONTROL",
+    "net_cagr_excess_positive_in": [
+      "base",
+      "double"
+    ],
+    "max_additional_drawdown_loss_fraction_base": 0.05,
+    "positive_development_segments_min": 2,
+    "development_segment_count": 3,
+    "passing_label": "WORTH_FORWARD_OBSERVATION_ONLY"
+  },
+  "uncertainty": {
+    "kind": "paired circular moving-block bootstrap on complete common monthly active returns",
+    "comparisons": [
+      "M12_PRIMARY-EQUAL4_PRIMARY_CONTROL",
+      "M6_SENSITIVITY-EQUAL4_PRIMARY_CONTROL"
+    ],
+    "block_months": 6,
+    "replications": 10000,
+    "seed": 20261018,
+    "individual_two_sided_ci": 0.975,
+    "minimum_full_months": 36,
+    "inference": "descriptive; does not erase prior testing or establish clean out-of-sample discovery"
+  },
+  "forbidden": [
+    "performance-driven universe or window changes",
+    "treat missing row as executable forward-filled quote",
+    "auto swap missing ETF",
+    "reuse V1 output locations",
+    "deploy or trade",
+    "claim full cross-asset diversification",
+    "promote M6 if M12 fails"
+  ],
+  "qualified_prefix_end_if_h2_blocked": "2026-06-30",
+  "prefix_label": "PREFIX_ONLY_NO_FULL_WINDOW_G2_PASS",
+  "known_512100_merge": {
+    "record_date": "2022-09-01",
+    "effective_halt_date": "2022-09-02",
+    "resume_date": "2022-09-05",
+    "exact_ratio": "0.36555",
+    "actual_shares": "ceil(old_shares * Decimal(0.36555))",
+    "signal_tr": "theoretical ratio only; exclude investor-account rounding gain",
+    "cost_basis": "preserve total basis unless documented cash-in-lieu; audit NAV rounding delta"
+  }
+}

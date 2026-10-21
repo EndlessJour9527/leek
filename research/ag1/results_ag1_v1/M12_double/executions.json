@@ -1,0 +1,2322 @@
+[
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3028.174862000",
+      "quantities": {
+        "510500": "4000",
+        "512100": "9300"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "46971.825138000"
+    },
+    "date": "2023-01-03",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2022-12-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2022-12-30",
+    "trades": [
+      {
+        "cash_after": "26417.954048000",
+        "cash_before": "50000.000",
+        "commission": "47.069952000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "5.883744",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 37763,
+          "file": "evidence/sse2020_0.docx",
+          "retrieved_at": "2026-10-18T06:12:26.272682+00:00",
+          "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10785127/files/b39b8db2daa74eac916d8b3d6907af51.docx"
+        },
+        "notional": "23534.976000",
+        "quantity": "4000",
+        "raw_open": "5.872",
+        "side": "BUY",
+        "slippage_cost": "46.976000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      },
+      {
+        "cash_after": "3028.174862000",
+        "cash_before": "26417.954048000",
+        "commission": "46.686186000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.510010",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 37763,
+          "file": "evidence/sse2020_0.docx",
+          "retrieved_at": "2026-10-18T06:12:26.272682+00:00",
+          "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10785127/files/b39b8db2daa74eac916d8b3d6907af51.docx"
+        },
+        "notional": "23343.093000",
+        "quantity": "9300",
+        "raw_open": "2.505",
+        "side": "BUY",
+        "slippage_cost": "46.593000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3028.174862000",
+      "quantities": {},
+      "remainder_reallocated": false,
+      "total_cost": "0"
+    },
+    "date": "2023-02-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-01-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-01-31",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3425.448467600",
+      "quantities": {
+        "510300": "6200"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "25316.362461600"
+    },
+    "date": "2023-03-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-02-28",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-02-28",
+    "trades": [
+      {
+        "cash_after": "28741.810929200",
+        "cash_before": "3028.174862000",
+        "commission": "51.530332800",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.770448",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 37763,
+          "file": "evidence/sse2020_0.docx",
+          "retrieved_at": "2026-10-18T06:12:26.272682+00:00",
+          "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10785127/files/b39b8db2daa74eac916d8b3d6907af51.docx"
+        },
+        "notional": "25765.166400",
+        "quantity": "9300",
+        "raw_open": "2.776",
+        "side": "SELL",
+        "slippage_cost": "51.633600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      },
+      {
+        "cash_after": "3425.448467600",
+        "cash_before": "28741.810929200",
+        "commission": "50.531661600",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "4.075134",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 37763,
+          "file": "evidence/sse2020_0.docx",
+          "retrieved_at": "2026-10-18T06:12:26.272682+00:00",
+          "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10785127/files/b39b8db2daa74eac916d8b3d6907af51.docx"
+        },
+        "notional": "25265.830800",
+        "quantity": "6200",
+        "raw_open": "4.067",
+        "side": "BUY",
+        "slippage_cost": "50.430800",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3079.991891600",
+      "quantities": {
+        "512100": "9200"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "25355.117016000"
+    },
+    "date": "2023-04-03",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-03-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-03-31",
+    "trades": [
+      {
+        "cash_after": "28435.108907600",
+        "cash_before": "3425.448467600",
+        "commission": "50.119560000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "4.041900",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 37763,
+          "file": "evidence/sse2020_0.docx",
+          "retrieved_at": "2026-10-18T06:12:26.272682+00:00",
+          "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10785127/files/b39b8db2daa74eac916d8b3d6907af51.docx"
+        },
+        "notional": "25059.780000",
+        "quantity": "6200",
+        "raw_open": "4.050",
+        "side": "SELL",
+        "slippage_cost": "50.220000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      },
+      {
+        "cash_after": "3079.991891600",
+        "cash_before": "28435.108907600",
+        "commission": "50.609016000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.750490",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 37763,
+          "file": "evidence/sse2020_0.docx",
+          "retrieved_at": "2026-10-18T06:12:26.272682+00:00",
+          "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10785127/files/b39b8db2daa74eac916d8b3d6907af51.docx"
+        },
+        "notional": "25304.508000",
+        "quantity": "9200",
+        "raw_open": "2.745",
+        "side": "BUY",
+        "slippage_cost": "50.508000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2801.155291600",
+      "quantities": {
+        "512100": "100"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "278.836600"
+    },
+    "date": "2023-05-04",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-04-28",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-04-28",
+    "trades": [
+      {
+        "cash_after": "2801.155291600",
+        "cash_before": "3079.991891600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.688366",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "268.836600",
+        "quantity": "100",
+        "raw_open": "2.683",
+        "side": "BUY",
+        "slippage_cost": "0.536600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2801.155291600",
+      "quantities": {},
+      "remainder_reallocated": false,
+      "total_cost": "0"
+    },
+    "date": "2023-06-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-05-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-05-31",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3056.623291600",
+      "quantities": {},
+      "remainder_reallocated": false,
+      "total_cost": "0"
+    },
+    "date": "2023-07-03",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-06-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-06-30",
+    "trades": [
+      {
+        "cash_after": "3056.623291600",
+        "cash_before": "2801.155291600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.654680",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "265.468000",
+        "quantity": "100",
+        "raw_open": "2.660",
+        "side": "SELL",
+        "slippage_cost": "0.532000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3513.443456400",
+      "quantities": {
+        "510300": "5900"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "24168.384288000"
+    },
+    "date": "2023-08-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-07-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-07-31",
+    "trades": [
+      {
+        "cash_after": "3664.984091600",
+        "cash_before": "3056.623291600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "6.183608",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "618.360800",
+        "quantity": "100",
+        "raw_open": "6.196",
+        "side": "SELL",
+        "slippage_cost": "1.239200",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      },
+      {
+        "cash_after": "27681.827744400",
+        "cash_before": "3664.984091600",
+        "commission": "48.129947200",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.615758",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "24064.973600",
+        "quantity": "9200",
+        "raw_open": "2.621",
+        "side": "SELL",
+        "slippage_cost": "48.226400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      },
+      {
+        "cash_after": "3513.443456400",
+        "cash_before": "27681.827744400",
+        "commission": "48.240288000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "4.088160",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "24120.144000",
+        "quantity": "5900",
+        "raw_open": "4.080",
+        "side": "BUY",
+        "slippage_cost": "48.144000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3513.443456400",
+      "quantities": {
+        "510300": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2023-09-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-08-31",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510300"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-08-31",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3513.443456400",
+      "quantities": {
+        "510300": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2023-10-09",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-09-28",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510300"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-09-28",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3134.707456400",
+      "quantities": {
+        "510300": "100"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "378.736000"
+    },
+    "date": "2023-11-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-10-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-10-31",
+    "trades": [
+      {
+        "cash_after": "3134.707456400",
+        "cash_before": "3513.443456400",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.687360",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "368.736000",
+        "quantity": "100",
+        "raw_open": "3.680",
+        "side": "BUY",
+        "slippage_cost": "0.736000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3134.707456400",
+      "quantities": {
+        "510300": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2023-12-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-11-30",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510300"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-11-30",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2638.302148400",
+      "quantities": {
+        "512100": "9000"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "21424.441356000"
+    },
+    "date": "2024-01-02",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2023-12-29",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2023-12-29",
+    "trades": [
+      {
+        "cash_after": "24062.743504400",
+        "cash_before": "3134.707456400",
+        "commission": "41.939952000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.494996",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "20969.976000",
+        "quantity": "6000",
+        "raw_open": "3.502",
+        "side": "SELL",
+        "slippage_cost": "42.024000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      },
+      {
+        "cash_after": "2638.302148400",
+        "cash_before": "24062.743504400",
+        "commission": "42.763356000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.375742",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "21381.678000",
+        "quantity": "9000",
+        "raw_open": "2.371",
+        "side": "BUY",
+        "slippage_cost": "42.678000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2131.030948400",
+      "quantities": {
+        "512100": "500"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "971.920000"
+    },
+    "date": "2024-02-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-01-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-01-31",
+    "trades": [
+      {
+        "cash_after": "3102.950948400",
+        "cash_before": "2638.302148400",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "4.746488",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "474.648800",
+        "quantity": "100",
+        "raw_open": "4.756",
+        "side": "SELL",
+        "slippage_cost": "0.951200",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      },
+      {
+        "cash_after": "2131.030948400",
+        "cash_before": "3102.950948400",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "1.923840",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "961.920000",
+        "quantity": "500",
+        "raw_open": "1.920",
+        "side": "BUY",
+        "slippage_cost": "1.920000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2951.101349600",
+      "quantities": {
+        "510300": "5700"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "20035.602622800"
+    },
+    "date": "2024-03-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-02-29",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-02-29",
+    "trades": [
+      {
+        "cash_after": "2662.246348400",
+        "cash_before": "2131.030948400",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "5.412154",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "541.215400",
+        "quantity": "100",
+        "raw_open": "5.423",
+        "side": "SELL",
+        "slippage_cost": "1.084600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      },
+      {
+        "cash_after": "22986.703972400",
+        "cash_before": "2662.246348400",
+        "commission": "40.730376000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.143704",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "20365.188000",
+        "quantity": "9500",
+        "raw_open": "2.148",
+        "side": "SELL",
+        "slippage_cost": "40.812000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      },
+      {
+        "cash_after": "2951.101349600",
+        "cash_before": "22986.703972400",
+        "commission": "39.991222800",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.508002",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "19995.611400",
+        "quantity": "5700",
+        "raw_open": "3.501",
+        "side": "BUY",
+        "slippage_cost": "39.911400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2951.101349600",
+      "quantities": {},
+      "remainder_reallocated": false,
+      "total_cost": "0"
+    },
+    "date": "2024-04-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-03-29",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-03-29",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2951.101349600",
+      "quantities": {},
+      "remainder_reallocated": false,
+      "total_cost": "0"
+    },
+    "date": "2024-05-06",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-04-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-04-30",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3273.001349600",
+      "quantities": {
+        "510500": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2024-06-03",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-05-31",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510500"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-05-31",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3100.404749600",
+      "quantities": {
+        "510500": "100"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "510.599200"
+    },
+    "date": "2024-07-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-06-28",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-06-28",
+    "trades": [
+      {
+        "cash_after": "3611.003949600",
+        "cash_before": "3273.001349600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.480026",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "348.002600",
+        "quantity": "100",
+        "raw_open": "3.487",
+        "side": "SELL",
+        "slippage_cost": "0.697400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      },
+      {
+        "cash_after": "3100.404749600",
+        "cash_before": "3611.003949600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "5.005992",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "500.599200",
+        "quantity": "100",
+        "raw_open": "4.996",
+        "side": "BUY",
+        "slippage_cost": "0.999200",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3100.404749600",
+      "quantities": {
+        "510500": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2024-08-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-07-31",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510500"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-07-31",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2148.524749600",
+      "quantities": {
+        "510500": "200"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "951.880000"
+    },
+    "date": "2024-09-02",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-08-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-08-30",
+    "trades": [
+      {
+        "cash_after": "2148.524749600",
+        "cash_before": "3100.404749600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "4.709400",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "941.880000",
+        "quantity": "200",
+        "raw_open": "4.700",
+        "side": "BUY",
+        "slippage_cost": "1.880000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3251.374549600",
+      "quantities": {},
+      "remainder_reallocated": false,
+      "total_cost": "0"
+    },
+    "date": "2024-10-08",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-09-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-09-30",
+    "trades": [
+      {
+        "cash_after": "2603.193549600",
+        "cash_before": "2148.524749600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "4.646688",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "464.668800",
+        "quantity": "100",
+        "raw_open": "4.656",
+        "side": "SELL",
+        "slippage_cost": "0.931200",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      },
+      {
+        "cash_after": "3251.374549600",
+        "cash_before": "2603.193549600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "6.581810",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "658.181000",
+        "quantity": "100",
+        "raw_open": "6.595",
+        "side": "SELL",
+        "slippage_cost": "1.319000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2904.339116400",
+      "quantities": {
+        "159915": "10800",
+        "510300": "200"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "23618.569292800"
+    },
+    "date": "2024-11-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-10-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-10-31",
+    "trades": [
+      {
+        "cash_after": "26522.908409200",
+        "cash_before": "3251.374549600",
+        "commission": "46.636340400",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "5.979018",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "23318.170200",
+        "quantity": "3900",
+        "raw_open": "5.991",
+        "side": "SELL",
+        "slippage_cost": "46.729800",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      },
+      {
+        "cash_after": "3708.724716400",
+        "cash_before": "26522.908409200",
+        "commission": "45.537292800",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.108208",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "22768.646400",
+        "quantity": "10800",
+        "raw_open": "2.104",
+        "side": "BUY",
+        "slippage_cost": "45.446400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      },
+      {
+        "cash_after": "2904.339116400",
+        "cash_before": "3708.724716400",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.971928",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "794.385600",
+        "quantity": "200",
+        "raw_open": "3.964",
+        "side": "BUY",
+        "slippage_cost": "1.585600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3111.104716400",
+      "quantities": {
+        "510300": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2024-12-02",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-11-29",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510300"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-11-29",
+    "trades": [
+      {
+        "cash_after": "3111.104716400",
+        "cash_before": "2904.339116400",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.167656",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "216.765600",
+        "quantity": "100",
+        "raw_open": "2.172",
+        "side": "SELL",
+        "slippage_cost": "0.434400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2681.066316400",
+      "quantities": {
+        "159915": "200"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "430.038400"
+    },
+    "date": "2025-01-02",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2024-12-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2024-12-31",
+    "trades": [
+      {
+        "cash_after": "2681.066316400",
+        "cash_before": "3111.104716400",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.100192",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "420.038400",
+        "quantity": "200",
+        "raw_open": "2.096",
+        "side": "BUY",
+        "slippage_cost": "0.838400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2776.353010000",
+      "quantities": {
+        "159915": "0",
+        "512100": "9400"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "22216.198910400"
+    },
+    "date": "2025-02-05",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-01-27",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "159915"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-01-27",
+    "trades": [
+      {
+        "cash_after": "24992.551920400",
+        "cash_before": "2681.066316400",
+        "commission": "44.712396000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.922140",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "22356.198000",
+        "quantity": "5700",
+        "raw_open": "3.930",
+        "side": "SELL",
+        "slippage_cost": "44.802000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      },
+      {
+        "cash_after": "2776.353010000",
+        "cash_before": "24992.551920400",
+        "commission": "44.343710400",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.358708",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "22171.855200",
+        "quantity": "9400",
+        "raw_open": "2.354",
+        "side": "BUY",
+        "slippage_cost": "44.255200",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3450.844050400",
+      "quantities": {
+        "159915": "0",
+        "510300": "5700"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "22862.677086000"
+    },
+    "date": "2025-03-03",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-02-28",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "159915"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-02-28",
+    "trades": [
+      {
+        "cash_after": "26313.521136400",
+        "cash_before": "2776.353010000",
+        "commission": "47.168673600",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.508972",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "23584.336800",
+        "quantity": "9400",
+        "raw_open": "2.514",
+        "side": "SELL",
+        "slippage_cost": "47.263200",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      },
+      {
+        "cash_after": "3450.844050400",
+        "cash_before": "26313.521136400",
+        "commission": "45.634086000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "4.002990",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "22817.043000",
+        "quantity": "5700",
+        "raw_open": "3.995",
+        "side": "BUY",
+        "slippage_cost": "45.543000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3097.359231600",
+      "quantities": {
+        "159915": "100",
+        "512100": "9100"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "22994.249345200"
+    },
+    "date": "2025-04-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-03-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-03-31",
+    "trades": [
+      {
+        "cash_after": "26091.608576800",
+        "cash_before": "3450.844050400",
+        "commission": "45.372273600",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.980024",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "22686.136800",
+        "quantity": "5700",
+        "raw_open": "3.988",
+        "side": "SELL",
+        "slippage_cost": "45.463200",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510300"
+      },
+      {
+        "cash_after": "25874.495176800",
+        "cash_before": "26091.608576800",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.071134",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "207.113400",
+        "quantity": "100",
+        "raw_open": "2.067",
+        "side": "BUY",
+        "slippage_cost": "0.413400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      },
+      {
+        "cash_after": "3097.359231600",
+        "cash_before": "25874.495176800",
+        "commission": "45.463345200",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.497986",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "22731.672600",
+        "quantity": "9100",
+        "raw_open": "2.493",
+        "side": "BUY",
+        "slippage_cost": "45.372600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2699.384831600",
+      "quantities": {
+        "159915": "200"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "397.974400"
+    },
+    "date": "2025-05-06",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-04-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-04-30",
+    "trades": [
+      {
+        "cash_after": "2699.384831600",
+        "cash_before": "3097.359231600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "1.939872",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "387.974400",
+        "quantity": "200",
+        "raw_open": "1.936",
+        "side": "BUY",
+        "slippage_cost": "0.774400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2699.384831600",
+      "quantities": {},
+      "remainder_reallocated": false,
+      "total_cost": "0"
+    },
+    "date": "2025-06-03",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-05-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-05-30",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "2901.759231600",
+      "quantities": {
+        "512100": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2025-07-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-06-30",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "512100"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-06-30",
+    "trades": [
+      {
+        "cash_after": "2901.759231600",
+        "cash_before": "2699.384831600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.123744",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "212.374400",
+        "quantity": "100",
+        "raw_open": "2.128",
+        "side": "SELL",
+        "slippage_cost": "0.425600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3070.402631600",
+      "quantities": {
+        "512100": "100"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "279.638200"
+    },
+    "date": "2025-08-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-07-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-07-31",
+    "trades": [
+      {
+        "cash_after": "3350.040831600",
+        "cash_before": "2901.759231600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.291408",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "458.281600",
+        "quantity": "200",
+        "raw_open": "2.296",
+        "side": "SELL",
+        "slippage_cost": "0.918400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      },
+      {
+        "cash_after": "3070.402631600",
+        "cash_before": "3350.040831600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.696382",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "269.638200",
+        "quantity": "100",
+        "raw_open": "2.691",
+        "side": "BUY",
+        "slippage_cost": "0.538200",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3853.958631600",
+      "quantities": {
+        "512100": "400"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "1218.412000"
+    },
+    "date": "2025-09-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-08-29",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-08-29",
+    "trades": [
+      {
+        "cash_after": "5072.370631600",
+        "cash_before": "3070.402631600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "2.874240",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "2011.968000",
+        "quantity": "700",
+        "raw_open": "2.880",
+        "side": "SELL",
+        "slippage_cost": "4.032000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      },
+      {
+        "cash_after": "3853.958631600",
+        "cash_before": "5072.370631600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.021030",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "1208.412000",
+        "quantity": "400",
+        "raw_open": "3.015",
+        "side": "BUY",
+        "slippage_cost": "2.412000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3899.167631600",
+      "quantities": {
+        "512100": "500"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "1550.074000"
+    },
+    "date": "2025-10-09",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-09-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-09-30",
+    "trades": [
+      {
+        "cash_after": "5449.241631600",
+        "cash_before": "3853.958631600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.210566",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "1605.283000",
+        "quantity": "500",
+        "raw_open": "3.217",
+        "side": "SELL",
+        "slippage_cost": "3.217000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      },
+      {
+        "cash_after": "3899.167631600",
+        "cash_before": "5449.241631600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.080148",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "1540.074000",
+        "quantity": "500",
+        "raw_open": "3.074",
+        "side": "BUY",
+        "slippage_cost": "3.074000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "4603.225413600",
+      "quantities": {
+        "510500": "4000"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "29826.950832000"
+    },
+    "date": "2025-11-03",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-10-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-10-31",
+    "trades": [
+      {
+        "cash_after": "34430.176245600",
+        "cash_before": "3899.167631600",
+        "commission": "61.184386000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.028930",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "30592.193000",
+        "quantity": "10100",
+        "raw_open": "3.035",
+        "side": "SELL",
+        "slippage_cost": "61.307000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "512100"
+      },
+      {
+        "cash_after": "4603.225413600",
+        "cash_before": "34430.176245600",
+        "commission": "59.534832000",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "7.441854",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "29767.416000",
+        "quantity": "4000",
+        "raw_open": "7.427",
+        "side": "BUY",
+        "slippage_cost": "59.416000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "4603.225413600",
+      "quantities": {
+        "510500": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2025-12-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-11-28",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510500"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-11-28",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "4603.225413600",
+      "quantities": {
+        "159915": "0",
+        "510500": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2026-01-05",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2025-12-31",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "159915"
+      },
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510500"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2025-12-31",
+    "trades": []
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "4659.156613600",
+      "quantities": {
+        "159915": "300"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "1013.402800"
+    },
+    "date": "2026-02-02",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2026-01-30",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2026-01-30",
+    "trades": [
+      {
+        "cash_after": "5672.559413600",
+        "cash_before": "4851.225413600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "8.313340",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "831.334000",
+        "quantity": "100",
+        "raw_open": "8.330",
+        "side": "SELL",
+        "slippage_cost": "1.666000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      },
+      {
+        "cash_after": "4659.156613600",
+        "cash_before": "5672.559413600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.344676",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "1003.402800",
+        "quantity": "300",
+        "raw_open": "3.338",
+        "side": "BUY",
+        "slippage_cost": "2.002800",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "3671.906013600",
+      "quantities": {
+        "159915": "300"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "987.250600"
+    },
+    "date": "2026-03-02",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2026-02-27",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2026-02-27",
+    "trades": [
+      {
+        "cash_after": "3671.906013600",
+        "cash_before": "4659.156613600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.257502",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "977.250600",
+        "quantity": "300",
+        "raw_open": "3.251",
+        "side": "BUY",
+        "slippage_cost": "1.950600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "4164.247013600",
+      "quantities": {
+        "510500": "100"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "793.063000"
+    },
+    "date": "2026-04-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2026-03-31",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2026-03-31",
+    "trades": [
+      {
+        "cash_after": "4957.310013600",
+        "cash_before": "3671.906013600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.238510",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "1295.404000",
+        "quantity": "400",
+        "raw_open": "3.245",
+        "side": "SELL",
+        "slippage_cost": "2.596000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      },
+      {
+        "cash_after": "4164.247013600",
+        "cash_before": "4957.310013600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "7.830630",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "783.063000",
+        "quantity": "100",
+        "raw_open": "7.815",
+        "side": "BUY",
+        "slippage_cost": "1.563000",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "0",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "5656.436613600",
+      "quantities": {
+        "510500": "0"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "0.000000"
+    },
+    "date": "2026-05-06",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2026-04-30",
+    "rejected": [
+      {
+        "planned_quantity": "0",
+        "reason": "capped_or_unaffordable_lot",
+        "side": "BUY",
+        "symbol": "510500"
+      }
+    ],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2026-04-30",
+    "trades": [
+      {
+        "cash_after": "5656.436613600",
+        "cash_before": "4164.247013600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "3.755474",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "1502.189600",
+        "quantity": "400",
+        "raw_open": "3.763",
+        "side": "SELL",
+        "slippage_cost": "3.010400",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      }
+    ]
+  },
+  {
+    "allocation": {
+      "alpha_interval": {
+        "left": "1",
+        "left_closed": true,
+        "right": "1",
+        "right_closed": true
+      },
+      "cash_remaining": "5561.825413600",
+      "quantities": {
+        "510500": "200"
+      },
+      "remainder_reallocated": false,
+      "total_cost": "1700.173600"
+    },
+    "date": "2026-06-01",
+    "evidence_tier": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+    "plan_id": "2026-05-29",
+    "rejected": [],
+    "same_open_sale_cash_assumed_available": true,
+    "signal_date": "2026-05-29",
+    "trades": [
+      {
+        "cash_after": "7261.999013600",
+        "cash_before": "5656.436613600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "4.038906",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 620843,
+          "file": "evidence/sz2023.pdf",
+          "retrieved_at": "2026-10-18T06:13:56.094914+00:00",
+          "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+          "status": "ok",
+          "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf"
+        },
+        "notional": "1615.562400",
+        "quantity": "400",
+        "raw_open": "4.047",
+        "side": "SELL",
+        "slippage_cost": "3.237600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "159915"
+      },
+      {
+        "cash_after": "5561.825413600",
+        "cash_before": "7261.999013600",
+        "commission": "10",
+        "execution_evidence": "CONDITIONAL_FIRST_PRINT_DAILY_PROXY",
+        "fill_price": "8.450868",
+        "first_print_time": "first_trade_time_unknown",
+        "limit_evidence": {
+          "bytes": 51948,
+          "file": "evidence/sse2023.docx",
+          "retrieved_at": "2026-10-18T06:12:17.435284+00:00",
+          "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+          "status": "ok",
+          "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx"
+        },
+        "notional": "1690.173600",
+        "quantity": "200",
+        "raw_open": "8.434",
+        "side": "BUY",
+        "slippage_cost": "3.373600",
+        "status_evidence": "observed_daily_conditional",
+        "symbol": "510500"
+      }
+    ]
+  }
+]

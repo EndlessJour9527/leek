@@ -1,0 +1,2344 @@
+[
+  {
+    "date": "2022-12-30",
+    "plan": {
+      "execution_date": "2023-01-03",
+      "id": "2022-12-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "5200",
+          "side": "BUY",
+          "signal_planned_notional": "11850.800",
+          "signal_weight_budget": "11875.0000000",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "3000",
+          "side": "BUY",
+          "signal_planned_notional": "11814.000",
+          "signal_weight_budget": "11875.0000000",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "2000",
+          "side": "BUY",
+          "signal_planned_notional": "11774.000",
+          "signal_weight_budget": "11875.0000000",
+          "symbol": "510500",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "4700",
+          "side": "BUY",
+          "signal_planned_notional": "11782.900",
+          "signal_weight_budget": "11875.0000000",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.279",
+        "510300": "3.938",
+        "510500": "5.887",
+        "512100": "2.507"
+      },
+      "signal_date": "2022-12-30",
+      "signal_nav": "50000.000",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-01-31",
+    "plan": {
+      "execution_date": "2023-02-01",
+      "id": "2023-01-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "SELL",
+          "signal_planned_notional": "501.400",
+          "signal_weight_budget": "12782.6319302337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "415.900",
+          "signal_weight_budget": "12782.6319302337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "271.700",
+          "signal_weight_budget": "12782.6319302337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.507",
+        "510300": "4.159",
+        "510500": "6.303",
+        "512100": "2.717"
+      },
+      "signal_date": "2023-01-31",
+      "signal_nav": "53821.608127300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-02-28",
+    "plan": {
+      "execution_date": "2023-03-01",
+      "id": "2023-02-28",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "300",
+          "side": "BUY",
+          "signal_planned_notional": "707.700",
+          "signal_weight_budget": "12642.6249202337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "814.200",
+          "signal_weight_budget": "12642.6249202337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "637.200",
+          "signal_weight_budget": "12642.6249202337500",
+          "symbol": "510500",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "277.600",
+          "signal_weight_budget": "12642.6249202337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.359",
+        "510300": "4.071",
+        "510500": "6.372",
+        "512100": "2.776"
+      },
+      "signal_date": "2023-02-28",
+      "signal_nav": "53232.104927300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-03-31",
+    "plan": {
+      "execution_date": "2023-04-03",
+      "id": "2023-03-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "232.700",
+          "signal_weight_budget": "12540.8578564837500",
+          "symbol": "159915",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.327",
+        "510300": "4.050",
+        "510500": "6.359",
+        "512100": "2.742"
+      },
+      "signal_date": "2023-03-31",
+      "signal_nav": "52803.612027300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-04-28",
+    "plan": {
+      "execution_date": "2023-05-04",
+      "id": "2023-04-28",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "451.000",
+          "signal_weight_budget": "12343.6853564837500",
+          "symbol": "159915",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.255",
+        "510300": "4.025",
+        "510500": "6.277",
+        "512100": "2.692"
+      },
+      "signal_date": "2023-04-28",
+      "signal_nav": "51973.412027300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-05-31",
+    "plan": {
+      "execution_date": "2023-06-01",
+      "id": "2023-05-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "426.200",
+          "signal_weight_budget": "11876.7068477337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "380.200",
+          "signal_weight_budget": "11876.7068477337500",
+          "symbol": "510300",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.131",
+        "510300": "3.802",
+        "510500": "6.092",
+        "512100": "2.629"
+      },
+      "signal_date": "2023-05-31",
+      "signal_nav": "50007.186727300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-06-30",
+    "plan": {
+      "execution_date": "2023-07-03",
+      "id": "2023-06-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "216.400",
+          "signal_weight_budget": "12008.1599389837500",
+          "symbol": "159915",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.164",
+        "510300": "3.882",
+        "510500": "6.095",
+        "512100": "2.659"
+      },
+      "signal_date": "2023-06-30",
+      "signal_nav": "50560.673427300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-07-31",
+    "plan": {
+      "execution_date": "2023-08-01",
+      "id": "2023-07-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "218.200",
+          "signal_weight_budget": "12179.0649389837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "408.400",
+          "signal_weight_budget": "12179.0649389837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "262.000",
+          "signal_weight_budget": "12179.0649389837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.182",
+        "510300": "4.084",
+        "510500": "6.196",
+        "512100": "2.620"
+      },
+      "signal_date": "2023-07-31",
+      "signal_nav": "51280.273427300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-08-31",
+    "plan": {
+      "execution_date": "2023-09-01",
+      "id": "2023-08-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "410.400",
+          "signal_weight_budget": "11513.2792889837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "246.000",
+          "signal_weight_budget": "11513.2792889837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.052",
+        "510300": "3.839",
+        "510500": "5.846",
+        "512100": "2.460"
+      },
+      "signal_date": "2023-08-31",
+      "signal_nav": "48476.965427300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-09-28",
+    "plan": {
+      "execution_date": "2023-10-09",
+      "id": "2023-09-28",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "390.600",
+          "signal_weight_budget": "11294.8016614837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "376.400",
+          "signal_weight_budget": "11294.8016614837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "244.900",
+          "signal_weight_budget": "11294.8016614837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.953",
+        "510300": "3.764",
+        "510500": "5.792",
+        "512100": "2.449"
+      },
+      "signal_date": "2023-09-28",
+      "signal_nav": "47557.059627300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-10-31",
+    "plan": {
+      "execution_date": "2023-11-01",
+      "id": "2023-10-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "240.100",
+          "signal_weight_budget": "11029.0368577337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.916",
+        "510300": "3.644",
+        "510500": "5.627",
+        "512100": "2.401"
+      },
+      "signal_date": "2023-10-31",
+      "signal_nav": "46438.049927300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-11-30",
+    "plan": {
+      "execution_date": "2023-12-01",
+      "id": "2023-11-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "187.400",
+          "signal_weight_budget": "10965.2584414837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "244.600",
+          "signal_weight_budget": "10965.2584414837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.874",
+        "510300": "3.562",
+        "510500": "5.637",
+        "512100": "2.446"
+      },
+      "signal_date": "2023-11-30",
+      "signal_nav": "46169.509227300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2023-12-29",
+    "plan": {
+      "execution_date": "2024-01-02",
+      "id": "2023-12-29",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "184.200",
+          "signal_weight_budget": "10747.3178489837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "237.400",
+          "signal_weight_budget": "10747.3178489837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.842",
+        "510300": "3.499",
+        "510500": "5.519",
+        "512100": "2.374"
+      },
+      "signal_date": "2023-12-29",
+      "signal_nav": "45251.864627300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-01-31",
+    "plan": {
+      "execution_date": "2024-02-01",
+      "id": "2024-01-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "400",
+          "side": "BUY",
+          "signal_planned_notional": "613.200",
+          "signal_weight_budget": "9374.0602877337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "322.200",
+          "signal_weight_budget": "9374.0602877337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "300",
+          "side": "BUY",
+          "signal_planned_notional": "579.300",
+          "signal_weight_budget": "9374.0602877337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.533",
+        "510300": "3.222",
+        "510500": "4.783",
+        "512100": "1.931"
+      },
+      "signal_date": "2024-01-31",
+      "signal_nav": "39469.727527300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-02-29",
+    "plan": {
+      "execution_date": "2024-03-01",
+      "id": "2024-02-29",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "SELL",
+          "signal_planned_notional": "352.200",
+          "signal_weight_budget": "10438.0349227337500",
+          "symbol": "159915",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.761",
+        "510300": "3.503",
+        "510500": "5.431",
+        "512100": "2.151"
+      },
+      "signal_date": "2024-02-29",
+      "signal_nav": "43949.620727300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-03-29",
+    "plan": {
+      "execution_date": "2024-04-01",
+      "id": "2024-03-29",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "218.700",
+          "signal_weight_budget": "10476.1889652337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.768",
+        "510300": "3.526",
+        "510500": "5.371",
+        "512100": "2.187"
+      },
+      "signal_date": "2024-03-29",
+      "signal_nav": "44110.269327300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-04-30",
+    "plan": {
+      "execution_date": "2024-05-06",
+      "id": "2024-04-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "181.600",
+          "signal_weight_budget": "10685.5406552337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "220.700",
+          "signal_weight_budget": "10685.5406552337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.816",
+        "510300": "3.598",
+        "510500": "5.529",
+        "512100": "2.207"
+      },
+      "signal_date": "2024-04-30",
+      "signal_nav": "44991.750127300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-05-31",
+    "plan": {
+      "execution_date": "2024-06-03",
+      "id": "2024-05-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "177.200",
+          "signal_weight_budget": "10510.5541702337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "215.800",
+          "signal_weight_budget": "10510.5541702337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.772",
+        "510300": "3.582",
+        "510500": "5.335",
+        "512100": "2.158"
+      },
+      "signal_date": "2024-05-31",
+      "signal_nav": "44254.964927300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-06-28",
+    "plan": {
+      "execution_date": "2024-07-01",
+      "id": "2024-06-28",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "165.200",
+          "signal_weight_budget": "9922.1972489837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "348.700",
+          "signal_weight_budget": "9922.1972489837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "396.600",
+          "signal_weight_budget": "9922.1972489837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.652",
+        "510300": "3.487",
+        "510500": "4.996",
+        "512100": "1.983"
+      },
+      "signal_date": "2024-06-28",
+      "signal_nav": "41777.672627300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-07-31",
+    "plan": {
+      "execution_date": "2024-08-01",
+      "id": "2024-07-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "165.800",
+          "signal_weight_budget": "9943.6175402337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "199.300",
+          "signal_weight_budget": "9943.6175402337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.658",
+        "510300": "3.508",
+        "510500": "4.975",
+        "512100": "1.993"
+      },
+      "signal_date": "2024-07-31",
+      "signal_nav": "41867.863327300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-08-30",
+    "plan": {
+      "execution_date": "2024-09-02",
+      "id": "2024-08-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "310.400",
+          "signal_weight_budget": "9467.5808764837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "339.200",
+          "signal_weight_budget": "9467.5808764837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "471.200",
+          "signal_weight_budget": "9467.5808764837500",
+          "symbol": "510500",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "188.200",
+          "signal_weight_budget": "9467.5808764837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.552",
+        "510300": "3.392",
+        "510500": "4.712",
+        "512100": "1.882"
+      },
+      "signal_date": "2024-08-30",
+      "signal_nav": "39863.498427300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-09-30",
+    "plan": {
+      "execution_date": "2024-10-08",
+      "id": "2024-09-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "700",
+          "side": "SELL",
+          "signal_planned_notional": "1562.400",
+          "signal_weight_budget": "12198.8296414837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "423.300",
+          "signal_weight_budget": "12198.8296414837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "238.900",
+          "signal_weight_budget": "12198.8296414837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.232",
+        "510300": "4.233",
+        "510500": "5.995",
+        "512100": "2.389"
+      },
+      "signal_date": "2024-09-30",
+      "signal_nav": "51363.493227300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-10-31",
+    "plan": {
+      "execution_date": "2024-11-01",
+      "id": "2024-10-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "424.400",
+          "signal_weight_budget": "12076.2619239837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "300",
+          "side": "BUY",
+          "signal_planned_notional": "1191.300",
+          "signal_weight_budget": "12076.2619239837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "SELL",
+          "signal_planned_notional": "496.600",
+          "signal_weight_budget": "12076.2619239837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.122",
+        "510300": "3.971",
+        "510500": "6.000",
+        "512100": "2.483"
+      },
+      "signal_date": "2024-10-31",
+      "signal_nav": "50847.418627300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-11-29",
+    "plan": {
+      "execution_date": "2024-12-02",
+      "id": "2024-11-29",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "217.900",
+          "signal_weight_budget": "12177.7209739837500",
+          "symbol": "159915",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.179",
+        "510300": "4.001",
+        "510500": "5.944",
+        "512100": "2.513"
+      },
+      "signal_date": "2024-11-29",
+      "signal_nav": "51274.614627300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2024-12-31",
+    "plan": {
+      "execution_date": "2025-01-02",
+      "id": "2024-12-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "210.200",
+          "signal_weight_budget": "11921.5018889837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "402.200",
+          "signal_weight_budget": "11921.5018889837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "242.000",
+          "signal_weight_budget": "11921.5018889837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.102",
+        "510300": "4.022",
+        "510500": "5.811",
+        "512100": "2.420"
+      },
+      "signal_date": "2024-12-31",
+      "signal_nav": "50195.797427300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-01-27",
+    "plan": {
+      "execution_date": "2025-02-05",
+      "id": "2025-01-27",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "202.800",
+          "signal_weight_budget": "11621.4792539837500",
+          "symbol": "159915",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.028",
+        "510300": "3.907",
+        "510500": "5.585",
+        "512100": "2.336"
+      },
+      "signal_date": "2025-01-27",
+      "signal_nav": "48932.544227300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-02-28",
+    "plan": {
+      "execution_date": "2025-03-03",
+      "id": "2025-02-28",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "212.800",
+          "signal_weight_budget": "12152.0067539837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "399.400",
+          "signal_weight_budget": "12152.0067539837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "251.100",
+          "signal_weight_budget": "12152.0067539837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.128",
+        "510300": "3.994",
+        "510500": "5.867",
+        "512100": "2.511"
+      },
+      "signal_date": "2025-02-28",
+      "signal_nav": "51166.344227300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-03-31",
+    "plan": {
+      "execution_date": "2025-04-01",
+      "id": "2025-03-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "412.800",
+          "signal_weight_budget": "12030.9882964837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "398.400",
+          "signal_weight_budget": "12030.9882964837500",
+          "symbol": "510300",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.064",
+        "510300": "3.984",
+        "510500": "5.854",
+        "512100": "2.492"
+      },
+      "signal_date": "2025-03-31",
+      "signal_nav": "50656.792827300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-04-30",
+    "plan": {
+      "execution_date": "2025-05-06",
+      "id": "2025-04-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "384.200",
+          "signal_weight_budget": "11519.9817052337500",
+          "symbol": "159915",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.921",
+        "510300": "3.866",
+        "510500": "5.626",
+        "512100": "2.381"
+      },
+      "signal_date": "2025-04-30",
+      "signal_nav": "48505.186127300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-05-30",
+    "plan": {
+      "execution_date": "2025-06-03",
+      "id": "2025-05-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "197.200",
+          "signal_weight_budget": "11732.8782252337500",
+          "symbol": "159915",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "1.972",
+        "510300": "3.959",
+        "510500": "5.694",
+        "512100": "2.423"
+      },
+      "signal_date": "2025-05-30",
+      "signal_nav": "49401.592527300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-06-30",
+    "plan": {
+      "execution_date": "2025-07-01",
+      "id": "2025-06-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "SELL",
+          "signal_planned_notional": "426.600",
+          "signal_weight_budget": "12320.1929014837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "398.200",
+          "signal_weight_budget": "12320.1929014837500",
+          "symbol": "510300",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.133",
+        "510300": "3.982",
+        "510500": "5.963",
+        "512100": "2.562"
+      },
+      "signal_date": "2025-06-30",
+      "signal_nav": "51874.496427300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-07-31",
+    "plan": {
+      "execution_date": "2025-08-01",
+      "id": "2025-07-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "230.100",
+          "signal_weight_budget": "12975.5205714837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "831.000",
+          "signal_weight_budget": "12975.5205714837500",
+          "symbol": "510300",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.301",
+        "510300": "4.155",
+        "510500": "6.297",
+        "512100": "2.695"
+      },
+      "signal_date": "2025-07-31",
+      "signal_nav": "54633.770827300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-08-29",
+    "plan": {
+      "execution_date": "2025-09-01",
+      "id": "2025-08-29",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "500",
+          "side": "SELL",
+          "signal_planned_notional": "1432.500",
+          "signal_weight_budget": "14807.0352614837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "460.100",
+          "signal_weight_budget": "14807.0352614837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "300.600",
+          "signal_weight_budget": "14807.0352614837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "2.865",
+        "510300": "4.601",
+        "510500": "7.141",
+        "512100": "3.006"
+      },
+      "signal_date": "2025-08-29",
+      "signal_nav": "62345.411627300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-09-30",
+    "plan": {
+      "execution_date": "2025-10-09",
+      "id": "2025-09-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "300",
+          "side": "SELL",
+          "signal_planned_notional": "965.100",
+          "signal_weight_budget": "15581.2520114837500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "474.100",
+          "signal_weight_budget": "15581.2520114837500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "612.600",
+          "signal_weight_budget": "15581.2520114837500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "3.217",
+        "510300": "4.741",
+        "510500": "7.519",
+        "512100": "3.063"
+      },
+      "signal_date": "2025-09-30",
+      "signal_nav": "65605.271627300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-10-31",
+    "plan": {
+      "execution_date": "2025-11-03",
+      "id": "2025-10-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "475.600",
+          "signal_weight_budget": "15461.5347927337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "303.700",
+          "signal_weight_budget": "15461.5347927337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "3.166",
+        "510300": "4.756",
+        "510500": "7.436",
+        "512100": "3.037"
+      },
+      "signal_date": "2025-10-31",
+      "signal_nav": "65101.199127300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-11-28",
+    "plan": {
+      "execution_date": "2025-12-01",
+      "id": "2025-11-28",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "303.500",
+          "signal_weight_budget": "14998.6710427337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "463.500",
+          "signal_weight_budget": "14998.6710427337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "713.500",
+          "signal_weight_budget": "14998.6710427337500",
+          "symbol": "510500",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "296.700",
+          "signal_weight_budget": "14998.6710427337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "3.035",
+        "510300": "4.635",
+        "510500": "7.135",
+        "512100": "2.967"
+      },
+      "signal_date": "2025-11-28",
+      "signal_nav": "63152.299127300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2025-12-31",
+    "plan": {
+      "execution_date": "2026-01-05",
+      "id": "2025-12-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "475.300",
+          "signal_weight_budget": "15603.2035427337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "307.900",
+          "signal_weight_budget": "15603.2035427337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "3.186",
+        "510300": "4.753",
+        "510500": "7.588",
+        "512100": "3.079"
+      },
+      "signal_date": "2025-12-31",
+      "signal_nav": "65697.699127300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2026-01-30",
+    "plan": {
+      "execution_date": "2026-02-02",
+      "id": "2026-01-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "333.500",
+          "signal_weight_budget": "16584.5535427337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "400",
+          "side": "BUY",
+          "signal_planned_notional": "1884.400",
+          "signal_weight_budget": "16584.5535427337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "844.000",
+          "signal_weight_budget": "16584.5535427337500",
+          "symbol": "510500",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "331.100",
+          "signal_weight_budget": "16584.5535427337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "3.335",
+        "510300": "4.711",
+        "510500": "8.440",
+        "512100": "3.311"
+      },
+      "signal_date": "2026-01-30",
+      "signal_nav": "69829.699127300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2026-02-27",
+    "plan": {
+      "execution_date": "2026-03-02",
+      "id": "2026-02-27",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "BUY",
+          "signal_planned_notional": "660.200",
+          "signal_weight_budget": "16830.8808477337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "343.100",
+          "signal_weight_budget": "16830.8808477337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "3.301",
+        "510300": "4.725",
+        "510500": "8.737",
+        "512100": "3.431"
+      },
+      "signal_date": "2026-02-27",
+      "signal_nav": "70866.866727300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2026-03-31",
+    "plan": {
+      "execution_date": "2026-04-01",
+      "id": "2026-03-31",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "SELL",
+          "signal_planned_notional": "636.400",
+          "signal_weight_budget": "15552.8720202337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "SELL",
+          "signal_planned_notional": "446.300",
+          "signal_weight_budget": "15552.8720202337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "768.300",
+          "signal_weight_budget": "15552.8720202337500",
+          "symbol": "510500",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "305.100",
+          "signal_weight_budget": "15552.8720202337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "3.182",
+        "510300": "4.463",
+        "510500": "7.683",
+        "512100": "3.051"
+      },
+      "signal_date": "2026-03-31",
+      "signal_nav": "65485.776927300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2026-04-30",
+    "plan": {
+      "execution_date": "2026-05-06",
+      "id": "2026-04-30",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "200",
+          "side": "SELL",
+          "signal_planned_notional": "737.800",
+          "signal_weight_budget": "17123.0792827337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "482.400",
+          "signal_weight_budget": "17123.0792827337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "843.000",
+          "signal_weight_budget": "17123.0792827337500",
+          "symbol": "510500",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "336.200",
+          "signal_weight_budget": "17123.0792827337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "3.689",
+        "510300": "4.824",
+        "510500": "8.430",
+        "512100": "3.362"
+      },
+      "signal_date": "2026-04-30",
+      "signal_nav": "72097.175927300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2026-05-29",
+    "plan": {
+      "execution_date": "2026-06-01",
+      "id": "2026-05-29",
+      "orders": [
+        {
+          "odd_exit_allowed": true,
+          "quantity": "300",
+          "side": "SELL",
+          "signal_planned_notional": "1215.900",
+          "signal_weight_budget": "17633.1455402337500",
+          "symbol": "159915",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "492.300",
+          "signal_weight_budget": "17633.1455402337500",
+          "symbol": "510300",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "100",
+          "side": "BUY",
+          "signal_planned_notional": "844.300",
+          "signal_weight_budget": "17633.1455402337500",
+          "symbol": "510500",
+          "target_zero": false
+        },
+        {
+          "odd_exit_allowed": true,
+          "quantity": "300",
+          "side": "BUY",
+          "signal_planned_notional": "1014.900",
+          "signal_weight_budget": "17633.1455402337500",
+          "symbol": "512100",
+          "target_zero": false
+        }
+      ],
+      "signal_closes": {
+        "159915": "4.053",
+        "510300": "4.923",
+        "510500": "8.443",
+        "512100": "3.383"
+      },
+      "signal_date": "2026-05-29",
+      "signal_nav": "74244.823327300",
+      "weights": {
+        "159915": "0.2375",
+        "510300": "0.2375",
+        "510500": "0.2375",
+        "512100": "0.2375"
+      }
+    },
+    "quantized_scores": {},
+    "ranking": [],
+    "scores": {},
+    "stale": {
+      "159915": false,
+      "510300": false,
+      "510500": false,
+      "512100": false
+    },
+    "status": "planned",
+    "strategy": "fixed"
+  },
+  {
+    "date": "2026-06-30",
+    "status": "no_next_session_no_order",
+    "strategy": "fixed"
+  }
+]

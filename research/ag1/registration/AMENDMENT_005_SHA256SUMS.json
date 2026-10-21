@@ -1,0 +1,13 @@
+{
+  "bound_at_utc": "2026-10-18T06:16:01.362359+00:00",
+  "original_manifest_sha256": "6eed1cfb809b128a673a945d1031dcb679e04f8ccc01b6c69e9f72c8643da5a4",
+  "previous_manifest_sha256": "65dc88499fdb8c225a7c7ff1efbb02b766807c7bf7c8a0cea2f6502564016bdb",
+  "clarifications": {
+    "CLARIFICATION_001.md": "77c0ac457b8b5590eb0c76bc494abb4335fabe4670b9630a3002631de25bbf23",
+    "CLARIFICATION_002.md": "2fbbc04c3d21c9e6c8fa09f5e3545c59002b37d5b80779da7e0156c53a4dabf3",
+    "CLARIFICATION_003.md": "09b8b49ced7425f86e1c60450e2da3a89252d018f14dc42a9552ae3ad53fb4f0",
+    "CLARIFICATION_004.md": "a243c7a9ca914a8634c82b48115b6df9e6c69961f90d2e93b162cc765a8cb66c",
+    "CLARIFICATION_005.md": "42e34f827d108fb236ba31afdaacea157979495a61c7ce1495ea73dfbca5630f"
+  },
+  "formal_returns_run": false
+}

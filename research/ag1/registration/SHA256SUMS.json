@@ -1,0 +1,11 @@
+{
+  "frozen_at_utc": "2026-10-18T06:03:49.073860+00:00",
+  "performance_not_run": true,
+  "files": {
+    "PROTOCOL.md": "f874cb4a4e5d961ee829d1a96776cc74945b0835969b857bc9844d0757ebe963",
+    "registry.json": "abf6c1267c040f9cfc2d7aa0e7168ca886311a8e276a25bcf3ce033eda523476",
+    "SOURCES.md": "55bfcfc7e3b495129e9fa4966700b445f19c28cef05bf086d643b51a97ab2914",
+    "DATA_GAPS.md": "4bea7a8624b8b39b246d6a9efd26310cd6f1cf38c01fef9aeb8ca881c6b547db",
+    "recovery_check.json": "a7b25bc3969a6894381000d2635a190cba731f44729ba193f6d0e7e316128cfa"
+  }
+}

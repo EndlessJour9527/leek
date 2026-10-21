@@ -1,0 +1,383 @@
+{
+  "files": {
+    "REGISTRATION_AG1.md": {
+      "source_sha256": "a85f821b2f22a9595df9da71dd4043e4cc8a50c0aa080840c71cb7ca84855965",
+      "transformation": "unchanged"
+    },
+    "audit/DESIGN_AUDIT_AG1.json": {
+      "source_sha256": "168d8c2caf6ae67d3c6f273b1967710fc4a8b8f88aa54d5375f83446e74bce1f",
+      "transformation": "replace internal reviewer label if present; economics unchanged"
+    },
+    "audit/RESULT_AUDIT_AG1.json": {
+      "source_sha256": "64ab02c499c265190d318118acaa6f4cc05621aa2052282d45fe734f5333241a",
+      "transformation": "replace internal reviewer label if present; economics unchanged"
+    },
+    "audit/RUN_RELEASE_AG1.json": {
+      "source_sha256": "69d53f85023128191b5e0bdfe1e375683506a1c5b6bbef459c1c14bc438b52dd",
+      "transformation": "replace internal reviewer label if present; economics unchanged"
+    },
+    "audit/SEGMENT_CHECK.json": {
+      "source_sha256": "bd554d599b4ff41539d424ce164e8e13665834673de747c52592233a9c613b71",
+      "transformation": "replace internal reviewer label if present; economics unchanged"
+    },
+    "audit/SIGNALS_DIVIDENDS_AUDIT.json": {
+      "source_sha256": "98dc7cee3776160ab3f38cd2916e8175c0aabc8f0a9e860bc9e36f2716b031da",
+      "transformation": "replace internal reviewer label if present; economics unchanged"
+    },
+    "calibration_candidate.json": {
+      "source_sha256": "1f701b88a7543045ba38ac5d98fb16dea6e174b828897a7767daecbc6dc0fae6",
+      "transformation": "unchanged"
+    },
+    "implementation/adapter.py": {
+      "source_sha256": "366610bd173c9313b45ec44efced641b91a518015f4ddbc70470720aaf582a69",
+      "transformation": "unchanged"
+    },
+    "implementation/allocation.py": {
+      "source_sha256": "1df21e69b6cf1a75f5a7f397d51ab5c96002a260e7efd67ef7cae2b923903c05",
+      "transformation": "unchanged"
+    },
+    "implementation/batch_artifacts.py": {
+      "source_sha256": "b19799d49e2f2895899110dd5ce7d63e81e92109064a840717c29464383ab279",
+      "transformation": "unchanged"
+    },
+    "implementation/ca_math.py": {
+      "source_sha256": "8dc90a766494fda24296643237af860c5a27344c2d4c8f88f06f701a929b7346",
+      "transformation": "unchanged"
+    },
+    "implementation/cash_gate.py": {
+      "source_sha256": "68dd5cb29e3725b9561dc1e1975390e12d639da70aabd61c18e2cf3ebe14d790",
+      "transformation": "unchanged"
+    },
+    "implementation/contract.py": {
+      "source_sha256": "7dbcc8c675389a51fd26b4ad8404677153d53872595166cd277388f51917ac19",
+      "transformation": "unchanged"
+    },
+    "implementation/execution.py": {
+      "source_sha256": "5472450df91d4bc61c84008ce917ef9a3df06397a62010b32952fe6aa8f2f1f6",
+      "transformation": "unchanged"
+    },
+    "implementation/ledger.py": {
+      "source_sha256": "c61b2621aead35d082a699cf96b6f27e6011ed29351a219ce51e7b04b8dede2e",
+      "transformation": "unchanged"
+    },
+    "implementation/monthly_signals.py": {
+      "source_sha256": "eec51529149d21a27035d28330920c73e45a761949ff13b97bb5cda6d64c1ca4",
+      "transformation": "unchanged"
+    },
+    "implementation/portfolio.py": {
+      "source_sha256": "8626a1fdc0fe1598191d5013b7f2f3ee8d6e01753ba0f7b2c8c14da16a8d1eda",
+      "transformation": "unchanged"
+    },
+    "implementation/prepare_normalized.py": {
+      "source_sha256": "5d937af78ce59421818ad6240b02ddb8e32c3faaf71a15310b011cbcb10c3dfa",
+      "transformation": "unchanged"
+    },
+    "implementation/registration_guard.py": {
+      "source_sha256": "6db2e270d824b886f0889ed6e24270491e314a26401b73ad72daff9692e2a268",
+      "transformation": "unchanged"
+    },
+    "implementation/release_gate.py": {
+      "source_sha256": "4c9e2d7f6789a0435738ecb598788f0d1038854d8bad65553f0b7dcbdd23d070",
+      "transformation": "unchanged"
+    },
+    "implementation/run_ag1.py": {
+      "source_sha256": "bdbc467bacf604fefc76ee8bcf54e4b14c469e2081a12d193194e10d29fd4480",
+      "transformation": "unchanged"
+    },
+    "implementation/run_portfolio.py": {
+      "source_sha256": "5ac1282a1d5cc67960546a0f4380d060521436ae1091081243740e8afc4e4e20",
+      "transformation": "unchanged"
+    },
+    "implementation/schedule.py": {
+      "source_sha256": "7e37e70fb330d50e7745b018eade3ed519ca7edf99c2aa5b593ca384da5bbefb",
+      "transformation": "unchanged"
+    },
+    "implementation/test_allocation.py": {
+      "source_sha256": "b00a3c26310ac76f8f7e35c8c512f6a2059c17d65cf2912b250783108d12b898",
+      "transformation": "unchanged"
+    },
+    "implementation/test_batch_artifacts.py": {
+      "source_sha256": "12603a685d1531c8fa0e528e0cb3fb07e38efe5dfeeacd5b7bba514b1fe74bdc",
+      "transformation": "unchanged"
+    },
+    "implementation/test_ca_math.py": {
+      "source_sha256": "8a7893321c73d539a37dbf671b99306d08ddce7fcc6dea8b07819ae5dc00f08b",
+      "transformation": "unchanged"
+    },
+    "implementation/test_cash_gate.py": {
+      "source_sha256": "61d2275d25a818994da0772d98e4833181439a3a5d455488d4b800f953f618b5",
+      "transformation": "unchanged"
+    },
+    "implementation/test_contract.py": {
+      "source_sha256": "6056e41788c85e88b85060b1edd4c19197615a57a9e3f66029f2bf003a75e687",
+      "transformation": "unchanged"
+    },
+    "implementation/test_execution.py": {
+      "source_sha256": "aa217969973dd39af11b13c22de95357cd3d678c8ae88e95b0d97976a266c471",
+      "transformation": "unchanged"
+    },
+    "implementation/test_ledger.py": {
+      "source_sha256": "00c3e31d4dcce4d4995d864b74f95d521b8131ad59227d1b03645aad4130879b",
+      "transformation": "unchanged"
+    },
+    "implementation/test_ledger_invariants.py": {
+      "source_sha256": "1b31fe3c0f3b1a682e17ad6f645ca2264b2c12be0ba4b4f30f4d68422b344a42",
+      "transformation": "unchanged"
+    },
+    "implementation/test_monthly_signals.py": {
+      "source_sha256": "ac1157f22f38f65d4bc6c21a5b685cfb268d3d28c889c15adf582812ec9d6805",
+      "transformation": "unchanged"
+    },
+    "implementation/test_portfolio.py": {
+      "source_sha256": "9090ca8663c66df2556b36b38af6838a0949de7101c662268ea2deb88f043980",
+      "transformation": "unchanged"
+    },
+    "implementation/test_release_gate.py": {
+      "source_sha256": "a8e53cf3363c1b9dde75bbcb9f5b1f00087b762d4f2a50e0d7d5b70005bc497b",
+      "transformation": "unchanged"
+    },
+    "implementation/test_schedule.py": {
+      "source_sha256": "5c43ac92d6c7c4c7d9b6c57a3c2a60c1afce552fc20c70e1ccf4f17d506ec358",
+      "transformation": "unchanged"
+    },
+    "registration/AMENDMENT_002_SHA256SUMS.json": {
+      "source_sha256": "02bf9ef1a000cff79147923f303b9504b227214f4792fdef152efc5be15d087f",
+      "transformation": "unchanged"
+    },
+    "registration/AMENDMENT_003_SHA256SUMS.json": {
+      "source_sha256": "e5d7c735f7155a59f1eb29203367208bdba0866b0f1586f375f310734a140f36",
+      "transformation": "unchanged"
+    },
+    "registration/AMENDMENT_004_SHA256SUMS.json": {
+      "source_sha256": "65dc88499fdb8c225a7c7ff1efbb02b766807c7bf7c8a0cea2f6502564016bdb",
+      "transformation": "unchanged"
+    },
+    "registration/AMENDMENT_005_SHA256SUMS.json": {
+      "source_sha256": "2bce7aaf2e6344a15413a3edfc0d2cc2d3788bd6d73385f33c9965f3ad9fcb43",
+      "transformation": "unchanged"
+    },
+    "registration/AMENDMENT_SHA256SUMS.json": {
+      "source_sha256": "b137239a15650beea43d42c641bace60cac11e8a858fb05bd2ac59385070da3a",
+      "transformation": "unchanged"
+    },
+    "registration/CLARIFICATION_001.md": {
+      "source_sha256": "77c0ac457b8b5590eb0c76bc494abb4335fabe4670b9630a3002631de25bbf23",
+      "transformation": "unchanged"
+    },
+    "registration/CLARIFICATION_002.md": {
+      "source_sha256": "2fbbc04c3d21c9e6c8fa09f5e3545c59002b37d5b80779da7e0156c53a4dabf3",
+      "transformation": "unchanged"
+    },
+    "registration/CLARIFICATION_003.md": {
+      "source_sha256": "09b8b49ced7425f86e1c60450e2da3a89252d018f14dc42a9552ae3ad53fb4f0",
+      "transformation": "unchanged"
+    },
+    "registration/CLARIFICATION_004.md": {
+      "source_sha256": "a243c7a9ca914a8634c82b48115b6df9e6c69961f90d2e93b162cc765a8cb66c",
+      "transformation": "unchanged"
+    },
+    "registration/CLARIFICATION_005.md": {
+      "source_sha256": "42e34f827d108fb236ba31afdaacea157979495a61c7ce1495ea73dfbca5630f",
+      "transformation": "unchanged"
+    },
+    "registration/DATA_GAPS.md": {
+      "source_sha256": "4bea7a8624b8b39b246d6a9efd26310cd6f1cf38c01fef9aeb8ca881c6b547db",
+      "transformation": "unchanged"
+    },
+    "registration/PROTOCOL.md": {
+      "source_sha256": "f874cb4a4e5d961ee829d1a96776cc74945b0835969b857bc9844d0757ebe963",
+      "transformation": "unchanged"
+    },
+    "registration/SHA256SUMS.json": {
+      "source_sha256": "6eed1cfb809b128a673a945d1031dcb679e04f8ccc01b6c69e9f72c8643da5a4",
+      "transformation": "unchanged"
+    },
+    "registration/SOURCES.md": {
+      "source_sha256": "55bfcfc7e3b495129e9fa4966700b445f19c28cef05bf086d643b51a97ab2914",
+      "transformation": "unchanged"
+    },
+    "registration/registry.json": {
+      "source_sha256": "abf6c1267c040f9cfc2d7aa0e7168ca886311a8e276a25bcf3ce033eda523476",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/AG1_base/daily_derived.json": {
+      "source_sha256": "624447fb462e6237a9dbe703209cdc3def20211ddc2f160209a0c56ab3526c9b",
+      "transformation": "project date/cash/nav/cumulative costs; derive aggregate market value and exposure; omit vendor marks and positions"
+    },
+    "results_ag1_v1/AG1_base/events.json": {
+      "source_sha256": "c80400e2aa1c8bff7071beeaaad3166b034d7e49caac003081bb1b20f1ccee7f",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/AG1_base/executions.json": {
+      "source_sha256": "bc892a29d932d5adb4e0ba4a66b089852b6dbdbf57870b86654211d09f8e0a98",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/AG1_base/signals.json": {
+      "source_sha256": "1aececd6809a19694db73e4aa29b87fd17264450adf305db6f5acfb970bcc69d",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/AG1_base/terminal.json": {
+      "source_sha256": "4224cf7ea7e356a6eafe909b72ff6ea63bfe9fdafe813735989e628851772034",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/AG1_double/daily_derived.json": {
+      "source_sha256": "dff12e1dfd299623e4b536dfdccbced5cbeb93fdebbd5dbf88c2be5c08487bd0",
+      "transformation": "project date/cash/nav/cumulative costs; derive aggregate market value and exposure; omit vendor marks and positions"
+    },
+    "results_ag1_v1/AG1_double/events.json": {
+      "source_sha256": "1fefe5eb4abb2282b9d75d3bdc530624b4439724bba82bd32cad1dc527bee9f8",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/AG1_double/executions.json": {
+      "source_sha256": "a21f5f0c0f81caba4bbe3b615be5702ac0d85da961f23400275b847557dcf9f0",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/AG1_double/signals.json": {
+      "source_sha256": "e219aa5f437047901b4d0aebcfa1b70525bf31d9f3f8b7803c21c96b0bbf9d22",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/AG1_double/terminal.json": {
+      "source_sha256": "812e6a5af1c0bbf7bd3be1727c4817a90c32c21304cc0f77ca25e3536e2c2cf4",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/EW95_CONTEXT_base/daily_derived.json": {
+      "source_sha256": "ddce0892a867a6631778f77d5344795b7f439ed2e3ef96c106ca911029e355c4",
+      "transformation": "project date/cash/nav/cumulative costs; derive aggregate market value and exposure; omit vendor marks and positions"
+    },
+    "results_ag1_v1/EW95_CONTEXT_base/events.json": {
+      "source_sha256": "13529a275297d7d23994b0fbbc6babda57c4983b4ecd9c784a5689d742cc2523",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/EW95_CONTEXT_base/executions.json": {
+      "source_sha256": "be8f30dc141fc0ad5c3c61bdea6373224d2ec6b99e17004aa260df74a9ed8523",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/EW95_CONTEXT_base/signals.json": {
+      "source_sha256": "b102e5717d444362ab4abcbab3b7bc5bfd95ee026cc3776ebb7a726f56af5c29",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/EW95_CONTEXT_base/terminal.json": {
+      "source_sha256": "daacaa646087769ac3744ab3b202f07acb0c9aa01c9ad65a76f7c148dafb37f2",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/EW95_CONTEXT_double/daily_derived.json": {
+      "source_sha256": "7ff0ab80929897e20042c200ebd870f7435c11700faac3dc1cbb3bc52c379d54",
+      "transformation": "project date/cash/nav/cumulative costs; derive aggregate market value and exposure; omit vendor marks and positions"
+    },
+    "results_ag1_v1/EW95_CONTEXT_double/events.json": {
+      "source_sha256": "1825923c20f98386c83f1e6d6acec48bd22cd97f536cc5b8eea364b93cd5d6bb",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/EW95_CONTEXT_double/executions.json": {
+      "source_sha256": "9e189e9448f99537034dc4ab8552291cdce98f62cf2044279b8465b238a3e221",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/EW95_CONTEXT_double/signals.json": {
+      "source_sha256": "38355986d6d89e2b57078d72879fb4113ba8998da9ffcff95f34e2b322613a6c",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/EW95_CONTEXT_double/terminal.json": {
+      "source_sha256": "ee45e59cf694a526ec3ff06aa192def0aa5267a17b3bde54b964114fcc67913b",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_FIXED_Q_base/daily_derived.json": {
+      "source_sha256": "fa826daf42982826539930a0a5e456eb9c4ec8b2cb13c697451c4a22d4cf03f1",
+      "transformation": "project date/cash/nav/cumulative costs; derive aggregate market value and exposure; omit vendor marks and positions"
+    },
+    "results_ag1_v1/M12_FIXED_Q_base/events.json": {
+      "source_sha256": "f8232bee36cefea18e8727bee1393621430e26d7a765a83638501b748c6cd56f",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_FIXED_Q_base/executions.json": {
+      "source_sha256": "a1b1b93d0898ed85a25ce358252762ca8c541541ff9b6169ffd9b4c5ce42e5a5",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_FIXED_Q_base/signals.json": {
+      "source_sha256": "fc4a6515165c6f142439e3a961d55a999ac8962e795db6b2b597377fa4af2915",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_FIXED_Q_base/terminal.json": {
+      "source_sha256": "aea3ad123de2b941b3b5346fe09f07fdd0352f8d90be8426102fe6633269a9b9",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_FIXED_Q_double/daily_derived.json": {
+      "source_sha256": "d77ca3621e5381faa1a1b03f7c7556639fb15babc3a6c81ad7e1ea84460388ce",
+      "transformation": "project date/cash/nav/cumulative costs; derive aggregate market value and exposure; omit vendor marks and positions"
+    },
+    "results_ag1_v1/M12_FIXED_Q_double/events.json": {
+      "source_sha256": "f8232bee36cefea18e8727bee1393621430e26d7a765a83638501b748c6cd56f",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_FIXED_Q_double/executions.json": {
+      "source_sha256": "7bd2e005af6572d457c119447aea1a517731a981d09c3f0323164f86f5acdd16",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_FIXED_Q_double/signals.json": {
+      "source_sha256": "9998afa59572bbcd881ccb12152c79391e1d52e47dde4155e69d6b4b7a2220ab",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_FIXED_Q_double/terminal.json": {
+      "source_sha256": "8e3cc36a99019be215a092d7fedd2c09ae172f9313c01583e492664806b4909c",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_base/daily_derived.json": {
+      "source_sha256": "5da7fc7d1dc270b204a0ef4fdd37b987bd959637e02aa1214a375c8cd84dff91",
+      "transformation": "project date/cash/nav/cumulative costs; derive aggregate market value and exposure; omit vendor marks and positions"
+    },
+    "results_ag1_v1/M12_base/events.json": {
+      "source_sha256": "bea15b59679f8076ccd7f5ff525b6fa41a89c3ab3f1e9fb146733cf7ce04608f",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_base/executions.json": {
+      "source_sha256": "b5e404285045ee3fd69c724e1ce222fbb94d9acd148f55a0efde2d14f49b253a",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_base/signals.json": {
+      "source_sha256": "a87f30f7360b6ae75df249d4eb5e81d449aab0fdd5c6c54151cf2ce35685e1f0",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_base/terminal.json": {
+      "source_sha256": "3a40a472e6269995d0d242a90c8c1dda8d5042008a0dda70d7214e5d6c66ac3a",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_double/daily_derived.json": {
+      "source_sha256": "8ba60ed84a814c45d50bfe099be1da7caf1d3270ea6babf7101da1bd9a9ae05f",
+      "transformation": "project date/cash/nav/cumulative costs; derive aggregate market value and exposure; omit vendor marks and positions"
+    },
+    "results_ag1_v1/M12_double/events.json": {
+      "source_sha256": "7867ed9e71748c790c13656979c79ee128b46bb80026f83a4729eda05b5082dc",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_double/executions.json": {
+      "source_sha256": "e0730effdcb6946d0353a39df5c16d0890fc8ee898db5dda7d9ac7bc262951cf",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_double/signals.json": {
+      "source_sha256": "9abcffc0dada0ecbd86acd3a76e02d84fafa0fdb149b5bd74f561b0ed66754ca",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/M12_double/terminal.json": {
+      "source_sha256": "9352eee70f069b795f6641fdf378f564d25f28d17fd76bba49488082d30de52e",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/calibration_before_evaluation.json": {
+      "source_sha256": "1f701b88a7543045ba38ac5d98fb16dea6e174b828897a7767daecbc6dc0fae6",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/decision.json": {
+      "source_sha256": "ade401f8f4b0944a4629458a48fbfcaed618d3ac4242aed484b7ad10dfc0e3da",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/manifest_before_evaluation.json": {
+      "source_sha256": "d8c5cba57a6ee0f65c25577dcea6965a17dbc81251a4e0652903c0dedb482a6b",
+      "transformation": "unchanged"
+    },
+    "results_ag1_v1/metrics.json": {
+      "source_sha256": "00976b1d4f5b0636a880510e8fa6d73a13ed5ea9d63191194c1add9d0ff1901d",
+      "transformation": "unchanged"
+    }
+  },
+  "original_package_bytes": 1212521,
+  "original_package_sha256": "3de505a41dd6b43ae79db01d6b10cabc6b1b61a9c005608877b0a146036527fd",
+  "scope": "public research capsule; raw input archives excluded"
+}

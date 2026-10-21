@@ -223,3 +223,11 @@ Only exact cash dividends are supported; splits, tax, complex actions and real
 data are explicitly rejected. The old replay entry points are unchanged.
 See the [contract, limitations and runnable fixtures](docs/synthetic-cash-dividend-replay-v1.md).
 This is accounting infrastructure, not a profitable strategy or live-trading qualification.
+
+## Completed research decisions
+
+- [AG1 cash-gate capsule](research/ag1/README.md): eight archived development paths,
+  a rejected hypothesis, source and independent audit. Public verification is
+  reproducible without raw vendor data; full historical replay requires authorized
+  frozen inputs. Not integrated production trading or live qualification.
+- [2026-10-21 decisions and next milestones](docs/research-decisions-20261021.md).

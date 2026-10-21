@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-10-21T11:25:10.007638+00:00",
+  "design_checks": [
+    "Original E4 protocol and clarifications 001/005 read; original ranking retained",
+    "Cash gate evaluated before score quantization; exact zero OFF",
+    "One positive score means original Top2 weights .475 each, even second negative",
+    "Training q targets only, effective-session weighting; no training P&L or q optimization",
+    "2023-01-03 to 2026-06-30 fresh independent 50000 accounts; training holdings not carried",
+    "Eight paths only: AG1/M12/M12_FIXED_Q/EW95 x base/double",
+    "CE3 uses same CAGR convention as E4 and 252*population variance of daily returns; initial cost return included",
+    "Strict pre-outcome A/B/C joint test in both cost scenarios; no parameter rescue",
+    "Data dependency exclusion specific to absent 2020-08 dates, not blanket vendor certificate",
+    "No new historical execution until implementation hashes and synthetic checks independently released"
+  ],
+  "future_release_requirements": [
+    "implementation manifest",
+    "synthetic test evidence",
+    "q exact numerator/denominator and causal daily audit",
+    "input hash validation at run time"
+  ],
+  "mismatches": [],
+  "portable_files_checked": 370,
+  "registration_sha256": "a85f821b2f22a9595df9da71dd4043e4cc8a50c0aa080840c71cb7ca84855965",
+  "required_synthetic_cases": [
+    "All four nonpositive -> zero weights, including max exactly zero",
+    "A tiny positive below ranking quantum -> ON; gate must not quantize",
+    "Only one positive -> original two names .475 each, no half-weight variant",
+    "Rank tie stable code order unchanged",
+    "Missing/nonfinite input -> block, not OFF",
+    "Formation month/endpoints and next-session execution causal; no same-close fill",
+    "q excludes evaluation dates and is based on effective training day targets",
+    "Same cost labels retained; double genuinely reruns fees and allocation",
+    "Dividend/receivable not double counted; no phantom cash",
+    "Unknown limit/status for any actual order blocks that order/path; inherited old no-order claim insufficient",
+    "Control wrappers with gate disabled match original engine on synthetic fixtures",
+    "Initial new group cash 50000; first return includes costs; no annual reset"
+  ],
+  "reviewer": "independent-review",
+  "scope": "Unique whole-pool max(raw scores)<=0 cash gate; no per-seat positive gate",
+  "status": "DESIGN_PASS_ONLY_IMPLEMENTATION_PENDING"
+}
