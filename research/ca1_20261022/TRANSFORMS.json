@@ -1,0 +1,90 @@
+{
+  "implementation/RESULTS/CASH_DOUBLE_research_cost.json": {
+    "source_sha256": "45ab0a072919e137495e328a4732cd03b736d0a7529d588da766cff69b24e64e",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/SCASH_BASE.json": {
+    "source_sha256": "6a02e65b145a13ae9cc13a0b9c44fb35995a4208612ced26953462d5cfceccc7",
+    "removed_daily_raw_close_fields": 3420
+  },
+  "implementation/RESULTS/SCASH_DOUBLE.json": {
+    "source_sha256": "d382c916e428a5075b388cddae96abfb6f18e6416b1223af387905268850bfc1",
+    "removed_daily_raw_close_fields": 3420
+  },
+  "implementation/RESULTS/CASH_BASE_fixed_fill_double.json": {
+    "source_sha256": "d1094a683d3dc03b60d0382457c1efd90ed2d78d1c79c588ca84bcdcbc6d62d0",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/BH300_DOUBLE_research_cost.json": {
+    "source_sha256": "913863a016f287c5a342277059eac84b46ec6a0a15bef6cd59c3efdbed1d04d5",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/BH300_BASE_research_cost.json": {
+    "source_sha256": "425218e8d1b2f1249f1af7fdd666d003dbba14a9825cb702996c10758144f992",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/CASH_BASE.json": {
+    "source_sha256": "463cda2b49b5c649069ffa7fa86e1920e4cf203d1d8c73e7de634962c47777e5",
+    "removed_daily_raw_close_fields": 3420
+  },
+  "implementation/RESULTS/CASH_DOUBLE.json": {
+    "source_sha256": "62ccb1dafb4c98ac589399e00f6f785534c178ecfcebcaa89bfdfad23e139665",
+    "removed_daily_raw_close_fields": 3420
+  },
+  "implementation/RESULTS/BH300_BASE.json": {
+    "source_sha256": "58a4e186f09b3d91e74b895c190a85120ddbf75ca79ccd11e9cb959532549697",
+    "removed_daily_raw_close_fields": 3420
+  },
+  "implementation/RESULTS/CA1_DOUBLE_research_cost.json": {
+    "source_sha256": "de44678318fd4e685e7c51e38b5928e08abf298a373abfa57511ae6e8262761c",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/CA1_BASE_research_cost.json": {
+    "source_sha256": "908ce3f83420ec04135ad5b57229367109a6826ca29ff91a48af1ddaac1a1f43",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/BH300_DOUBLE.json": {
+    "source_sha256": "5c956eeeaab5d47a2e852e3f27ea07e19e807890c7173c670bd487f92ae67f0b",
+    "removed_daily_raw_close_fields": 3420
+  },
+  "implementation/RESULTS/DECISION.json": {
+    "source_sha256": "7396ecb2e76aa8de945cf9227298d07f8af0eb3ef90bcbcc978dae096ee67da5",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/SCASH_DOUBLE_research_cost.json": {
+    "source_sha256": "e5e3c9e0660433d0d1f80657f3eec168f06760281afd03de4bdbf9cdd47a75ac",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/BH300_BASE_fixed_fill_double.json": {
+    "source_sha256": "25034f5860f24b834bdbb72b583fb5849586890970f97c4e306f84689b675bba",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/CA1_BASE_fixed_fill_double.json": {
+    "source_sha256": "579de1f3f7c47300db88632e4b6ea8bbe4660f4e41ffeb957e8f45c48f1d83dc",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/SUMMARY.json": {
+    "source_sha256": "a486d498a2c3a6385171b5e465a5574dee37b06a92cf14b7ab22aa30e9656b65",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/CA1_DOUBLE.json": {
+    "source_sha256": "1a0107f8b7e1c9769f3814f8508c0e7ffe8749a63bac316c800d153d411b39de",
+    "removed_daily_raw_close_fields": 3420
+  },
+  "implementation/RESULTS/SCASH_BASE_research_cost.json": {
+    "source_sha256": "0fdd7c06ab205ead34c00d3f5307443952c8f011bbfdc3f6df12857db69b5fc5",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/SCASH_BASE_fixed_fill_double.json": {
+    "source_sha256": "bb5ae973d9f08567396438adb3271ac7a1cbfaf0860f63615a693f49b4edbbf7",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/CASH_BASE_research_cost.json": {
+    "source_sha256": "45ab0a072919e137495e328a4732cd03b736d0a7529d588da766cff69b24e64e",
+    "removed_daily_raw_close_fields": 0
+  },
+  "implementation/RESULTS/CA1_BASE.json": {
+    "source_sha256": "7826779c1407c85b46189a0418f5b55e3b8949042dfbbf1c53811a81f1180403",
+    "removed_daily_raw_close_fields": 3420
+  }
+}

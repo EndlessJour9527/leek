@@ -1,0 +1,54 @@
+{
+  "status": "FINAL_AUDIT_PASS_BOUNDED_RESEARCH_ONLY",
+  "economic_screen": "RETAIN_FOR_FURTHER_EVIDENCE",
+  "subscription_economics_at_50000": "NEGATIVE_ALL_THREE_FX_SCENARIOS_BASE_AND_DOUBLE",
+  "live_readiness": "NOT_CERTIFIED_NOT_AUTHORIZED",
+  "reviewer": "audit_cross_asset_registration",
+  "independent_metrics_reviewer": "audit_ca1_metrics",
+  "checks": {
+    "implementation_synthetic_tests": 22,
+    "independent_execution_synthetic_tests": 5,
+    "independent_metrics_synthetic_tests": 15,
+    "postrun_metric_comparisons": 648,
+    "daily_ledger_rows_independently_reconstructed": 9120,
+    "fills": 225,
+    "orders": 236,
+    "cycles": 230,
+    "buy_quantities_independently_recomputed": 130,
+    "source_OHLC_fields_compared": 13680,
+    "portable_byte_identical_files": 24
+  },
+  "evidence_sha256": {
+    "implementation/IMPLEMENTATION_MANIFEST.json": "ad513ba95ff9ab5e08b0240ec3afdce295f16b5a8197117e9733f26c5e0f0ff0",
+    "implementation/RUN_RELEASE.json": "51f6887a7f6e3c9b4e6741b979f8eb48e83c26e28d99d5bd1f1a0a5cb2573acd",
+    "implementation/RESULTS/RESULT_HASHES.json": "fc09d2189c6a9663168f2b9bf74183fe682d8a29338fd63921ae1ca7ff70312f",
+    "independent_audit/DESIGN_REVIEW.md": "e1b7cac707ea53f5008ae7ba8f04650eb8943343a17faa09302969f3c48cc306",
+    "independent_audit/input_normalization.json": "a331c244cea072e104beeaceaf7cb36e2cdeb9ca408b3bb8bde747a848d1f4a2",
+    "independent_audit/metrics_final.json": "35bd314237a886ac56826924f295f599e08bfc27c3a9339fb30ca0c483dfa805",
+    "independent_audit/post_run_ledger.json": "a49a7b0a83f7cf62d1f17492cd2afe196b071feaff26c36aa3764d9970adb6a8",
+    "independent_audit/order_selection.json": "3b002c9f37881e1b6053f577194e371b7a7e7d35c780ac272c01dac76cfb7815",
+    "independent_audit/attribution_portable.json": "bc0a2fd2b475f2678032968c42efe6058e673b00d93769e09bde111c432a3942",
+    "audit_metrics/postrun_metrics.json": "dbc0064661ea1da45d5679be2133c4c6bac27f9feba0dd5e0d46082b28264b4d"
+  },
+  "findings": [
+    "BASE CA1 annualized return 8.198014%, MDD 10.903741%; SCASH 0.978914%, MDD12.630324%.",
+    "DOUBLE CA1 annualized return 7.988171%, MDD10.983065%. Both costs satisfy frozen CAGR/CE3/drawdown/3segment screen.",
+    "BASE gold profit contribution 72.5483%, DOUBLE73.1634%; no evidence of durable alpha from one already-seen historical period.",
+    "BASE subscription FX7 total39487.47 exceeds model profit22415.43; economic surplus -17072.04. Subscription is separate, not trading NAV.",
+    "All eight paths have 0 complete flat-to-flat episodes; win rate remains UNDEFINED, not 0%.",
+    "Final month June30 cycle skipped because both next sessions outside fixed window; no terminal liquidation.",
+    "Existing ledger reused unchanged. Known modeled boundary NO_FILL retained, no favorable intraday fills or quantity resizing."
+  ],
+  "limitations": [
+    "Public raw daily first print is conditional open proxy, not verified 09:30 execution.",
+    "Capacity, actual per-day halt/official limits and true costs remain uncertified.",
+    "All history is seen development; no locked unseen or live evidence.",
+    "Same intended stock weight is not same realized risk. Bond round-lot target shortfall/residual cash disclosed.",
+    "No old V1/formal strategy/account changes; no real trading permission."
+  ],
+  "corrections_preserved": [
+    "Original v1+one additive design clarification retained.",
+    "Initial synthetic expectation failure and independent metric failures retained; final code rechecked."
+  ],
+  "created_at_utc": "2026-10-22T02:45:20Z"
+}

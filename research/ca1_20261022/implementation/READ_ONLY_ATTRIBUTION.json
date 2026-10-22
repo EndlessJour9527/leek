@@ -1,0 +1,116 @@
+{
+  "CA1_BASE": {
+    "assets": [
+      {
+        "buys_including_cost": "33029.91",
+        "earned_dividends": "1906.80",
+        "ending_mark": "25095.000",
+        "net_profit_contribution": "4189.590",
+        "sells_after_cost": "10217.70",
+        "symbol": "510300"
+      },
+      {
+        "buys_including_cost": "12464.38",
+        "earned_dividends": "349.01",
+        "ending_mark": "14079.200",
+        "net_profit_contribution": "1963.830",
+        "sells_after_cost": "0",
+        "symbol": "511010"
+      },
+      {
+        "buys_including_cost": "24349.23",
+        "earned_dividends": "0",
+        "ending_mark": "21782.800",
+        "net_profit_contribution": "16262.010",
+        "sells_after_cost": "18828.44",
+        "symbol": "518880"
+      }
+    ],
+    "failed_orders": [
+      {
+        "cycle_buy": "2024-10-09",
+        "execute": "2024-10-08",
+        "fill_quantity": 0,
+        "lock": "2024-09-30",
+        "quantity": 700,
+        "reason": "MODEL_LIMIT_BOUNDARY",
+        "reserved": "0",
+        "side": "SELL",
+        "signal": "2024-09-30",
+        "status": "NO_FILL",
+        "symbol": "510300"
+      },
+      {
+        "cycle_buy": "2026-02-03",
+        "execute": "2026-02-02",
+        "fill_quantity": 0,
+        "lock": "2026-01-30",
+        "quantity": 200,
+        "reason": "MODEL_LIMIT_BOUNDARY",
+        "reserved": "0",
+        "side": "SELL",
+        "signal": "2026-01-30",
+        "status": "NO_FILL",
+        "symbol": "518880"
+      }
+    ],
+    "label": "READ_ONLY_ACCOUNTING_ATTRIBUTION_NOT_NEW_STRATEGY"
+  },
+  "CA1_DOUBLE": {
+    "assets": [
+      {
+        "buys_including_cost": "33920.23",
+        "earned_dividends": "1906.80",
+        "ending_mark": "25095.000",
+        "net_profit_contribution": "3900.040",
+        "sells_after_cost": "10818.47",
+        "symbol": "510300"
+      },
+      {
+        "buys_including_cost": "12489.26",
+        "earned_dividends": "349.01",
+        "ending_mark": "14079.200",
+        "net_profit_contribution": "1938.950",
+        "sells_after_cost": "0",
+        "symbol": "511010"
+      },
+      {
+        "buys_including_cost": "24255.08",
+        "earned_dividends": "0",
+        "ending_mark": "21782.800",
+        "net_profit_contribution": "15918.590",
+        "sells_after_cost": "18390.87",
+        "symbol": "518880"
+      }
+    ],
+    "failed_orders": [
+      {
+        "cycle_buy": "2024-10-09",
+        "execute": "2024-10-08",
+        "fill_quantity": 0,
+        "lock": "2024-09-30",
+        "quantity": 700,
+        "reason": "MODEL_LIMIT_BOUNDARY",
+        "reserved": "0",
+        "side": "SELL",
+        "signal": "2024-09-30",
+        "status": "NO_FILL",
+        "symbol": "510300"
+      },
+      {
+        "cycle_buy": "2026-02-03",
+        "execute": "2026-02-02",
+        "fill_quantity": 0,
+        "lock": "2026-01-30",
+        "quantity": 200,
+        "reason": "MODEL_LIMIT_BOUNDARY",
+        "reserved": "0",
+        "side": "SELL",
+        "signal": "2026-01-30",
+        "status": "NO_FILL",
+        "symbol": "518880"
+      }
+    ],
+    "label": "READ_ONLY_ACCOUNTING_ATTRIBUTION_NOT_NEW_STRATEGY"
+  }
+}

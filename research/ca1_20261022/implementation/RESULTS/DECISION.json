@@ -1,0 +1,21 @@
+{
+  "BASE": {
+    "gates": {
+      "cagr": true,
+      "ce3": true,
+      "drawdown": true,
+      "stability": true
+    },
+    "passed": true
+  },
+  "DOUBLE": {
+    "gates": {
+      "cagr": true,
+      "ce3": true,
+      "drawdown": true,
+      "stability": true
+    },
+    "passed": true
+  },
+  "decision": "RETAIN_FOR_FURTHER_EVIDENCE"
+}
