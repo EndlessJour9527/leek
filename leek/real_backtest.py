@@ -15,6 +15,7 @@ from pathlib import Path
 
 from .contract import DataBlocked, validate_calendar
 from .channel_signal import CloseChannel2010, MODEL_ID as H002
+from .mean_reversion_signal import MeanReversion20, MODEL_ID as H003
 from .history_data import VERSION, validate_bars
 from .ledger import Ledger, dec
 from .replay import atomic_create, canonical, digest, load, source_hash
@@ -88,7 +89,7 @@ def _new_quantity(cash,nav,close,config,case):
 def simulate(bars,events,config,strategy,case):
     """Pure model. Test fixtures may call this; the file CLI requires real data."""
     checked_config(config); validate_bars(bars); checked_events(events,bars)
-    if strategy not in STRATEGIES + (H002,): raise DataBlocked('unknown strategy')
+    if strategy not in STRATEGIES + (H002,H003): raise DataBlocked('unknown strategy')
     start=config['evaluation_start']; end=config['evaluation_end']
     first=next((i for i,b in enumerate(bars) if b['date']>=start),None)
     if first is None or first<config['lookback']+2 or bars[-1]['date']>end:
@@ -100,6 +101,7 @@ def simulate(bars,events,config,strategy,case):
     levels=[]; rolling=Fraction(0); up=down=0; state=False
     confirmations=3 if strategy=='h001_3d' else 1
     channel=CloseChannel2010() if strategy==H002 else None
+    reversion=MeanReversion20() if strategy==H003 else None
     pending=None; active=None; cycles=[]; rights_cycle={}; realized=D(0); income=D(0)
     daily=[]; orders=[]; ca_log=[]; signals=[]; has_bought=False
     nav=capital; peak=capital; worst=D(0); year_start=capital; last_year=None; annual={}
@@ -166,6 +168,8 @@ def simulate(bars,events,config,strategy,case):
             elif down>=confirmations: state=False
         if channel is not None:
             state=channel.update(level)
+        if reversion is not None:
+            state=reversion.update(level)
         if i>=first:
             peak=max(peak,nav); worst=min(worst,nav/peak-1)
             exposure=position['qty']*close/nav; exposure_sum+=exposure
@@ -181,10 +185,10 @@ def simulate(bars,events,config,strategy,case):
         # The final pre-start close may register the first evaluation-day order.
         if i>=first-1:
             side=None; q=D(0); qty=position['qty']
-            target_on = strategy=='buy_hold' or (strategy in ('ma120_1d','h001_3d',H002) and state)
+            target_on = strategy=='buy_hold' or (strategy in ('ma120_1d','h001_3d',H002,H003) and state)
             if target_on and not qty and not (strategy=='buy_hold' and has_bought):
                 q=_new_quantity(ledger.cash,nav,close,config,case); side='BUY'
-            elif strategy in ('ma120_1d','h001_3d',H002) and not state and qty:
+            elif strategy in ('ma120_1d','h001_3d',H002,H003) and not state and qty:
                 q=qty; side='SELL'
             next_day=bars[i+1]['date'] if i+1<len(bars) else None
             signals.append(dict(asof=day,available_at=day+'T17:00:00+08:00',
