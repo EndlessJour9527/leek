@@ -78,7 +78,7 @@ class H003SignalTests(unittest.TestCase):
 class H003LedgerTests(unittest.TestCase):
     def history(self):
         c,b,e=fixture()
-        for i in range(110,120):
+        for i in range(100,120):
             p='4' if i%2==0 else '6'
             b[i].update(open=p,close=p,high=p,low=p)
         for i,p in [(120,'3'),(121,'3.1'),(122,'3.2'),(123,'6'),(124,'6')]:
