@@ -1,0 +1,22 @@
+name: CA1 public evidence and synthetic tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  public-evidence:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m unittest discover -s research/ca1_20261022/implementation -p test_ca1.py -v
+        env:
+          PYTHONPATH: research/ca1_20261022/implementation
+      - run: python -m unittest discover -s research/ca1_20261022/independent_audit -p test_execution_independent.py -v
+        env:
+          PYTHONPATH: research/ca1_20261022/implementation
+      - run: python research/ca1_20261022/verify_public.py

@@ -1,0 +1,714 @@
+{
+  "BH300_BASE": {
+    "average_loss": null,
+    "average_win": null,
+    "cagr": 0.017112734597144685,
+    "ce3": -0.009551940856610583,
+    "closed_fifo_slices": 0,
+    "complete_round_trips": 0,
+    "dividends": 4064.3,
+    "es05": -0.022497102382739127,
+    "fees": 48.5,
+    "final_cash": 5467.3,
+    "final_nav": 54151.6,
+    "max_underwater_spell": 939,
+    "mdd": 0.3322873651712044,
+    "mean_weights": {
+      "510300": 0.9242826469237726,
+      "511010": 0.0,
+      "518880": 0.0
+    },
+    "net_expectancy": null,
+    "no_fill": 0,
+    "no_order": 0,
+    "segments": [
+      {
+        "cagr": -0.16375959397746664,
+        "ce3": -0.21406770154371357,
+        "end": "2022-12-30",
+        "es05": -0.025717324817476312,
+        "final_nav": 40329.1,
+        "max_underwater_spell": 258,
+        "mdd": 0.2862725427524905,
+        "mean_weights": {
+          "510300": 0.9478937277213263,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2021-10-18",
+        "total_return": -0.19341799999999998,
+        "turnover": null,
+        "underwater_days": 291,
+        "volatility": 0.17823993707370644
+      },
+      {
+        "cagr": 0.02581832476586232,
+        "ce3": -0.0025588316490703575,
+        "end": "2024-12-31",
+        "es05": -0.01987042002659721,
+        "final_nav": 42434.0,
+        "max_underwater_spell": 407,
+        "mdd": 0.2111998677072473,
+        "mean_weights": {
+          "510300": 0.9218735106220336,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2023-01-03",
+        "total_return": 0.05219308142259571,
+        "turnover": null,
+        "underwater_days": 469,
+        "volatility": 0.1701966878778407
+      },
+      {
+        "cagr": 0.17752635410960038,
+        "ce3": 0.15054328584494558,
+        "end": "2026-06-30",
+        "es05": -0.021577725687087643,
+        "final_nav": 54151.6,
+        "max_underwater_spell": 71,
+        "mdd": 0.0927910088058802,
+        "mean_weights": {
+          "510300": 0.9079972178796732,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2025-01-02",
+        "total_return": 0.2761370599047932,
+        "turnover": null,
+        "underwater_days": 318,
+        "volatility": 0.1439836022840761
+      }
+    ],
+    "slippage": 48.5,
+    "total_return": 0.083032,
+    "turnover": 1.1267216618783,
+    "underwater_days": 1124,
+    "volatility": 0.16484042094161572,
+    "win_rate": null,
+    "wins": 0
+  },
+  "BH300_DOUBLE": {
+    "average_loss": null,
+    "average_win": null,
+    "cagr": 0.016724891642520223,
+    "ce3": -0.010078941329379337,
+    "closed_fifo_slices": 0,
+    "complete_round_trips": 0,
+    "dividends": 4064.3,
+    "es05": -0.022547351926291793,
+    "fees": 97.0,
+    "final_cash": 5370.3,
+    "final_nav": 54054.6,
+    "max_underwater_spell": 939,
+    "mdd": 0.3329151944151185,
+    "mean_weights": {
+      "510300": 0.926396716699157,
+      "511010": 0.0,
+      "518880": 0.0
+    },
+    "net_expectancy": null,
+    "no_fill": 0,
+    "no_order": 0,
+    "segments": [
+      {
+        "cagr": -0.16543337204032305,
+        "ce3": -0.21627533766904933,
+        "end": "2022-12-30",
+        "es05": -0.025776245816435554,
+        "final_nav": 40232.1,
+        "max_underwater_spell": 258,
+        "mdd": 0.2868134308298239,
+        "mean_weights": {
+          "510300": 0.9500055256154266,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2021-10-18",
+        "total_return": -0.19535800000000003,
+        "turnover": null,
+        "underwater_days": 291,
+        "volatility": 0.17870479708829243
+      },
+      {
+        "cagr": 0.02587979101610216,
+        "ce3": -0.002637197144816611,
+        "end": "2024-12-31",
+        "es05": -0.019917392321895294,
+        "final_nav": 42337.0,
+        "max_underwater_spell": 407,
+        "mdd": 0.21167143922583276,
+        "mean_weights": {
+          "510300": 0.9241575095370724,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2023-01-03",
+        "total_return": 0.052318919469776626,
+        "turnover": null,
+        "underwater_days": 469,
+        "volatility": 0.1706073763266009
+      },
+      {
+        "cagr": 0.17791756225364308,
+        "ce3": 0.15080637840003358,
+        "end": "2026-06-30",
+        "es05": -0.021621447543680155,
+        "final_nav": 54054.6,
+        "max_underwater_spell": 71,
+        "mdd": 0.09299945114622443,
+        "mean_weights": {
+          "510300": 0.9098840705106246,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2025-01-02",
+        "total_return": 0.27676972860618365,
+        "turnover": null,
+        "underwater_days": 318,
+        "volatility": 0.14428001540955926
+      }
+    ],
+    "slippage": 97.0,
+    "total_return": 0.08109199999999994,
+    "turnover": 1.1292619251897489,
+    "underwater_days": 1124,
+    "volatility": 0.1652358314868203,
+    "win_rate": null,
+    "wins": 0
+  },
+  "CA1_BASE": {
+    "average_loss": null,
+    "average_win": null,
+    "cagr": 0.08198014083973693,
+    "ce3": 0.07392456073163185,
+    "closed_fifo_slices": 36,
+    "complete_round_trips": 0,
+    "dividends": 2255.81,
+    "es05": -0.013438984424790084,
+    "fees": 399.52,
+    "final_cash": 11458.43,
+    "final_nav": 72415.43,
+    "max_underwater_spell": 330,
+    "mdd": 0.10903740958832031,
+    "mean_weights": {
+      "510300": 0.32741865831674294,
+      "511010": 0.24234123081046757,
+      "518880": 0.32997850518390703
+    },
+    "net_expectancy": null,
+    "no_fill": 2,
+    "no_order": 2,
+    "segments": [
+      {
+        "cagr": -0.02074980761902212,
+        "ce3": -0.026219889398640527,
+        "end": "2022-12-30",
+        "es05": -0.009859435488614092,
+        "final_nav": 48755.65,
+        "max_underwater_spell": 272,
+        "mdd": 0.08031035143782583,
+        "mean_weights": {
+          "510300": 0.3237118610785812,
+          "511010": 0.25875773864582413,
+          "518880": 0.32848704775452653
+        },
+        "start": "2021-10-18",
+        "total_return": -0.024886999999999992,
+        "turnover": null,
+        "underwater_days": 288,
+        "volatility": 0.06957406894447594
+      },
+      {
+        "cagr": 0.09371315670487745,
+        "ce3": 0.08756346180453861,
+        "end": "2024-12-31",
+        "es05": -0.009956410900361612,
+        "final_nav": 58300.47,
+        "max_underwater_spell": 142,
+        "mdd": 0.051955317868706774,
+        "mean_weights": {
+          "510300": 0.3282903762061031,
+          "511010": 0.2572486069983933,
+          "518880": 0.33111421247947537
+        },
+        "start": "2023-01-03",
+        "total_return": 0.1957684904211101,
+        "turnover": null,
+        "underwater_days": 441,
+        "volatility": 0.07446002031305085
+      },
+      {
+        "cagr": 0.1563887173704699,
+        "ce3": 0.13847295547442529,
+        "end": "2026-06-30",
+        "es05": -0.01932368225572748,
+        "final_nav": 72415.43,
+        "max_underwater_spell": 97,
+        "mdd": 0.10903740958832031,
+        "mean_weights": {
+          "510300": 0.3293100436127978,
+          "511010": 0.20866191910557363,
+          "518880": 0.3296812364526283
+        },
+        "start": "2025-01-02",
+        "total_return": 0.24210713910196602,
+        "turnover": null,
+        "underwater_days": 286,
+        "volatility": 0.11749137834022871
+      }
+    ],
+    "slippage": 98.86,
+    "total_return": 0.44830859999999984,
+    "turnover": 1.7538277484002447,
+    "underwater_days": 1036,
+    "volatility": 0.08933280360545948,
+    "win_rate": null,
+    "wins": 0
+  },
+  "CA1_DOUBLE": {
+    "average_loss": null,
+    "average_win": null,
+    "cagr": 0.07988171483629114,
+    "ce3": 0.07188061397141533,
+    "closed_fifo_slices": 36,
+    "complete_round_trips": 0,
+    "dividends": 2255.81,
+    "es05": -0.013473883210470373,
+    "fees": 829.05,
+    "final_cash": 10800.58,
+    "final_nav": 71757.58,
+    "max_underwater_spell": 330,
+    "mdd": 0.1098306484139,
+    "mean_weights": {
+      "510300": 0.32760961210623446,
+      "511010": 0.24351897292908709,
+      "518880": 0.3301864879965624
+    },
+    "net_expectancy": null,
+    "no_fill": 2,
+    "no_order": 1,
+    "segments": [
+      {
+        "cagr": -0.023862003568071666,
+        "ce3": -0.029485212463294306,
+        "end": "2022-12-30",
+        "es05": -0.009873392398410808,
+        "final_nav": 48569.47,
+        "max_underwater_spell": 272,
+        "mdd": 0.08183555148345212,
+        "mean_weights": {
+          "510300": 0.3240724730927192,
+          "511010": 0.259521211105133,
+          "518880": 0.3283505085928207
+        },
+        "start": "2021-10-18",
+        "total_return": -0.02861059999999993,
+        "turnover": null,
+        "underwater_days": 289,
+        "volatility": 0.06971329016805182
+      },
+      {
+        "cagr": 0.09259845369839392,
+        "ce3": 0.08647592262943515,
+        "end": "2024-12-31",
+        "es05": -0.009986002411499592,
+        "final_nav": 57959.76,
+        "max_underwater_spell": 142,
+        "mdd": 0.05239724934770451,
+        "mean_weights": {
+          "510300": 0.3284638623821773,
+          "511010": 0.2584274602840402,
+          "518880": 0.33152233981339824
+        },
+        "start": "2023-01-03",
+        "total_return": 0.19333729604214334,
+        "turnover": null,
+        "underwater_days": 442,
+        "volatility": 0.07464473228423278
+      },
+      {
+        "cagr": 0.1538613445970347,
+        "ce3": 0.13615123432005682,
+        "end": "2026-06-30",
+        "es05": -0.019375434749492555,
+        "final_nav": 71757.58,
+        "max_underwater_spell": 97,
+        "mdd": 0.1098306484139,
+        "mean_weights": {
+          "510300": 0.3293841891353645,
+          "511010": 0.21018088764194792,
+          "518880": 0.3299044088978514
+        },
+        "start": "2025-01-02",
+        "total_return": 0.2380586116988752,
+        "turnover": null,
+        "underwater_days": 286,
+        "volatility": 0.1176144196112573
+      }
+    ],
+    "slippage": 199.38,
+    "total_return": 0.43515159999999997,
+    "turnover": 1.7787182647508215,
+    "underwater_days": 1039,
+    "volatility": 0.08947880712922417,
+    "win_rate": null,
+    "wins": 0
+  },
+  "CASH_BASE": {
+    "average_loss": null,
+    "average_win": null,
+    "cagr": 0.0,
+    "ce3": 0.0,
+    "closed_fifo_slices": 0,
+    "complete_round_trips": 0,
+    "dividends": 0.0,
+    "es05": 0.0,
+    "fees": 0.0,
+    "final_cash": 50000.0,
+    "final_nav": 50000.0,
+    "max_underwater_spell": 0,
+    "mdd": 0,
+    "mean_weights": {
+      "510300": 0.0,
+      "511010": 0.0,
+      "518880": 0.0
+    },
+    "net_expectancy": null,
+    "no_fill": 0,
+    "no_order": 0,
+    "segments": [
+      {
+        "cagr": 0.0,
+        "ce3": 0.0,
+        "end": "2022-12-30",
+        "es05": 0.0,
+        "final_nav": 50000.0,
+        "max_underwater_spell": 0,
+        "mdd": 0,
+        "mean_weights": {
+          "510300": 0.0,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2021-10-18",
+        "total_return": 0.0,
+        "turnover": null,
+        "underwater_days": 0,
+        "volatility": 0.0
+      },
+      {
+        "cagr": 0.0,
+        "ce3": 0.0,
+        "end": "2024-12-31",
+        "es05": 0.0,
+        "final_nav": 50000.0,
+        "max_underwater_spell": 0,
+        "mdd": 0,
+        "mean_weights": {
+          "510300": 0.0,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2023-01-03",
+        "total_return": 0.0,
+        "turnover": null,
+        "underwater_days": 0,
+        "volatility": 0.0
+      },
+      {
+        "cagr": 0.0,
+        "ce3": 0.0,
+        "end": "2026-06-30",
+        "es05": 0.0,
+        "final_nav": 50000.0,
+        "max_underwater_spell": 0,
+        "mdd": 0,
+        "mean_weights": {
+          "510300": 0.0,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2025-01-02",
+        "total_return": 0.0,
+        "turnover": null,
+        "underwater_days": 0,
+        "volatility": 0.0
+      }
+    ],
+    "slippage": 0.0,
+    "total_return": 0.0,
+    "turnover": 0.0,
+    "underwater_days": 0,
+    "volatility": 0.0,
+    "win_rate": null,
+    "wins": 0
+  },
+  "CASH_DOUBLE": {
+    "average_loss": null,
+    "average_win": null,
+    "cagr": 0.0,
+    "ce3": 0.0,
+    "closed_fifo_slices": 0,
+    "complete_round_trips": 0,
+    "dividends": 0.0,
+    "es05": 0.0,
+    "fees": 0.0,
+    "final_cash": 50000.0,
+    "final_nav": 50000.0,
+    "max_underwater_spell": 0,
+    "mdd": 0,
+    "mean_weights": {
+      "510300": 0.0,
+      "511010": 0.0,
+      "518880": 0.0
+    },
+    "net_expectancy": null,
+    "no_fill": 0,
+    "no_order": 0,
+    "segments": [
+      {
+        "cagr": 0.0,
+        "ce3": 0.0,
+        "end": "2022-12-30",
+        "es05": 0.0,
+        "final_nav": 50000.0,
+        "max_underwater_spell": 0,
+        "mdd": 0,
+        "mean_weights": {
+          "510300": 0.0,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2021-10-18",
+        "total_return": 0.0,
+        "turnover": null,
+        "underwater_days": 0,
+        "volatility": 0.0
+      },
+      {
+        "cagr": 0.0,
+        "ce3": 0.0,
+        "end": "2024-12-31",
+        "es05": 0.0,
+        "final_nav": 50000.0,
+        "max_underwater_spell": 0,
+        "mdd": 0,
+        "mean_weights": {
+          "510300": 0.0,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2023-01-03",
+        "total_return": 0.0,
+        "turnover": null,
+        "underwater_days": 0,
+        "volatility": 0.0
+      },
+      {
+        "cagr": 0.0,
+        "ce3": 0.0,
+        "end": "2026-06-30",
+        "es05": 0.0,
+        "final_nav": 50000.0,
+        "max_underwater_spell": 0,
+        "mdd": 0,
+        "mean_weights": {
+          "510300": 0.0,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2025-01-02",
+        "total_return": 0.0,
+        "turnover": null,
+        "underwater_days": 0,
+        "volatility": 0.0
+      }
+    ],
+    "slippage": 0.0,
+    "total_return": 0.0,
+    "turnover": 0.0,
+    "underwater_days": 0,
+    "volatility": 0.0,
+    "win_rate": null,
+    "wins": 0
+  },
+  "SCASH_BASE": {
+    "average_loss": null,
+    "average_win": null,
+    "cagr": 0.009789135561413476,
+    "ce3": 0.0065603614554542436,
+    "closed_fifo_slices": 13,
+    "complete_round_trips": 0,
+    "dividends": 1576.3,
+    "es05": -0.008018267643614461,
+    "fees": 191.0,
+    "final_cash": 34776.43,
+    "final_nav": 52342.93,
+    "max_underwater_spell": 911,
+    "mdd": 0.1263032382144561,
+    "mean_weights": {
+      "510300": 0.3284884845980392,
+      "511010": 0.0,
+      "518880": 0.0
+    },
+    "net_expectancy": null,
+    "no_fill": 1,
+    "no_order": 0,
+    "segments": [
+      {
+        "cagr": -0.05580322616262667,
+        "ce3": -0.0622124945875349,
+        "end": "2022-12-30",
+        "es05": -0.008674808308762764,
+        "final_nav": 46665.64,
+        "max_underwater_spell": 258,
+        "mdd": 0.10602503183943812,
+        "mean_weights": {
+          "510300": 0.3243995609001762,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2021-10-18",
+        "total_return": -0.06668720000000006,
+        "turnover": null,
+        "underwater_days": 291,
+        "volatility": 0.0605117987876091
+      },
+      {
+        "cagr": 0.01195571361606218,
+        "ce3": 0.008249763773691058,
+        "end": "2024-12-31",
+        "es05": -0.007368642113780268,
+        "final_nav": 47785.82,
+        "max_underwater_spell": 407,
+        "mdd": 0.08018927136945242,
+        "mean_weights": {
+          "510300": 0.32946194279095964,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2023-01-03",
+        "total_return": 0.02400438523933235,
+        "turnover": null,
+        "underwater_days": 469,
+        "volatility": 0.06401102670535942
+      },
+      {
+        "cagr": 0.06294741369544465,
+        "ce3": 0.061218597502794625,
+        "end": "2026-06-30",
+        "es05": -0.007849824069803021,
+        "final_nav": 52342.93,
+        "max_underwater_spell": 71,
+        "mdd": 0.03354983010021928,
+        "mean_weights": {
+          "510300": 0.3305588371687685,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2025-01-02",
+        "total_return": 0.09536531967014494,
+        "turnover": null,
+        "underwater_days": 318,
+        "volatility": 0.052259029631667
+      }
+    ],
+    "slippage": 38.47,
+    "total_return": 0.04685859999999997,
+    "turnover": 0.8050391583490912,
+    "underwater_days": 1117,
+    "volatility": 0.05968280816478609,
+    "win_rate": null,
+    "wins": 0
+  },
+  "SCASH_DOUBLE": {
+    "average_loss": null,
+    "average_win": null,
+    "cagr": 0.00863276416247305,
+    "ce3": 0.005367927106888516,
+    "closed_fifo_slices": 15,
+    "complete_round_trips": 0,
+    "dividends": 1560.6,
+    "es05": -0.008027119536887692,
+    "fees": 382.0,
+    "final_cash": 34495.25,
+    "final_nav": 52061.75,
+    "max_underwater_spell": 921,
+    "mdd": 0.12787042908245572,
+    "mean_weights": {
+      "510300": 0.3283226642587687,
+      "511010": 0.0,
+      "518880": 0.0
+    },
+    "net_expectancy": null,
+    "no_fill": 1,
+    "no_order": 2,
+    "segments": [
+      {
+        "cagr": -0.057788393137827354,
+        "ce3": -0.06435273379960064,
+        "end": "2022-12-30",
+        "es05": -0.008692351838209659,
+        "final_nav": 46547.74,
+        "max_underwater_spell": 258,
+        "mdd": 0.1068996541342444,
+        "mean_weights": {
+          "510300": 0.3242254248539698,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2021-10-18",
+        "total_return": -0.06904520000000003,
+        "turnover": null,
+        "underwater_days": 291,
+        "volatility": 0.060465718678618816
+      },
+      {
+        "cagr": 0.01174475900550842,
+        "ce3": 0.008022419611284838,
+        "end": "2024-12-31",
+        "es05": -0.007364555819389484,
+        "final_nav": 47645.26,
+        "max_underwater_spell": 407,
+        "mdd": 0.08025980671691324,
+        "mean_weights": {
+          "510300": 0.32964006889315123,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2023-01-03",
+        "total_return": 0.023578373515019235,
+        "turnover": null,
+        "underwater_days": 469,
+        "volatility": 0.06409410091702361
+      },
+      {
+        "cagr": 0.06121024735466851,
+        "ce3": 0.05950952243816746,
+        "end": "2026-06-30",
+        "es05": -0.00785352629867324,
+        "final_nav": 52061.75,
+        "max_underwater_spell": 71,
+        "mdd": 0.0336556740639945,
+        "mean_weights": {
+          "510300": 0.3299361914459112,
+          "511010": 0.0,
+          "518880": 0.0
+        },
+        "start": "2025-01-02",
+        "total_return": 0.09269526496444769,
+        "turnover": null,
+        "underwater_days": 318,
+        "volatility": 0.05221603256402328
+      }
+    ],
+    "slippage": 77.05,
+    "total_return": 0.04123499999999991,
+    "turnover": 0.8083366856278387,
+    "underwater_days": 1119,
+    "volatility": 0.05969728515528085,
+    "win_rate": null,
+    "wins": 0
+  }
+}

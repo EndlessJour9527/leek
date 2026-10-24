@@ -1,0 +1,38 @@
+[
+  {
+    "capital_burdens": {
+      "10000": "0.72",
+      "100000": "0.072",
+      "200000": "0.036",
+      "50000": "0.144"
+    },
+    "expense": "33846.41",
+    "expense_fraction_initial": "0.6769282",
+    "fx_scenario": 6,
+    "terminal_surplus": "-29791.81"
+  },
+  {
+    "capital_burdens": {
+      "10000": "0.84",
+      "100000": "0.084",
+      "200000": "0.042",
+      "50000": "0.168"
+    },
+    "expense": "39487.47",
+    "expense_fraction_initial": "0.7897494",
+    "fx_scenario": 7,
+    "terminal_surplus": "-35432.87"
+  },
+  {
+    "capital_burdens": {
+      "10000": "0.96",
+      "100000": "0.096",
+      "200000": "0.048",
+      "50000": "0.192"
+    },
+    "expense": "45128.54",
+    "expense_fraction_initial": "0.9025708",
+    "fx_scenario": 8,
+    "terminal_surplus": "-41073.94"
+  }
+]

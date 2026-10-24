@@ -1,0 +1,14 @@
+{
+  "../ACCEPTANCE_AND_BLOCKERS.md": "564720a8e2c321199323145a05982cc6255786fcb39389aa2ae4d39009860174",
+  "../ADDENDUM_001.md": "b7a84a5809b35b050e07f75bdd22950a2a180eae22cf3b6418fb48f9cec82aa8",
+  "../REGISTRATION_CA1.md": "ecbfed5e725bd2722115d304c6d7e460948946318f00500cab23da3eecad0afa",
+  "IMPLEMENTATION_NOTES.md": "0bbb5b7af3ff4eccb145df4df3d233091987dc81138a3e6ed4c8866a115b20bb",
+  "INPUTS.json": "975e34fc2343e9b49749b03fb766e90a896527b96b9ddfafc0c2063f57ff6f3b",
+  "ca1.py": "b2ba8e7bfe6fab52de5555f8c9d3e4c3644901dc236f3ff4cd8b2923af4e7968",
+  "prepare_inputs.py": "8af5e8bfee777cc7724e07649deea5b5f81add907f6b2eb19ef70f6d6d68fc82",
+  "run_batch.py": "ec16acadef931a0c230540289a8751b55232fdf3912c92e0103a751d22b69e66",
+  "synthetic_final.log": "9f8ca44ffaed217f39e2c3c6dba8c2e4ca79ac6765103beb56efdf9cfa50dc2d",
+  "test_ca1.py": "17e0cbbe390f1724a3fca23cb00b724f6053a706148359eedb82bf5e9e162a7f",
+  "test_integrated.py": "236a6a442448b0d3f4da8be343213be4550863ec62a6769b2fab7ee4e76c2d20",
+  "vendor/ledger.py": "9225e12ecdb8d7afb84f7948bacc48872cfc04c74ce59f03eadef2a443fade61"
+}

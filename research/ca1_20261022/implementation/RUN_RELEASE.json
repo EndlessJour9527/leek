@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "cash_CA_events": 9,
+    "implementation_synthetic": 22,
+    "independent_execution_synthetic": 5,
+    "independent_metrics_synthetic": 15,
+    "normalized_OHLC_fields": 13680,
+    "sessions": 1140
+  },
+  "created_at_utc": "2026-10-22T02:42:45Z",
+  "design_review_sha256": "e1b7cac707ea53f5008ae7ba8f04650eb8943343a17faa09302969f3c48cc306",
+  "evidence": {
+    "independent_audit/DESIGN_REVIEW.md": "e1b7cac707ea53f5008ae7ba8f04650eb8943343a17faa09302969f3c48cc306",
+    "independent_audit/execution_attempt_01.log": "6fd0a2d4cb9d300284fe6aa02b48075e5e3b8aa4e17e6dadb8176d65bf46d213",
+    "independent_audit/execution_final.log": "b2e9a8a22bb8fcf9f49647a1d955fd3e51ee79f0702fd3083c16575c7b243dd1",
+    "independent_audit/implementation_synthetic_recheck.log": "e7545d96ec3845a561666a38fb18b0daffe8c0c7366fff984ab07d24ca3db26a",
+    "independent_audit/input_normalization.json": "a331c244cea072e104beeaceaf7cb36e2cdeb9ca408b3bb8bde747a848d1f4a2",
+    "independent_audit/metrics_final.json": "35bd314237a886ac56826924f295f599e08bfc27c3a9339fb30ca0c483dfa805",
+    "independent_audit/test_execution_independent.py": "926ffa8bd4a3154fd58c61d2b63fb2445cae8081d5be742a5681988d5dc0581e"
+  },
+  "limitations": [
+    "All historical data already seen; not clean out-of-sample",
+    "Conditional first-print open, modeled limits, sufficient quantity; not real capacity certification",
+    "No real-account or trading authorization",
+    "Results require independent post-run verification before conclusions/publication"
+  ],
+  "manifest_sha256": "ad513ba95ff9ab5e08b0240ec3afdce295f16b5a8197117e9733f26c5e0f0ff0",
+  "reviewer": "audit_cross_asset_registration",
+  "scope": "CA1_FIXED_8_PATHS_HISTORICAL_DEVELOPMENT_ONLY",
+  "status": "RUN_RELEASE"
+}
