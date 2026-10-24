@@ -1,0 +1,31 @@
+{
+  "status": "BOUNDED_FIXED_ORDER_AUDIT_NOT_LIVE_CERTIFICATION",
+  "fixed_head": "0525b7b95b38433b962221deee08a50b9977ea99",
+  "unique_keys": 90,
+  "record_count": 231,
+  "fills": 225,
+  "no_fills": 6,
+  "no_orders": 5,
+  "unique_by_status": {
+    "FILL": 88,
+    "NO_FILL": 2
+  },
+  "unique_by_instrument": {
+    "510300": 48,
+    "511010": 1,
+    "518880": 41
+  },
+  "model_conflicts": 0,
+  "order_dates_with_ex_events": 0,
+  "official_daily_status_certified": 0,
+  "official_daily_limits_certified": 0,
+  "capacity_queue_certified": 0,
+  "no_return_rerun": true,
+  "no_order_mutation": true,
+  "independent_review": "PASS_FIXED_ORDER_RECONCILIATION_ONLY_LIVE_NOT_CERTIFIED",
+  "source_checks": 132,
+  "fixed_git_blobs": 42,
+  "correction": "CORRECTION_001 narrative table adds SCASH two rejects; original matrix and results unchanged",
+  "review_result_sha256": "46968f7b43e76528131d8b2bff1ba3d0c3b4425a022d09168f45d7abda67fc44",
+  "source_review_sha256": "02b19afec894e4b2a845b0c8fb8bab4d146b9fa25450a85e49fb00cd74ed8bb9"
+}
