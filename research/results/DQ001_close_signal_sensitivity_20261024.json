@@ -19,7 +19,24 @@
   "qualifying_h003_experiment": false,
   "raw_ohlc_available": false,
   "schema": "dq001-signal-sensitivity.v1",
-  "sensitivity": {},
+  "sensitivity": {
+    "h002_initial_OFF": {
+      "difference_days": 0,
+      "first_difference_dates": []
+    },
+    "h002_initial_ON": {
+      "difference_days": 0,
+      "first_difference_dates": []
+    },
+    "h003_initial_OFF": {
+      "difference_days": 0,
+      "first_difference_dates": []
+    },
+    "h003_initial_ON": {
+      "difference_days": 0,
+      "first_difference_dates": []
+    }
+  },
   "source_independence_certified": false,
   "status": "DIAGNOSTIC_ONLY",
   "test_states": [
