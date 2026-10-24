@@ -83,6 +83,8 @@ def evidence_allowed(metadata,allow_single_source):
 
 
 def execute(data_dir,config_path,output,allow_single_source=False):
+    from leek.history_review_gate import require_history_review
+    require_history_review()
     c,config_hash=load(config_path); checked_config(c)
     data,data_hash=load(Path(data_dir)/'dataset.json')
     if (data.get('version')!=VERSION or data.get('synthetic') is not False
@@ -120,6 +122,8 @@ def main():
     p.add_argument('--config',default='research/real_history_protocol.json')
     p.add_argument('--fetch',action='store_true'); p.add_argument('--allow-single-source',action='store_true')
     a=p.parse_args()
+    from leek.history_review_gate import require_history_review
+    require_history_review()  # before optional network acquisition
     if a.fetch:
         config,h=load(a.config); checked_config(config); acquire(config,h,a.data_dir,a.allow_single_source)
     execute(a.data_dir,a.config,a.output,a.allow_single_source)
