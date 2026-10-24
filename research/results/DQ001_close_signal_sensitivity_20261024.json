@@ -1,0 +1,46 @@
+{
+  "caveat": "Close-intent comparison only; no original open/high/low, no true fill/ledger replay; preserves all price disputes and the DQ001 blocking gate.",
+  "compared_session_end": "2025-12-31",
+  "compared_session_start": "2020-08-21",
+  "compared_sessions": 1301,
+  "derived_close_sessions": 1455,
+  "disputed_quote_days": 5,
+  "dq001_resolved": false,
+  "eligible_strategy_conclusions": 0,
+  "evidence_artifact_id": 12276081553,
+  "evidence_run": "https://github.com/EndlessJour9527/leek/actions/runs/39446205344",
+  "ex_dividend_events": 5,
+  "historical_orders_replayed": false,
+  "original_2019_warmup_available": false,
+  "performance_metrics": null,
+  "pinned_archived_buyhold_sha256": "53e5cfb1a67849a7cb5eb631817edadc63b3057426f305bbb06ad72bf76990de",
+  "pinned_source_audit_sha256": "c4790fd5fff383b959b732b02af7172c24eb6c72187d72fb34e61eaab213e763",
+  "qualifying_h002_experiment": false,
+  "qualifying_h003_experiment": false,
+  "raw_ohlc_available": false,
+  "schema": "dq001-signal-sensitivity.v1",
+  "sensitivity": {
+    "h002_initial_OFF": {
+      "difference_days": 0,
+      "first_difference_dates": []
+    },
+    "h002_initial_ON": {
+      "difference_days": 0,
+      "first_difference_dates": []
+    },
+    "h003_initial_OFF": {
+      "difference_days": 0,
+      "first_difference_dates": []
+    },
+    "h003_initial_ON": {
+      "difference_days": 0,
+      "first_difference_dates": []
+    }
+  },
+  "source_independence_certified": false,
+  "status": "DIAGNOSTIC_ONLY",
+  "test_states": [
+    "initial_ON",
+    "initial_OFF"
+  ]
+}
