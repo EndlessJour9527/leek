@@ -224,6 +224,8 @@ def simulate(bars,events,config,strategy,case):
 
 
 def run(input_path,config_path,output):
+    from leek.history_review_gate import require_history_review
+    require_history_review()
     data,data_hash=load(input_path); config,config_hash=load(config_path); checked_config(config)
     if data.get('version')!=VERSION or data.get('synthetic') is not False or data.get('adjustment')!='raw' or data.get('instrument')!='510300':
         raise DataBlocked('real unadjusted 510300 dataset required')
