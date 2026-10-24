@@ -4,6 +4,7 @@ from pathlib import Path
 import unittest
 
 from leek.channel_signal import MODEL_ID
+from leek.mean_reversion_signal import MODEL_ID as H003_ID
 from leek.real_backtest import STRATEGIES
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,16 +27,16 @@ class TraderTeamRegistryTests(unittest.TestCase):
         self.assertEqual(self.team['budget_scope'], 'whole_team_all_attempts_including_failures')
 
     def test_existing_strategy_bindings_are_supported(self):
-        supported = set(STRATEGIES) | {MODEL_ID}
+        supported = set(STRATEGIES) | {MODEL_ID, H003_ID}
         implemented = [s for s in self.seats if s['implementation_state'] == 'IMPLEMENTED_UNVALIDATED']
-        self.assertEqual(len(implemented), 3)
+        self.assertEqual(len(implemented), 4)
         self.assertEqual({s['engine_strategy'] for s in implemented},
-                         {'ma120_1d', 'h001_3d', MODEL_ID})
+                         {'ma120_1d', 'h001_3d', MODEL_ID, H003_ID})
         self.assertTrue(all(s['engine_strategy'] in supported for s in implemented))
 
     def test_planned_seats_do_not_claim_executable_models(self):
         planned = [s for s in self.seats if s['implementation_state'] == 'PLANNED']
-        self.assertEqual(len(planned), 7)
+        self.assertEqual(len(planned), 6)
         for seat in planned:
             self.assertIsNone(seat['engine_strategy'])
             self.assertIn('IMPLEMENTATION_MISSING', seat['current_blockers'])
@@ -54,7 +55,7 @@ class TraderTeamRegistryTests(unittest.TestCase):
     def test_known_conflict_cannot_disappear_from_implemented_lanes(self):
         registry = json.loads((ROOT / 'research/data_conflicts.json').read_text(encoding='utf-8'))
         self.assertIn('DQ001', {x['id'] for x in registry['issues']})
-        for seat in self.seats[:3]:
+        for seat in self.seats[:4]:
             self.assertIn('DQ001', seat['current_blockers'])
 
     def test_no_live_trading_or_capital_pooling(self):
@@ -77,7 +78,7 @@ class TraderTeamRegistryTests(unittest.TestCase):
         self.assertIn('out_of_selection_strategy_returns', by_id['T10']['required_data'])
 
     def test_registry_is_not_a_performance_report_or_deployed_runtime(self):
-        self.assertEqual(self.team['implemented_batch_entrypoint'], 'research.run_h002')
+        self.assertEqual(self.team['implemented_batch_entrypoint'], 'research.cli')
         self.assertIn('sequentially', self.team['batch_entrypoint_note'])
         self.assertIn('not a deployed', self.team['batch_entrypoint_note'])
         for seat in self.seats:

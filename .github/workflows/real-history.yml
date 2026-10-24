@@ -1,16 +1,6 @@
-name: Real historical research
+name: Legacy real-history runner (manual only)
 on:
   workflow_dispatch:
-  push:
-    branches: [feat/real-history-backtest]
-    paths:
-      - 'leek/history_data.py'
-      - 'leek/real_backtest.py'
-      - 'research/run_real_history.py'
-      - 'tests/test_real_history.py'
-      - 'tests/test_history_evidence.py'
-      - 'research/real_history_protocol.json'
-      - '.github/workflows/real-history.yml'
 permissions:
   contents: read
 jobs:
