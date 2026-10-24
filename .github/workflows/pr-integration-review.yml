@@ -25,7 +25,7 @@ jobs:
           mkdir -p "$RUNNER_TEMP/review-evidence"
           cat > "$RUNNER_TEMP/review-evidence/pins.tsv" <<'PINS'
           5 d2fdfcc1bf5d59ce6d1abce2259969bac5ee4fdd 788f446e228687bbaea15290e842e06cdc6919cb
-          6 788f446e228687bbaea15290e842e06cdc6919cb 7682219e09580d842ac36152e674d146e93f0e86
+          6 788f446e228687bbaea15290e842e06cdc6919cb 9d6d5022af0fc6921001ac7c17790bd7700852c3
           7 7682219e09580d842ac36152e674d146e93f0e86 0d5eacae8a01dc515f2d5775748f3717a321553a
           8 0d5eacae8a01dc515f2d5775748f3717a321553a d26eb05fb0666c0ff6d9fdf3af3e3984c8d6ab01
           9 d2fdfcc1bf5d59ce6d1abce2259969bac5ee4fdd 15ba3226b599a6e2668cbb71dcf6a2fa25ac6cf7
@@ -45,15 +45,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Integrated offline regression tests on Python 3.12
-        run: python -m unittest discover -s tests -v
+      - name: Integrated core, archive tests and public verification (3.12)
+        run: |
+          python -m unittest discover -s tests -q
+          python research/ag1/run_public_tests.py
+          python research/ag1/verify_results.py
+          PYTHONPATH=research/ca1_20261022/implementation python -m unittest discover -s research/ca1_20261022/implementation -p test_ca1.py -q
+          PYTHONPATH=research/ca1_20261022/implementation python -m unittest discover -s research/ca1_20261022/independent_audit -p test_execution_independent.py -q
+          python research/ca1_20261022/verify_public.py
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - name: Integrated offline regression tests on Python 3.10
-        run: python -m unittest discover -s tests -v
-      - name: Retain available archive verification entrypoints
-        run: find research -type f -name '*verif*.py' -print
+      - name: Integrated core, archive tests and public verification (3.10)
+        run: |
+          python -m unittest discover -s tests -q
+          python research/ag1/run_public_tests.py
+          python research/ag1/verify_results.py
+          PYTHONPATH=research/ca1_20261022/implementation python -m unittest discover -s research/ca1_20261022/implementation -p test_ca1.py -q
+          PYTHONPATH=research/ca1_20261022/implementation python -m unittest discover -s research/ca1_20261022/independent_audit -p test_execution_independent.py -q
+          python research/ca1_20261022/verify_public.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
