@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "base": {
+      "A_drawdown_reduction_ge_5pp": true,
+      "B_cagr_opportunity_cost_le_2pp": false,
+      "C_ce3_above_fixed_q": true,
+      "cagr_opportunity_cost": 0.024515804462479585,
+      "ce3_increment": 0.028225534748203926,
+      "drawdown_reduction": 0.13988308590416693
+    },
+    "double": {
+      "A_drawdown_reduction_ge_5pp": true,
+      "B_cagr_opportunity_cost_le_2pp": false,
+      "C_ce3_above_fixed_q": true,
+      "cagr_opportunity_cost": 0.024094302569892756,
+      "ce3_increment": 0.02421529899317916,
+      "drawdown_reduction": 0.13284186755706337
+    }
+  },
+  "decision": "STOP_RESEARCH_VARIANT",
+  "independent_result_audit": "PENDING",
+  "not_unseen_test": true
+}

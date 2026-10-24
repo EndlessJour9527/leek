@@ -1,0 +1,100 @@
+{
+  "all_seen_development": true,
+  "assertions": 58021,
+  "audit_status": "PASS",
+  "cash_reconstruction": "raw output fills and dividend payments independently reconstructed, fees and NAV checked daily",
+  "criteria": {
+    "base": {
+      "A": true,
+      "B": false,
+      "C": true,
+      "drawdown_reduction_pp": 13.988308590416693,
+      "opportunity_cost_pp": 2.4515804462479585
+    },
+    "double": {
+      "A": true,
+      "B": false,
+      "C": true,
+      "drawdown_reduction_pp": 13.284186755706337,
+      "opportunity_cost_pp": 2.4094302569892756
+    }
+  },
+  "decision": "STOP_RESEARCH_VARIANT",
+  "limits": "conditional first-print proxy, not real execution or unseen test",
+  "metrics": {
+    "AG1_base": {
+      "cagr": 0.14261970840104854,
+      "ce3": 0.09974351504805817,
+      "days": 843,
+      "exposure": 0.5793390048196922,
+      "fills": 42,
+      "mdd": 0.20282937621753971,
+      "terminal_nav": "79632.612839800"
+    },
+    "AG1_double": {
+      "cagr": 0.1356974312659227,
+      "ce3": 0.09309762727412269,
+      "days": 843,
+      "exposure": 0.5766454559007985,
+      "fills": 39,
+      "mdd": 0.21362663117698574,
+      "terminal_nav": "77961.218102400"
+    },
+    "EW95_CONTEXT_base": {
+      "cagr": 0.1375450502669684,
+      "ce3": 0.06841706537023287,
+      "days": 843,
+      "exposure": 0.9274776355095193,
+      "fills": 65,
+      "mdd": 0.3019451202706006,
+      "terminal_nav": "78404.855427300"
+    },
+    "EW95_CONTEXT_double": {
+      "cagr": 0.13540894277919846,
+      "ce3": 0.06642590233469571,
+      "days": 843,
+      "exposure": 0.9270029378772946,
+      "fills": 58,
+      "mdd": 0.30142073567397276,
+      "terminal_nav": "77892.110309200"
+    },
+    "M12_FIXED_Q_base": {
+      "cagr": 0.08988688287145563,
+      "ce3": 0.07151798029985425,
+      "days": 843,
+      "exposure": 0.46939814721537976,
+      "fills": 56,
+      "mdd": 0.1848394938897352,
+      "terminal_nav": "67524.220727900"
+    },
+    "M12_FIXED_Q_double": {
+      "cagr": 0.08715287310700948,
+      "ce3": 0.06888232828094353,
+      "days": 843,
+      "exposure": 0.4677714846674549,
+      "fills": 55,
+      "mdd": 0.18549433791249298,
+      "terminal_nav": "66934.778856000"
+    },
+    "M12_base": {
+      "cagr": 0.16713551286352812,
+      "ce3": 0.09544989958037522,
+      "days": 843,
+      "exposure": 0.9389541717523763,
+      "fills": 58,
+      "mdd": 0.34271246212170664,
+      "terminal_nav": "85757.928120500"
+    },
+    "M12_double": {
+      "cagr": 0.15979173383581546,
+      "ce3": 0.08817388917068866,
+      "days": 843,
+      "exposure": 0.9361205958380141,
+      "fills": 54,
+      "mdd": 0.3464684987340491,
+      "terminal_nav": "83889.025413600"
+    }
+  },
+  "new_variant_count": 1,
+  "result_manifest_sha256": "a891b64c23c10484e218afe5db0ac9ebe148d5698946eff3bd7fc8897091275a"
+}

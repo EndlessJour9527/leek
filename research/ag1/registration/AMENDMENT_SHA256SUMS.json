@@ -1,0 +1,9 @@
+{
+  "bound_at_utc": "2026-10-18T06:04:48.101798+00:00",
+  "original_manifest_sha256": "6eed1cfb809b128a673a945d1031dcb679e04f8ccc01b6c69e9f72c8643da5a4",
+  "clarifications": {
+    "CLARIFICATION_001.md": "77c0ac457b8b5590eb0c76bc494abb4335fabe4670b9630a3002631de25bbf23"
+  },
+  "economic_parameters_changed": false,
+  "formal_returns_run": false
+}

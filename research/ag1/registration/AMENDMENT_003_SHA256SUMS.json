@@ -1,0 +1,11 @@
+{
+  "bound_at_utc": "2026-10-18T06:06:07.788735+00:00",
+  "original_manifest_sha256": "6eed1cfb809b128a673a945d1031dcb679e04f8ccc01b6c69e9f72c8643da5a4",
+  "previous_manifest_sha256": "02bf9ef1a000cff79147923f303b9504b227214f4792fdef152efc5be15d087f",
+  "clarifications": {
+    "CLARIFICATION_001.md": "77c0ac457b8b5590eb0c76bc494abb4335fabe4670b9630a3002631de25bbf23",
+    "CLARIFICATION_002.md": "2fbbc04c3d21c9e6c8fa09f5e3545c59002b37d5b80779da7e0156c53a4dabf3",
+    "CLARIFICATION_003.md": "09b8b49ced7425f86e1c60450e2da3a89252d018f14dc42a9552ae3ad53fb4f0"
+  },
+  "formal_returns_run": false
+}

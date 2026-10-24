@@ -1,0 +1,11 @@
+{
+  "calibration_sha256": "1f701b88a7543045ba38ac5d98fb16dea6e174b828897a7767daecbc6dc0fae6",
+  "labels": [
+    "ALL_SEEN_DEVELOPMENT",
+    "CONDITIONAL_FIRST_PRINT_DAILY_PROXY"
+  ],
+  "new_variant_count": 1,
+  "paths": 8,
+  "registration_sha256": "a85f821b2f22a9595df9da71dd4043e4cc8a50c0aa080840c71cb7ca84855965",
+  "release_sha256": "69d53f85023128191b5e0bdfe1e375683506a1c5b6bbef459c1c14bc438b52dd"
+}

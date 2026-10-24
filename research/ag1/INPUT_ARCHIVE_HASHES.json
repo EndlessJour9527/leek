@@ -1,0 +1,29 @@
+{
+  "archives": [
+    {
+      "file": "E4_H1_core.zip",
+      "sha256": "3ace584c754d6e3470053162c26735565d5bd996f0eed497a0d9f009460985bd"
+    },
+    {
+      "file": "E4_H1_evidence_01.zip",
+      "sha256": "cf03159002fa6eb40ff8942135b052fda42d2545c83daf45d78d9d25f16f288d"
+    },
+    {
+      "file": "E4_H1_evidence_02.zip",
+      "sha256": "f7308629b284d2fc1755757a6c7c499a0d3d416c29b6f636b32fbe7913deb083"
+    },
+    {
+      "file": "E4_H1_evidence_03.zip",
+      "sha256": "a07155a159855d24829558218a4e7d19bb5a260c9dbcbaa97c6e00e89baf9b90"
+    },
+    {
+      "file": "E4_H1_evidence_04.zip",
+      "sha256": "715ccee8fd6e155593c830c2545244e3e5022dcaa4b8bd15220c19bced201035"
+    },
+    {
+      "file": "E4_H1_evidence_05.zip",
+      "sha256": "7983fbf235b07b8d648d7988d538cffcc6f4cfc426a99713513261e596ae2d20"
+    }
+  ],
+  "availability": "not redistributed; obtain lawfully from the data custodian"
+}

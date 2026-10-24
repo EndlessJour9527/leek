@@ -1,0 +1,39 @@
+{
+  "checks": 516,
+  "details": {
+    "AG1_base": {
+      "dividend_entitlements_checked": 11,
+      "signals_equal_frozen_original": 42
+    },
+    "AG1_double": {
+      "dividend_entitlements_checked": 11,
+      "signals_equal_frozen_original": 42
+    },
+    "EW95_CONTEXT_base": {
+      "dividend_entitlements_checked": 11,
+      "signals_equal_frozen_original": 0
+    },
+    "EW95_CONTEXT_double": {
+      "dividend_entitlements_checked": 11,
+      "signals_equal_frozen_original": 0
+    },
+    "M12_FIXED_Q_base": {
+      "dividend_entitlements_checked": 11,
+      "signals_equal_frozen_original": 42
+    },
+    "M12_FIXED_Q_double": {
+      "dividend_entitlements_checked": 11,
+      "signals_equal_frozen_original": 42
+    },
+    "M12_base": {
+      "dividend_entitlements_checked": 11,
+      "signals_equal_frozen_original": 42
+    },
+    "M12_double": {
+      "dividend_entitlements_checked": 11,
+      "signals_equal_frozen_original": 42
+    }
+  },
+  "method": "New momentum scores exactly match previously frozen E4 same-date scores; each dividend checked once against record-date actual quantity times official amount, zero eligibility before new group start",
+  "status": "PASS"
+}
