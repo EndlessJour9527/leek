@@ -1,15 +1,6 @@
-name: H002 real-history research
+name: Legacy H002 runner (manual only)
 on:
   workflow_dispatch:
-  push:
-    branches: [feat/h002-open-source-research]
-    paths:
-      - 'leek/channel_signal.py'
-      - 'leek/real_backtest.py'
-      - 'research/run_h002.py'
-      - 'research/H002_PROTOCOL.md'
-      - 'tests/test_h002*.py'
-      - '.github/workflows/h002-research.yml'
 permissions:
   contents: read
 jobs:

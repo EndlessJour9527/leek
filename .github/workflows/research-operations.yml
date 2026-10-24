@@ -1,0 +1,88 @@
+name: Research readiness and explicit experiments
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'preflight collects readiness only; run attempts a gated real experiment'
+        type: choice
+        options: [preflight, run]
+        default: preflight
+      experiment:
+        description: 'CA1 requires private originals; hosted CI reports missing inputs'
+        type: choice
+        options: [h002, h003, ca1]
+        default: h002
+      allow_single_source:
+        description: 'Explicit downgrade for network unavailability only; never bypass DQ001'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: research-operations-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  research-status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Generate current-checkout status (no download, not a backtest)
+        run: |
+          mkdir -p "$RUNNER_TEMP/research-status"
+          python -m research.cli status --report "$RUNNER_TEMP/research-status/status.json"
+      - name: Explicit manual experiment only
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          MODE: ${{ inputs.mode }}
+          EXPERIMENT: ${{ inputs.experiment }}
+          ALLOW_SINGLE: ${{ inputs.allow_single_source }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=("$MODE" --experiment "$EXPERIMENT" --report "$RUNNER_TEMP/research-status/attempt.json")
+          if [[ "$MODE" == run ]]; then
+            args+=(--output "$RUNNER_TEMP/research-results")
+            if [[ "$EXPERIMENT" != ca1 ]]; then
+              args+=(--fetch --data-dir "$RUNNER_TEMP/research-input")
+            fi
+          fi
+          if [[ "$ALLOW_SINGLE" == true ]]; then args+=(--allow-single-source); fi
+          python -m research.cli "${args[@]}"
+      - name: Summarize readiness separately from CI success
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          folder = Path(os.environ['RUNNER_TEMP']) / 'research-status'
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
+              out.write('## Research status — green CI is NOT a backtest pass\n')
+              p = folder / 'status.json'
+              if p.exists():
+                  for lane in json.loads(p.read_text())['lanes']:
+                      out.write(f"- {lane['experiment']}: **{lane['readiness']['status']}**\n")
+              p = folder / 'attempt.json'
+              if p.exists():
+                  value = json.loads(p.read_text())
+                  out.write(f"\nExplicit attempt: **{value['status']}**\n")
+              out.write('\nNo strategy promotion or live execution is authorized.\n')
+          PY
+      - name: Publish sanitized readiness only, never private inputs or runner logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: research-readiness-${{ github.sha }}
+          path: ${{ runner.temp }}/research-status/*.json
+          retention-days: 14
+          if-no-files-found: error

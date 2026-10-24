@@ -10,88 +10,188 @@
   "paper_account_policy": "isolated_per_strategy_never_sum_as_one_account",
   "automatic_promotion": false,
   "live_trading_enabled": false,
-  "shared_functions": ["data_quality", "execution_risk", "independent_validation"],
-  "implemented_batch_entrypoint": "research.run_h002",
-  "batch_entrypoint_note": "Existing gated runner evaluates T01/T02/T03 plus cash/passive controls sequentially; this registry is not a deployed parallel-agent runtime.",
+  "shared_functions": [
+    "data_quality",
+    "execution_risk",
+    "independent_validation"
+  ],
+  "implemented_batch_entrypoint": "research.cli",
+  "batch_entrypoint_note": "Unified status/preflight/run routes H002/H003 sequentially; CA1 restoration is private and release-bound. This is not a deployed parallel-agent runtime.",
   "seats": [
     {
-      "id": "T01", "name": "趋势跟随", "family": "moving_average_trend",
-      "engine_strategy": "ma120_1d", "implementation_state": "IMPLEMENTED_UNVALIDATED",
+      "id": "T01",
+      "name": "趋势跟随",
+      "family": "moving_average_trend",
+      "engine_strategy": "ma120_1d",
+      "implementation_state": "IMPLEMENTED_UNVALIDATED",
       "role": "冻结对照，定位趋势追踪的亏损阶段，不根据当日结果修改MA周期",
-      "required_data": ["raw_daily_ohlc", "cash_dividends", "trading_calendar"],
-      "current_blockers": ["DQ001"],
+      "required_data": [
+        "raw_daily_ohlc",
+        "cash_dividends",
+        "trading_calendar"
+      ],
+      "current_blockers": [
+        "DQ001"
+      ],
       "next_deliverable": "共享数据冲突解决后复跑冻结基线，保留逐笔亏损归因"
     },
     {
-      "id": "T02", "name": "趋势确认", "family": "moving_average_trend",
-      "engine_strategy": "h001_3d", "implementation_state": "IMPLEMENTED_UNVALIDATED",
+      "id": "T02",
+      "name": "趋势确认",
+      "family": "moving_average_trend",
+      "engine_strategy": "h001_3d",
+      "implementation_state": "IMPLEMENTED_UNVALIDATED",
       "role": "保留H001负面结果，研究确认延迟和开盘跳空的代价",
-      "required_data": ["raw_daily_ohlc", "cash_dividends", "trading_calendar"],
-      "current_blockers": ["DQ001"],
+      "required_data": [
+        "raw_daily_ohlc",
+        "cash_dividends",
+        "trading_calendar"
+      ],
+      "current_blockers": [
+        "DQ001"
+      ],
       "next_deliverable": "诊断延迟/跳空与损益的关系；新执行约束须独立登记"
     },
     {
-      "id": "T03", "name": "通道突破", "family": "close_channel_breakout",
-      "engine_strategy": "h002_channel_20_10", "implementation_state": "IMPLEMENTED_UNVALIDATED",
+      "id": "T03",
+      "name": "通道突破",
+      "family": "close_channel_breakout",
+      "engine_strategy": "h002_channel_20_10",
+      "implementation_state": "IMPLEMENTED_UNVALIDATED",
       "role": "冻结H002前20日突破入场、前10日跌破退出规则",
-      "required_data": ["raw_daily_ohlc", "cash_dividends", "trading_calendar"],
-      "current_blockers": ["DQ001"],
+      "required_data": [
+        "raw_daily_ohlc",
+        "cash_dividends",
+        "trading_calendar"
+      ],
+      "current_blockers": [
+        "DQ001"
+      ],
       "next_deliverable": "通过数据关卡后运行已登记H002，不搜索附近窗口"
     },
     {
-      "id": "T04", "name": "均值回归", "family": "mean_reversion",
-      "engine_strategy": null, "implementation_state": "PLANNED",
-      "role": "研究震荡环境中的过度偏离与回归，区别于趋势追随",
-      "required_data": ["raw_daily_ohlc", "cash_dividends", "trading_calendar"],
-      "current_blockers": ["HYPOTHESIS_NOT_REGISTERED", "IMPLEMENTATION_MISSING"],
-      "next_deliverable": "审查一个原始开源实现，登记规则/适用环境/成本失败条件"
+      "id": "T04",
+      "name": "均值回归",
+      "family": "mean_reversion",
+      "engine_strategy": "h003_close_tr_bb20_2",
+      "implementation_state": "IMPLEMENTED_UNVALIDATED",
+      "role": "已实现前20个收盘总回报均值/总体方差规则，等待真实数据研究；不视为验证通过",
+      "required_data": [
+        "raw_daily_ohlc",
+        "cash_dividends",
+        "trading_calendar"
+      ],
+      "current_blockers": [
+        "DQ001"
+      ],
+      "next_deliverable": "依据 research/H003_PROTOCOL.md，在数据审查通过后用 research.cli 运行冻结策略与对照；不修改阈值"
     },
     {
-      "id": "T05", "name": "ETF相对强弱轮动", "family": "cross_sectional_rotation",
-      "engine_strategy": null, "implementation_state": "PLANNED",
+      "id": "T05",
+      "name": "ETF相对强弱轮动",
+      "family": "cross_sectional_rotation",
+      "engine_strategy": null,
+      "implementation_state": "PLANNED",
       "role": "比较不同市场暴露的相对强弱，不把重叠ETF当独立验证",
-      "required_data": ["multi_etf_raw_ohlc", "per_asset_corporate_actions", "point_in_time_universe"],
-      "current_blockers": ["MULTI_ASSET_DATA_MISSING", "IMPLEMENTATION_MISSING"],
+      "required_data": [
+        "multi_etf_raw_ohlc",
+        "per_asset_corporate_actions",
+        "point_in_time_universe"
+      ],
+      "current_blockers": [
+        "MULTI_ASSET_DATA_MISSING",
+        "IMPLEMENTATION_MISSING"
+      ],
       "next_deliverable": "固定非事后挑选的ETF池、共同交易日及公平基准方案"
     },
     {
-      "id": "T06", "name": "低波动与风险预算", "family": "volatility_risk_allocation",
-      "engine_strategy": null, "implementation_state": "PLANNED",
+      "id": "T06",
+      "name": "低波动与风险预算",
+      "family": "volatility_risk_allocation",
+      "engine_strategy": null,
+      "implementation_state": "PLANNED",
       "role": "研究风险暴露和换手约束，不能仅靠减少仓位宣称超额收益",
-      "required_data": ["validated_return_history", "cost_model", "exposure_history"],
-      "current_blockers": ["RISK_MATCHED_BENCHMARK_MISSING", "IMPLEMENTATION_MISSING"],
+      "required_data": [
+        "validated_return_history",
+        "cost_model",
+        "exposure_history"
+      ],
+      "current_blockers": [
+        "RISK_MATCHED_BENCHMARK_MISSING",
+        "IMPLEMENTATION_MISSING"
+      ],
       "next_deliverable": "登记风险可比基准、仓位边界和成本压力测试"
     },
     {
-      "id": "T07", "name": "价值与质量", "family": "fundamental_value_quality",
-      "engine_strategy": null, "implementation_state": "PLANNED",
+      "id": "T07",
+      "name": "价值与质量",
+      "family": "fundamental_value_quality",
+      "engine_strategy": null,
+      "implementation_state": "PLANNED",
       "role": "研究估值/盈利质量，不用日线或今天的成分股冒充历史财务证据",
-      "required_data": ["point_in_time_financials", "actual_publication_times", "delisted_universe"],
-      "current_blockers": ["POINT_IN_TIME_FUNDAMENTALS_MISSING", "IMPLEMENTATION_MISSING"],
+      "required_data": [
+        "point_in_time_financials",
+        "actual_publication_times",
+        "delisted_universe"
+      ],
+      "current_blockers": [
+        "POINT_IN_TIME_FUNDAMENTALS_MISSING",
+        "IMPLEMENTATION_MISSING"
+      ],
       "next_deliverable": "核对财务数据许可、发布时间和历史股票池可得性"
     },
     {
-      "id": "T08", "name": "财报公告事件", "family": "event_driven",
-      "engine_strategy": null, "implementation_state": "PLANNED",
+      "id": "T08",
+      "name": "财报公告事件",
+      "family": "event_driven",
+      "engine_strategy": null,
+      "implementation_state": "PLANNED",
       "role": "研究事件公布后的反应，公告时点不可前移",
-      "required_data": ["timestamped_announcements", "point_in_time_event_labels", "tradeability"],
-      "current_blockers": ["TIMESTAMPED_EVENT_DATA_MISSING", "IMPLEMENTATION_MISSING"],
+      "required_data": [
+        "timestamped_announcements",
+        "point_in_time_event_labels",
+        "tradeability"
+      ],
+      "current_blockers": [
+        "TIMESTAMPED_EVENT_DATA_MISSING",
+        "IMPLEMENTATION_MISSING"
+      ],
       "next_deliverable": "定义一个事件及标签可用时点，排除修订和未来信息"
     },
     {
-      "id": "T09", "name": "题材龙头与短线", "family": "theme_leader_short_term",
-      "engine_strategy": null, "implementation_state": "PLANNED",
+      "id": "T09",
+      "name": "题材龙头与短线",
+      "family": "theme_leader_short_term",
+      "engine_strategy": null,
+      "implementation_state": "PLANNED",
       "role": "研究题材轮动、龙头与打板；日线触及涨停不等于排队成交",
-      "required_data": ["point_in_time_theme_membership", "intraday_quotes", "limit_queue_and_fill_evidence"],
-      "current_blockers": ["INTRADAY_EXECUTION_DATA_MISSING", "IMPLEMENTATION_MISSING"],
+      "required_data": [
+        "point_in_time_theme_membership",
+        "intraday_quotes",
+        "limit_queue_and_fill_evidence"
+      ],
+      "current_blockers": [
+        "INTRADAY_EXECUTION_DATA_MISSING",
+        "IMPLEMENTATION_MISSING"
+      ],
       "next_deliverable": "建立可成交性/滑点/拒单数据要求，禁止编造打板收益"
     },
     {
-      "id": "T10", "name": "市场状态与组合选择", "family": "regime_portfolio_selection",
-      "engine_strategy": null, "implementation_state": "PLANNED",
+      "id": "T10",
+      "name": "市场状态与组合选择",
+      "family": "regime_portfolio_selection",
+      "engine_strategy": null,
+      "implementation_state": "PLANNED",
       "role": "研究何时使用哪些策略，验证相关性和共享资金约束，不多数投票下单",
-      "required_data": ["causal_regime_features", "out_of_selection_strategy_returns", "shared_capital_limits"],
-      "current_blockers": ["INDEPENDENT_STRATEGY_EVIDENCE_MISSING", "IMPLEMENTATION_MISSING"],
+      "required_data": [
+        "causal_regime_features",
+        "out_of_selection_strategy_returns",
+        "shared_capital_limits"
+      ],
+      "current_blockers": [
+        "INDEPENDENT_STRATEGY_EVIDENCE_MISSING",
+        "IMPLEMENTATION_MISSING"
+      ],
       "next_deliverable": "登记市场状态特征和组合验证协议，不用全样本事后选择赢家"
     }
   ]
