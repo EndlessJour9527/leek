@@ -1,0 +1,73 @@
+name: Pinned PR 5-12 integration review
+on:
+  push:
+    branches: [review/pr-integration-20261024]
+    paths: ['.github/workflows/pr-integration-review.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: d2fdfcc1bf5d59ce6d1abce2259969bac5ee4fdd
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Construct local-only integration of reviewed heads
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Leek integration review'
+          git config user.email 'integration-review@users.noreply.github.com'
+          mkdir -p "$RUNNER_TEMP/review-evidence"
+          cat > "$RUNNER_TEMP/review-evidence/pins.tsv" <<'PINS'
+          5 d2fdfcc1bf5d59ce6d1abce2259969bac5ee4fdd 788f446e228687bbaea15290e842e06cdc6919cb
+          6 788f446e228687bbaea15290e842e06cdc6919cb 9d6d5022af0fc6921001ac7c17790bd7700852c3
+          7 7682219e09580d842ac36152e674d146e93f0e86 0d5eacae8a01dc515f2d5775748f3717a321553a
+          8 0d5eacae8a01dc515f2d5775748f3717a321553a d26eb05fb0666c0ff6d9fdf3af3e3984c8d6ab01
+          9 d2fdfcc1bf5d59ce6d1abce2259969bac5ee4fdd 15ba3226b599a6e2668cbb71dcf6a2fa25ac6cf7
+          10 d2fdfcc1bf5d59ce6d1abce2259969bac5ee4fdd 0525b7b95b38433b962221deee08a50b9977ea99
+          11 d2fdfcc1bf5d59ce6d1abce2259969bac5ee4fdd 3c5846f3b537958ea7513151db42caff7786ffd2
+          12 d26eb05fb0666c0ff6d9fdf3af3e3984c8d6ab01 b5e27d8f0e9c1c4508d2bbca968b9ba10ecbd1e4
+          PINS
+          while read -r number base head; do
+            git cat-file -e "$head^{commit}"
+            git diff --stat "$base" "$head"
+            git diff "$base" "$head" -- '*.py' '*.yml' '*.md' '*.json' > "$RUNNER_TEMP/review-evidence/pr-$number.diff"
+            git merge --no-ff --no-edit "$head"
+          done < "$RUNNER_TEMP/review-evidence/pins.tsv"
+          git rev-parse HEAD^{tree} | tee "$RUNNER_TEMP/review-evidence/integration-tree.txt"
+          git ls-tree -r HEAD > "$RUNNER_TEMP/review-evidence/tree-files.txt"
+          git archive --format=zip --output="$RUNNER_TEMP/review-evidence/integrated-source.zip" HEAD
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Integrated core, archive tests and public verification (3.12)
+        run: |
+          python -m unittest discover -s tests -q
+          python research/ag1/run_public_tests.py
+          python research/ag1/verify_results.py
+          PYTHONPATH=research/ca1_20261022/implementation python -m unittest discover -s research/ca1_20261022/implementation -p test_ca1.py -q
+          PYTHONPATH=research/ca1_20261022/implementation python -m unittest discover -s research/ca1_20261022/independent_audit -p test_execution_independent.py -q
+          python research/ca1_20261022/verify_public.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Integrated core, archive tests and public verification (3.10)
+        run: |
+          python -m unittest discover -s tests -q
+          python research/ag1/run_public_tests.py
+          python research/ag1/verify_results.py
+          PYTHONPATH=research/ca1_20261022/implementation python -m unittest discover -s research/ca1_20261022/implementation -p test_ca1.py -q
+          PYTHONPATH=research/ca1_20261022/implementation python -m unittest discover -s research/ca1_20261022/independent_audit -p test_execution_independent.py -q
+          python research/ca1_20261022/verify_public.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pinned-pr-integration-review
+          path: ${{ runner.temp }}/review-evidence/
+          retention-days: 7
+          if-no-files-found: error
