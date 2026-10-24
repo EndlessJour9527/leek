@@ -1,0 +1,22 @@
+{
+  "version": "real-history-research.v1",
+  "instrument": "510300",
+  "warmup_start": "2019-01-01",
+  "evaluation_start": "2020-01-01",
+  "evaluation_end": "2025-12-31",
+  "initial_cash": "50000",
+  "entry_budget_fraction": "0.20",
+  "lot_size": 100,
+  "tick_size": "0.001",
+  "lookback": 120,
+  "strategies": ["cash", "buy_hold", "ma120_1d", "h001_3d"],
+  "cost_cases": {
+    "base": {"commission_rate": "0.0002", "minimum_commission": "5", "slippage_bps": "5"},
+    "stress": {"commission_rate": "0.0004", "minimum_commission": "10", "slippage_bps": "10"}
+  },
+  "execution": "Intent fixed after close; next listed session open plus adverse tick-rounded slippage; whole-lot all-or-reject, no terminal liquidation.",
+  "dividends": "record-close, ex-before-open gross receivable, pay-after-trading; exact-rational forward total-return signal.",
+  "scope": "One preselected liquid ETF; not a full-market stock selection backtest. Entry allocation is a reference budget, not a hard daily exposure cap. No leverage.",
+  "validation": "Retrospective developmental comparison, not untouched holdout or live execution evidence. No automatic promotion or broker orders.",
+  "known_limitations": ["Daily open fills do not establish order-book availability or capacity", "Costs are research assumptions, not Guoyuan account tariffs", "No independent complete corporate-action certification", "Historical vendor revisions and publication latency are not fully point-in-time audited", "Tax-free cash dividend accounting is an explicit research convention"]
+}

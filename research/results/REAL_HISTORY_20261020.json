@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETED_REAL_HISTORY_CONDITIONAL",
+  "evidence_grade": "SINGLE_PRICE_VENDOR_RESEARCH_ONLY",
+  "run_url": "https://github.com/EndlessJour9527/leek/actions/runs/39446205344",
+  "tested_commit": "483a11ea54670906ebda1165229ee4c0dc9e4d9c",
+  "tests_per_python_version": 135,
+  "python_versions": ["3.12.15", "3.10.22"],
+  "all_derived_files_byte_identical": true,
+  "artifact_id": 12276081553,
+  "artifact_sha256": "49c78bbddd7cc66e57f65b278b073e7f1f2e0b2267b16978cd27406774403b71",
+  "binding": {
+    "config_sha256": "f05c7f0fb34ee7d1e73fd57f2f85c2a19758979ae26aed35140a300cef7fde86",
+    "driver_sha256": "18c2af31aa3dcaf9eaf48eef7f0828b84c5d2ba4ba653b4b18cec0c43d731ad8",
+    "input_sha256": "bb695fa6e5473a9384fee70a6d2721ae5ce5cf5cacfa7c68563f8a55147a619c",
+    "source_sha256": "57e5470b396b337eb02b0b6ad607bc66098478c5c301e30086e689ecbd017971"
+  },
+  "window": {"warmup": "2019", "evaluation_start": "2020-01-02", "evaluation_end": "2025-12-31", "observations": 1699, "evaluation_sessions": 1455, "distribution_events": 7},
+  "annual_sessions": {"2019": 244, "2020": 243, "2021": 243, "2022": 242, "2023": 242, "2024": 242, "2025": 243},
+  "crosscheck": {"differing_cells": null, "primary_vendor": "Tencent", "reason": "RemoteDisconnected: Remote end closed connection without response", "status": "SECOND_PRICE_SOURCE_UNAVAILABLE"},
+  "automatic_promotion": false,
+  "untouched_holdout": false,
+  "results": {
+    "base__cash": {"terminal_nav": 50000.0, "total_return_pct": 0.0, "max_close_drawdown_pct": 0.0, "closed_trades": 0, "closed_win_rate_pct": null},
+    "base__buy_hold": {"terminal_nav": 52390.2, "total_return_pct": 4.7804, "annualized_return_pct": 0.7811332831269002, "max_close_drawdown_pct": -10.674164, "mean_exposure_pct": 20.037066, "closed_trades": 0, "closed_win_rate_pct": null, "open_cycles": 1, "commission": 5.0, "slippage": 7.2, "dividend_income": 883.2, "annual_returns_pct": {"2020": 5.5772, "2021": -0.941112, "2022": -4.566682, "2023": -1.80347, "2024": 2.899367, "2025": 3.898097}},
+    "base__ma120_1d": {"terminal_nav": 49788.6, "total_return_pct": -0.4228, "annualized_return_pct": -0.07057503084781924, "max_close_drawdown_pct": -10.301392, "mean_exposure_pct": 10.918964, "closed_trades": 32, "wins": 3, "losses": 29, "closed_win_rate_pct": 9.375, "open_cycles": 1, "commission": 325.0, "slippage": 366.9, "dividend_income": 522.4, "mean_closed_net_pnl": -72.6, "average_net_win": 1151.966667, "average_net_loss": -199.27931, "profit_factor": 0.598, "annual_returns_pct": {"2020": 2.2374, "2021": -4.328553, "2022": -1.984624, "2023": -1.032431, "2024": 1.015377, "2025": 3.894646}},
+    "base__h001_3d": {"terminal_nav": 48835.9, "total_return_pct": -2.3282, "annualized_return_pct": -0.39176282961866926, "max_close_drawdown_pct": -12.365724, "mean_exposure_pct": 10.647321, "closed_trades": 14, "wins": 2, "losses": 12, "closed_win_rate_pct": 14.285714285714286, "open_cycles": 1, "commission": 145.0, "slippage": 165.7, "dividend_income": 528.8, "mean_closed_net_pnl": -222.435714, "average_net_win": 1282.4, "average_net_loss": -473.241667, "profit_factor": 0.451637, "annual_returns_pct": {"2020": 3.842, "2021": -2.618979, "2022": -1.807117, "2023": -1.185961, "2024": -3.755093, "2025": 3.429733}},
+    "stress__cash": {"terminal_nav": 50000.0, "total_return_pct": 0.0, "max_close_drawdown_pct": 0.0, "closed_trades": 0, "closed_win_rate_pct": null},
+    "stress__buy_hold": {"terminal_nav": 52380.4, "total_return_pct": 4.7608, "annualized_return_pct": 0.7779917706772332, "max_close_drawdown_pct": -10.676094, "mean_exposure_pct": 20.040932, "closed_trades": 0, "closed_win_rate_pct": null, "open_cycles": 1, "commission": 10.0, "slippage": 12.0, "dividend_income": 883.2, "annual_returns_pct": {"2020": 5.5576, "2021": -0.941287, "2022": -4.567538, "2023": -1.803824, "2024": 2.899947, "2025": 3.898855}},
+    "stress__ma120_1d": {"terminal_nav": 49149.3, "total_return_pct": -1.7014, "annualized_return_pct": -0.285533022280382, "max_close_drawdown_pct": -11.206875, "mean_exposure_pct": 10.962922, "closed_trades": 32, "wins": 2, "losses": 30, "closed_win_rate_pct": 6.25, "open_cycles": 1, "commission": 650.0, "slippage": 685.8, "dividend_income": 522.4, "mean_closed_net_pnl": -92.271875, "profit_factor": 0.536075, "annual_returns_pct": {"2020": 2.0226, "2021": -4.76267, "2022": -2.231494, "2023": -1.162583, "2024": 0.842679, "2025": 3.819514}},
+    "stress__h001_3d": {"terminal_nav": 48550.2, "total_return_pct": -2.8996, "annualized_return_pct": -0.4890996498829403, "max_close_drawdown_pct": -12.717464, "mean_exposure_pct": 10.684184, "closed_trades": 14, "wins": 2, "losses": 12, "closed_win_rate_pct": 14.285714285714286, "open_cycles": 1, "commission": 290.0, "slippage": 306.4, "dividend_income": 528.8, "mean_closed_net_pnl": -242.157143, "profit_factor": 0.426925, "annual_returns_pct": {"2020": 3.7048, "2021": -2.720221, "2022": -1.886725, "2023": -1.268938, "2024": -3.87457, "2025": 3.366476}}
+  },
+  "diagnostic_case": {
+    "description": "Observed after running the experiment; not a pre-registered new strategy or causal attribution of all performance differences.",
+    "h001_trade": {"signal_date": "2024-09-30", "entry_date": "2024-10-08", "exit_date": "2025-04-02", "quantity": "2200", "entry_fill_price": "4.659", "entry_cost": "10254.800", "exit_proceeds": "8753.200", "net_pnl": "-1501.600", "prior_close_account_nav": "48622.9000", "entry_cost_to_prior_nav_pct": 21.090473830232256},
+    "ma120_corresponding_trend_trade": {"entry_date": "2024-09-27", "exit_date": "2025-03-31", "entry_cost": "9260.000", "exit_proceeds": "9997.500", "net_pnl": "737.500"}
+  },
+  "post_artifact_audit": "Downloaded artifact SHA-256 verified. All eight reports passed independent NAV, order cash-flow, chronology, unique IDs, closed/open PnL, drawdown and annual compounding recalculation. This checks report consistency, not data certification or execution realism."
+}

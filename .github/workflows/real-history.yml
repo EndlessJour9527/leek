@@ -1,0 +1,44 @@
+name: Real historical research
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/real-history-backtest]
+    paths:
+      - 'leek/history_data.py'
+      - 'leek/real_backtest.py'
+      - 'research/run_real_history.py'
+      - 'tests/test_real_history.py'
+      - 'tests/test_history_evidence.py'
+      - 'research/real_history_protocol.json'
+      - '.github/workflows/real-history.yml'
+permissions:
+  contents: read
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline accounting and causal regression tests (3.12)
+        run: python -m unittest discover -s tests -q
+      - name: Fetch real history and run evidence-graded ledger (3.12)
+        run: python -m research.run_real_history --fetch --allow-single-source --data-dir "$RUNNER_TEMP/leek-real-input" --output "$RUNNER_TEMP/leek-real-results-312"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Offline accounting and causal regression tests (3.10)
+        run: python -m unittest discover -s tests -q
+      - name: Rerun same frozen snapshot and compare all report bytes
+        run: |
+          python -m research.run_real_history --allow-single-source --data-dir "$RUNNER_TEMP/leek-real-input" --output "$RUNNER_TEMP/leek-real-results-310"
+          diff -r "$RUNNER_TEMP/leek-real-results-312" "$RUNNER_TEMP/leek-real-results-310"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: real-history-derived-research-results
+          path: ${{ runner.temp }}/leek-real-results-312/*.json
+          retention-days: 30
