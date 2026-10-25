@@ -1,0 +1,21 @@
+{
+  "acceptance_scope": "STRUCTURE_DECLARED_PIT_REFERENCE_AND_HASH_CONSISTENCY_ONLY",
+  "clean_holdout": false,
+  "errors": [
+    {
+      "code": "FUTURE_EVIDENCE",
+      "detail": "publication and availability must not exceed as_of",
+      "path": "$.packet.evidence[0]"
+    }
+  ],
+  "execution_authorized": false,
+  "independent_authorship_verified": false,
+  "profit_evidence": false,
+  "provenance_authenticated": false,
+  "report_type": "RESEARCH_EVIDENCE_BOUNDARY",
+  "research_stance": "ABSTAIN",
+  "schema_version": 1,
+  "statistical_independence_verified": false,
+  "status": "INVALID",
+  "truth_verified": false
+}

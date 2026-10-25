@@ -1,0 +1,71 @@
+{
+  "candidate": {
+    "as_of": "2026-01-05T16:00:00Z",
+    "candidate_id": "synthetic-candidate-001",
+    "candidate_sha256": "dabe46543e9d8fafadf6e8731ed9e369323e3925d98229ea47fbde790f46c16a",
+    "counter_evidence_ids": [
+      "synthetic-counter-001"
+    ],
+    "counter_search": null,
+    "created_at": "2026-01-06T09:05:00Z",
+    "invalidation_condition": "A separately supplied, cutoff-eligible fictional uncertainty estimate below 2 points would require a new candidate and challenge.",
+    "packet_sha256": "2601af44f13a30319f6688a0820361bdf8eb9dd18952fd9351ccb31f4b8ef956",
+    "producer_id": "synthetic-analyst",
+    "run_id": "synthetic-boundary-run-001",
+    "stance": "NEUTRAL",
+    "supporting_evidence_ids": [
+      "synthetic-support-001"
+    ],
+    "thesis": "Synthetic demonstration only: the small rise is inconclusive within the stated uncertainty."
+  },
+  "challenge": {
+    "as_of": "2026-01-05T16:00:00Z",
+    "candidate_sha256": "dabe46543e9d8fafadf6e8731ed9e369323e3925d98229ea47fbde790f46c16a",
+    "challenge_id": "synthetic-challenge-001",
+    "contradictions": [],
+    "created_at": "2026-01-06T09:10:00Z",
+    "disposition": "NO_MATERIAL_CONTRADICTION_FOUND",
+    "packet_sha256": "2601af44f13a30319f6688a0820361bdf8eb9dd18952fd9351ccb31f4b8ef956",
+    "producer_id": "synthetic-challenger",
+    "rationale": "Synthetic review declaration: no material contradiction to the neutral thesis was found within these two entries; this is not a truth certification.",
+    "reviewed_evidence_ids": [
+      "synthetic-support-001",
+      "synthetic-counter-001"
+    ],
+    "run_id": "synthetic-boundary-run-001",
+    "search_summary": {
+      "limitations": "Only two invented fixture entries were reviewed; no real-world search or independent model ran.",
+      "scope": "PACKET_ONLY"
+    }
+  },
+  "packet": {
+    "as_of": "2026-01-05T16:00:00Z",
+    "created_at": "2026-01-06T09:01:00Z",
+    "data_classification": "SYNTHETIC",
+    "evidence": [
+      {
+        "available_at": "2026-01-05T10:05:00Z",
+        "captured_at": "2026-01-06T09:00:00Z",
+        "content": "SYNTHETIC TEST DATA, NOT MARKET EVIDENCE: fictional demand index rose from 100 to 102.",
+        "content_sha256": "a335d565190df27d250f3cfdf1ab748a6c6d44a867dd74952e6ff540d0e5a41a",
+        "evidence_id": "synthetic-support-001",
+        "published_at": "2026-01-05T10:00:00Z",
+        "source_uri": "synthetic://example.invalid/support-001"
+      },
+      {
+        "available_at": "2026-01-05T10:06:00Z",
+        "captured_at": "2026-01-06T09:00:00Z",
+        "content": "SYNTHETIC TEST DATA, NOT MARKET EVIDENCE: fictional index uncertainty is plus or minus 5 points.",
+        "content_sha256": "e08b6f572c48faf7312fb06903043b0a9afee8524270b2f5dc0b4e74a2376c8c",
+        "evidence_id": "synthetic-counter-001",
+        "published_at": "2026-01-05T10:01:00Z",
+        "source_uri": "synthetic://example.invalid/counter-001"
+      }
+    ],
+    "mode": "historical_development",
+    "packet_id": "synthetic-packet-001",
+    "run_id": "synthetic-boundary-run-001",
+    "snapshot_sha256": "2601af44f13a30319f6688a0820361bdf8eb9dd18952fd9351ccb31f4b8ef956"
+  },
+  "schema_version": 1
+}
