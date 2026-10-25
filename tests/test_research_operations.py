@@ -19,7 +19,8 @@ class OperationsTests(unittest.TestCase):
         for name in ('h002', 'h003'):
             with tempfile.TemporaryDirectory() as temp:
                 target = Path(temp) / 'new-output'
-                with patch.object(cli, 'load', side_effect=AssertionError('input read')), \
+                with patch.object(cli, 'require_history_review', side_effect=DataBlocked('DQ001 unresolved fixture')), \
+                     patch.object(cli, 'load', side_effect=AssertionError('input read')), \
                      patch('research.run_real_history.acquire', side_effect=AssertionError('fetch')):
                     report = cli.run_experiment(name, target, Path(temp) / 'absent', fetch=True,
                                                 allow_single_source=True)
@@ -77,7 +78,8 @@ class OperationsTests(unittest.TestCase):
                     cli.bound_path(root, path)
 
     def test_status_has_real_code_bindings_not_returns(self):
-        report = cli.status()
+        with patch.object(cli, 'require_history_review', side_effect=DataBlocked('DQ001 unresolved fixture')):
+            report = cli.status()
         self.assertEqual(report['status'], 'STATUS_REPORT_ONLY')
         lanes = {x['experiment']: x for x in report['lanes']}
         self.assertEqual(lanes['h003']['implementation'], 'IMPLEMENTED')
@@ -88,7 +90,8 @@ class OperationsTests(unittest.TestCase):
     def test_cli_report_is_exclusive_and_blocked_is_nonzero(self):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / 'report.json'
-            with contextlib.redirect_stdout(io.StringIO()):
+            with patch.object(cli, 'require_history_review', side_effect=DataBlocked('DQ001 unresolved fixture')), \
+                    contextlib.redirect_stdout(io.StringIO()):
                 code = cli.main(['preflight', '--experiment', 'h003', '--report', str(path)])
             self.assertEqual(code, 2)
             initial = path.read_bytes()

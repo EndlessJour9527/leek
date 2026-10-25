@@ -5,6 +5,7 @@ from fractions import Fraction as F
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from leek.contract import DataBlocked
 from leek.mean_reversion_signal import MODEL_ID, MeanReversion20
@@ -139,7 +140,9 @@ class H003LedgerTests(unittest.TestCase):
     def test_dq001_gate_rejects_before_creating_or_fetching(self):
         with tempfile.TemporaryDirectory() as tmp:
             data=Path(tmp)/'new-data'; out=Path(tmp)/'new-report'
-            with self.assertRaises(DataBlocked):
+            unresolved={'version':'data-conflicts.v1','issues':[{'id':'DQ001','status':'UNRESOLVED'}]}
+            with patch('research.run_h003.load', return_value=(unresolved, 'test-only')), \
+                    self.assertRaises(DataBlocked):
                 run(data,out,fetch=True,allow_single_source=True)
             self.assertFalse(data.exists())
             self.assertFalse(out.exists())

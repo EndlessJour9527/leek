@@ -1,7 +1,7 @@
 """One frozen H002 experiment; not an optimizer or broker integration.
 
 Reuses PR5 acquisition and identical Ledger execution. Recomputes all controls
-on the same snapshot; single-source permission must be explicit. Consumed
+on the same snapshot; execution requires replayable reviewed source evidence. Consumed
 2020-2025 data remains development data, never relabelled as holdout.
 """
 from __future__ import annotations
@@ -21,17 +21,8 @@ PREREGISTRATION_COMMIT = 'ab34ceb9578aa4dcecf99f437d542c5700054aaf'
 
 
 def require_data_issue_resolution(registry):
-    if not isinstance(registry,dict) or registry.get('version')!='data-conflicts.v1':
-        raise DataBlocked('missing data-conflict registry')
-    issues=registry.get('issues')
-    if not isinstance(issues,list): raise DataBlocked('invalid data-conflict list')
-    # DQ001 cannot silently disappear in order to take a single-source fallback.
-    issue=next((x for x in issues if isinstance(x,dict) and x.get('id')=='DQ001'),None)
-    if issue is None or issue.get('status')!='RESOLVED_REVIEWED':
-        raise DataBlocked('DQ001 unresolved vendor disagreement; independent review required')
-    r=issue.get('resolution')
-    if not isinstance(r,dict) or not all(r.get(k) for k in ('review_commit','evidence_urls','rationale')):
-        raise DataBlocked('reviewed resolution evidence required')
+    from leek.history_review_gate import require_history_review
+    return require_history_review(registry)
 
 
 def screen(results):

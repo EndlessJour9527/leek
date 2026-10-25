@@ -56,7 +56,7 @@ class TraderTeamRegistryTests(unittest.TestCase):
         registry = json.loads((ROOT / 'research/data_conflicts.json').read_text(encoding='utf-8'))
         self.assertIn('DQ001', {x['id'] for x in registry['issues']})
         for seat in self.seats[:4]:
-            self.assertIn('DQ001', seat['current_blockers'])
+            self.assertIn('REPLAYABLE_REVIEWED_DQ001_INPUTS_REQUIRED', seat['current_blockers'])
 
     def test_no_live_trading_or_capital_pooling(self):
         self.assertEqual(self.team['mode'], 'research_and_paper_only')

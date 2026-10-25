@@ -4,16 +4,36 @@
     {
       "id": "DQ001",
       "instrument": "510300",
-      "status": "UNRESOLVED",
+      "status": "RESOLVED_REVIEWED",
       "scope": "2019-01-02..2025-12-31 real historical study",
       "observed_run": "https://github.com/EndlessJour9527/leek/actions/runs/39452725948",
       "observed_commit": "81b6665554da4b3b78cd00a001aec47d126b8f8e",
       "total_differing_ohlc_cells": 20,
-      "first_visible_dates": ["2020-08-21", "2020-08-24", "2020-08-25"],
-      "first_visible_fields": ["open", "close", "high", "low"],
+      "first_visible_dates": [
+        "2020-08-21",
+        "2020-08-24",
+        "2020-08-25"
+      ],
+      "first_visible_fields": [
+        "open",
+        "close",
+        "high",
+        "low"
+      ],
       "first_visible_eastmoney_minus_tencent": "0.001",
-      "resolution": null,
-      "rule": "H002 must not run on a later missing-secondary-source fallback until this known conflict is independently reviewed and resolved. No tolerance relaxation or synthetic fallback."
+      "resolution": {
+        "review_commit": "94173048588fa6c1d8c4d7ff0c6c8bba32365c6e",
+        "evidence_path": "research/results/DQ001_exchange_evidence.json",
+        "evidence_sha256": "b0abbe0e470c1db379958de754dfa3ec75414c98ca45254143e4ba043289dfc9",
+        "review_path": "research/reviews/DQ001_source_precedence_review.json",
+        "review_sha256": "d2227a6fdc3430627e119805c58e5c384913d49d202be4683624f4b01442bcf4",
+        "evidence_urls": [
+          "https://github.com/EndlessJour9527/leek/commit/94173048588fa6c1d8c4d7ff0c6c8bba32365c6e",
+          "https://yunhq.sse.com.cn:32042/v1/sh1/dayk/510300?begin=2005&end=2012&period=day"
+        ],
+        "rationale": "Bounded source precedence only: all20 frozen cells on2020-08-21/24/25/26/27 select the existing Tencent values independently corroborated by official SSE daily trading OHLC and reviewed nominal-price evidence. The upstream Eastmoney cause and historical revision timing remain unknown. No source vote, tolerance relaxation, global provider endorsement or historic point-in-time certification. Current snapshots must reproduce the exact reviewed pairs, match everywhere else and replay hashes; legacy single-source/match labels cannot bypass this scope."
+      },
+      "rule": "Only the hash-pinned, independently reviewed exact5-day/20-cell precedence can pass. Unknown or revised quotes, missing source snapshots or altered evidence block. Source review is not data availability, a completed strategy run or live approval."
     }
   ]
 }

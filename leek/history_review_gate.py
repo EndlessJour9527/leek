@@ -13,12 +13,13 @@ from .replay import load
 REGISTRY_PATH = Path(__file__).resolve().parents[1] / 'research/data_conflicts.json'
 
 
-def require_history_review():
-    """Reject before market-data reads, downloads, or output publication."""
-    try:
-        registry, _ = load(REGISTRY_PATH)
-    except (OSError, ValueError, TypeError) as exc:
-        raise DataBlocked('missing or malformed historical data-conflict registry') from exc
+def require_history_review(registry=None):
+    """Reject before market-data reads; return the validated bounded resolution."""
+    if registry is None:
+        try:
+            registry, _ = load(REGISTRY_PATH)
+        except (OSError, ValueError, TypeError) as exc:
+            raise DataBlocked('missing or malformed historical data-conflict registry') from exc
     if not isinstance(registry, dict) or registry.get('version') != 'data-conflicts.v1':
         raise DataBlocked('invalid historical data-conflict registry')
     issues = registry.get('issues')
@@ -38,3 +39,5 @@ def require_history_review():
             or any(not isinstance(u, str) or not u.startswith('https://') for u in urls)
             or not isinstance(rationale, str) or not rationale.strip()):
         raise DataBlocked('DQ001 reviewed resolution evidence malformed')
+    from .history_adjudication import load_resolution
+    return load_resolution(record)

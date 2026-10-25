@@ -15,13 +15,16 @@ python3 -m research.cli preflight --experiment h003
 python3 -m research.cli preflight --experiment ca1
 ```
 
-The first command is a status report, NOT an experiment. As of the 2026-10-24
-repair baseline, H002 and H003 are implemented but **BLOCKED_DATA (DQ001)**;
-CA1 public accounting can be checked but full replay is **BLOCKED_INPUTS**.
+The first command is a status report, NOT an experiment. As of 2026-10-25, the
+exact DQ001 5-day/20-cell source precedence is independently reviewed. H002/H003
+still need replayable, hash-checked private inputs (**BLOCKED_INPUTS** in a bare
+checkout); source availability and strategy completion are not implied. CA1
+public accounting can be checked; full replay requires the private originals.
 `research.cli` reports code, input readiness and experiment completion separately.
 There is no inferred win rate or automatically qualified candidate.
 
-See [operations, restoration and acceptance](docs/research-operations.md).
+See [DQ001 evidence and execution boundaries](docs/dq001-reviewed-source-precedence.md)
+and [operations, restoration and acceptance](docs/research-operations.md).
 The current-head `research-operations.yml` collects readiness on main/PRs;
 real network experiments require an explicit manual `run`. A green readiness
 collection job is not a profitable or completed backtest. No daily daemon is

@@ -119,7 +119,7 @@ def preflight(experiment, data_dir=None, private_root=None, fetch=False, allow_s
         validate_bars(data['bars']); validate_calendar(data['calendar'])
         if data['calendar'] != [row['date'] for row in data['bars']]:
             raise DataBlocked('calendar alignment mismatch')
-        grade = evidence_allowed(data['metadata'], allow_single_source)
+        grade = evidence_allowed(data['metadata'], allow_single_source, data, data_dir, config)
     except (DataBlocked, ValueError, KeyError, TypeError) as exc:
         return result('BLOCKED_INPUTS', experiment, reasons=[type(exc).__name__ + ': input validation failed'])
     return result('READY_FOR_CONDITIONAL_RESEARCH', experiment, input_sha256=input_sha,
