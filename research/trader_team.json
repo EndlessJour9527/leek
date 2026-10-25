@@ -31,7 +31,7 @@
         "trading_calendar"
       ],
       "current_blockers": [
-        "DQ001"
+        "REPLAYABLE_REVIEWED_DQ001_INPUTS_REQUIRED"
       ],
       "next_deliverable": "共享数据冲突解决后复跑冻结基线，保留逐笔亏损归因"
     },
@@ -48,7 +48,7 @@
         "trading_calendar"
       ],
       "current_blockers": [
-        "DQ001"
+        "REPLAYABLE_REVIEWED_DQ001_INPUTS_REQUIRED"
       ],
       "next_deliverable": "诊断延迟/跳空与损益的关系；新执行约束须独立登记"
     },
@@ -65,7 +65,7 @@
         "trading_calendar"
       ],
       "current_blockers": [
-        "DQ001"
+        "REPLAYABLE_REVIEWED_DQ001_INPUTS_REQUIRED"
       ],
       "next_deliverable": "通过数据关卡后运行已登记H002，不搜索附近窗口"
     },
@@ -82,7 +82,7 @@
         "trading_calendar"
       ],
       "current_blockers": [
-        "DQ001"
+        "REPLAYABLE_REVIEWED_DQ001_INPUTS_REQUIRED"
       ],
       "next_deliverable": "依据 research/H003_PROTOCOL.md，在数据审查通过后用 research.cli 运行冻结策略与对照；不修改阈值"
     },

@@ -51,13 +51,13 @@ class HistoricalReviewGateTests(unittest.TestCase):
         self.write(value)
         with self.assertRaises(DataBlocked): require_history_review()
 
-    def test_declared_resolution_validates_fields_without_changing_file(self):
+    def test_declared_shape_alone_is_not_a_review_without_bound_evidence(self):
         value=copy.deepcopy(self.unresolved)
         value['issues'][0].update(status='RESOLVED_REVIEWED',resolution={
             'review_commit':'a'*40,'evidence_urls':['https://example.com/synthetic-review'],
             'rationale':'Synthetic test of record shape, not a real approval.'})
         self.write(value); before=self.registry.read_bytes()
-        require_history_review()
+        with self.assertRaises(DataBlocked): require_history_review()
         self.assertEqual(before,self.registry.read_bytes())
         for field in ('review_commit','evidence_urls','rationale'):
             altered=copy.deepcopy(value);altered['issues'][0]['resolution'].pop(field)

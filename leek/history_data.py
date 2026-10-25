@@ -48,7 +48,8 @@ def fetch(url, cache, name):
             time.sleep(1)
     with destination.open('xb') as handle:
         handle.write(raw)
-    return raw, {'url': url, 'sha256': sha256(raw).hexdigest(), 'bytes': len(raw)}
+    return raw, {'url': url, 'sha256': sha256(raw).hexdigest(), 'bytes': len(raw),
+                 'snapshot_name': name}
 
 
 def validate_bars(bars):
@@ -182,7 +183,9 @@ def acquire(config_path, output):
         secondary.extend(b for b in rows if first <= b['date'] <= last and b['date'][:4]==str(year))
         time.sleep(0.2)
     validate_bars(primary); validate_bars(secondary)
-    comparison=crosscheck(primary,secondary)
+    from .history_adjudication import reconcile_sources
+    primary,comparison=reconcile_sources(primary,secondary,snapshots,'eastmoney-510300.json',
+        [f'tencent-{year}.json' for year in range(int(first[:4]),int(last[:4])+1)])
     index=json.loads(get(base+'secid=1.000001'+suffix,'eastmoney-calendar.json')).get('data') or {}
     if index.get('code') != '000001': raise DataBlocked('wrong calendar proxy instrument')
     calendar=[x.split(',')[0] for x in index.get('klines',[]) if first<=x.split(',')[0]<=last]

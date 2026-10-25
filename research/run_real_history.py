@@ -1,8 +1,9 @@
 """Research orchestration with an explicit optional single-vendor evidence grade.
 
-Strict history_data.acquire and real_backtest.run remain unchanged. This runner
-may continue ONLY on network unavailability of the second price source, never
-on malformed or conflicting prices. --allow-single-source must be explicit.
+Reviewed precedence is limited to the frozen DQ001 cells, never a tolerance.
+Single-source acquisition remains explicit and only on network unavailability.
+It does not qualify this DQ001-scoped dataset for execution: reviewed execution
+requires replayable snapshots from both sources, never a fallback grade.
 """
 from __future__ import annotations
 import argparse
@@ -54,8 +55,9 @@ def acquire(config, config_hash, directory, allow_single_source):
     else:
         em=parse_eastmoney(em_raw)
         em=[b for b in em if first<=b['date']<=last]
-        quality=dict(status='MATCH',primary_vendor='Eastmoney',**crosscheck(em,bars))
-        bars=em
+        from leek.history_adjudication import reconcile_sources
+        bars,quality=reconcile_sources(em,bars,cache,'eastmoney-510300.json',
+            [f'tencent-510300-{year}.json' for year in range(int(first[:4]),int(last[:4])+1)])
     events=parse_dividends(get(DIVIDEND_URL,'dividends.html'),first,last)
     # A frozen change detector; it is not a claim of complete certified CA history.
     expected={'2019-01-16':'0.059','2019-12-11':'0.062','2021-01-18':'0.072',
@@ -72,7 +74,10 @@ def acquire(config, config_hash, directory, allow_single_source):
     return data
 
 
-def evidence_allowed(metadata,allow_single_source):
+def evidence_allowed(metadata,allow_single_source,data=None,data_dir=None,config=None):
+    if data is not None and data_dir is not None and config is not None:
+        from leek.history_adjudication import validate_dataset_evidence
+        return validate_dataset_evidence(data,data_dir,config,allow_single_source)
     quality=metadata.get('crosscheck',{})
     if quality.get('status')=='MATCH' and quality.get('differing_cells')==0:
         return 'CROSS_VENDOR_OHLC_MATCH'
@@ -92,7 +97,7 @@ def execute(data_dir,config_path,output,allow_single_source=False):
         raise DataBlocked('real raw 510300 dataset required')
     if data['metadata'].get('config_sha256')!=config_hash: raise DataBlocked('config binding changed')
     if data['calendar']!=[b['date'] for b in data['bars']]: raise DataBlocked('calendar not aligned')
-    grade=evidence_allowed(data['metadata'],allow_single_source)
+    grade=evidence_allowed(data['metadata'],allow_single_source,data,data_dir,c)
     binding=dict(input_sha256=data_hash,config_sha256=config_hash,source_sha256=source_hash(),
                  driver_sha256=digest(Path(__file__).read_bytes()))
     output=Path(output)

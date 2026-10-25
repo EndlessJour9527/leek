@@ -15,16 +15,18 @@ class GovernanceTests(unittest.TestCase):
         r={'version':'data-conflicts.v1','issues':[{'id':'DQ001','status':'RESOLVED_REVIEWED','resolution':None}]}
         with self.assertRaises(DataBlocked): require_data_issue_resolution(r)
 
-    def test_declared_resolution_requires_review_fields(self):
+    def test_arbitrary_resolution_fields_never_approve_a_review(self):
         r={'version':'data-conflicts.v1','issues':[{'id':'DQ001','status':'RESOLVED_REVIEWED',
             'resolution':{'review_commit':'synthetic-test','evidence_urls':['https://example.com/test'], 'rationale':'synthetic'}}]}
-        require_data_issue_resolution(r)
+        with self.assertRaises(DataBlocked): require_data_issue_resolution(r)
         for field in ('review_commit','evidence_urls','rationale'):
             changed=copy.deepcopy(r); changed['issues'][0]['resolution'].pop(field)
             with self.assertRaises(DataBlocked): require_data_issue_resolution(changed)
 
     def test_real_runner_blocks_before_network_even_with_single_source_flag(self):
-        with patch('research.run_h002.acquire') as fetch:
+        unresolved={'version':'data-conflicts.v1','issues':[{'id':'DQ001','status':'UNRESOLVED'}]}
+        with patch('research.run_h002.load', return_value=(unresolved, 'test-only')), \
+                patch('research.run_h002.acquire') as fetch:
             with self.assertRaisesRegex(DataBlocked,'DQ001'):
                 run('/unused/input','/unused/output',fetch=True,allow_single_source=True)
             fetch.assert_not_called()

@@ -235,8 +235,8 @@ def run(input_path,config_path,output):
         raise DataBlocked('real unadjusted 510300 dataset required')
     if data['calendar']!=[b['date'] for b in data['bars']]: raise DataBlocked('calendar mismatch')
     if data['metadata'].get('config_sha256')!=config_hash: raise DataBlocked('data/config binding mismatch')
-    if data['metadata'].get('crosscheck',{}).get('differing_cells')!=0:
-        raise DataBlocked('historical data did not pass crosscheck')
+    from .history_adjudication import validate_dataset_evidence
+    grade=validate_dataset_evidence(data,Path(input_path).parent,config)
     results={}
     with localcontext(Context(prec=64,rounding=ROUND_HALF_UP)):
         for cost_name,cost in config['cost_cases'].items():
@@ -244,7 +244,7 @@ def run(input_path,config_path,output):
                 results[cost_name+'__'+strategy]=simulate(data['bars'],data['dividends'],config,strategy,cost)
     directory=Path(output); directory.mkdir(parents=True,exist_ok=False)
     binding=dict(input_sha256=data_hash,config_sha256=config_hash,source_sha256=source_hash())
-    summary=dict(status='COMPLETED_CONDITIONAL_REAL_HISTORY',binding=binding,
+    summary=dict(status='COMPLETED_CONDITIONAL_REAL_HISTORY',binding=binding,evidence_grade=grade,
                  audit=data['metadata'],frozen_protocol=config,
                  results={key:value['summary'] for key,value in results.items()},
                  disclaimer='Developmental historical experiment; no untouched holdout, execution certification or broker approval.')

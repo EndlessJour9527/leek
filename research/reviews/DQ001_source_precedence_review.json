@@ -1,0 +1,121 @@
+{
+  "version": "DQ001.source-review.v1",
+  "status": "PASS_REVIEWED_SOURCE_PRECEDENCE",
+  "policy": "SSE_OFFICIAL_OHLC_FOR_EXACT_DQ001_CELLS",
+  "review_commit": "94173048588fa6c1d8c4d7ff0c6c8bba32365c6e",
+  "reviewed_at_utc": "2026-10-25T08:47:57.096635+00:00",
+  "review_role": "Independent source-evidence auditor; separate from evidence collection and implementation",
+  "evidence_sha256": "b0abbe0e470c1db379958de754dfa3ec75414c98ca45254143e4ba043289dfc9",
+  "original_audit_sha256": "c4790fd5fff383b959b732b02af7172c24eb6c72187d72fb34e61eaab213e763",
+  "checks": {
+    "official_source_identity": true,
+    "field_mapping": true,
+    "bounded_unadjusted_basis_supported": true,
+    "all_twenty_cells": true,
+    "original_audit_preserved": true
+  },
+  "scope": {
+    "instrument": "510300",
+    "dates": [
+      "2020-08-21",
+      "2020-08-24",
+      "2020-08-25",
+      "2020-08-26",
+      "2020-08-27"
+    ],
+    "fields": [
+      "open",
+      "high",
+      "low",
+      "close"
+    ],
+    "cells": 20,
+    "selection": "Current official SSE daily trading OHLC for only the exact frozen DQ001 source-value tuples; these equal the archived Tencent-side values."
+  },
+  "rationale": "The exchange official page, namespace and chart code directly establish the source and date/open/high/low/close field mapping. Exact Decimal comparison finds all twenty SSE fields equal to the archived Tencent values and each exactly 0.001 below archived Eastmoney, without tolerance or rescaling. Contemporaneous target-period charts and cash-dividend checkpoints support nominal trading-price basis. Exchange-source precedence, not provider voting or strategy outcomes, is sufficient to settle this bounded price-selection conflict; upstream cause is a separate unknown.",
+  "remote_evidence_verification": {
+    "commit_sha": "94173048588fa6c1d8c4d7ff0c6c8bba32365c6e",
+    "commit_url": "https://github.com/EndlessJour9527/leek/commit/94173048588fa6c1d8c4d7ff0c6c8bba32365c6e",
+    "changed_files": [
+      "research/results/DQ001_exchange_evidence.json"
+    ],
+    "evidence_git_blob": "fb94cb99886c57940048b72990fc7e667f3cc63f",
+    "evidence_url": "https://github.com/EndlessJour9527/leek/blob/94173048588fa6c1d8c4d7ff0c6c8bba32365c6e/research/results/DQ001_exchange_evidence.json",
+    "evidence_sha256": "b0abbe0e470c1db379958de754dfa3ec75414c98ca45254143e4ba043289dfc9",
+    "bytes": 8913,
+    "git_blob_hash_verified": true,
+    "exact_local_evidence_match": true
+  },
+  "price_basis_review": {
+    "definition": "Empirically supported nominal trading-price basis for the bounded source-precedence decision, not API-wide unadjusted certification.",
+    "official_client_transforms_price": false,
+    "2020_contemporaneous_ohlc_visual_matches": 16,
+    "2020_contemporaneous_dates": [
+      "2020-08-24",
+      "2020-08-25",
+      "2020-08-26",
+      "2020-08-27"
+    ],
+    "contemporaneous_chart_caveat": "Charts are labeled front-adjusted; only their selected latest-session OHLC at the then-current date is used as nominal-price corroboration.",
+    "cash_dividend_checkpoints": [
+      {
+        "date": "2021-01-15",
+        "field": "close",
+        "contemporaneous_report_value": "5.526",
+        "sse_exact_match": true,
+        "report_url": "https://www.founderfu.com/upload/%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/files/%E8%82%A1%E7%A5%A8%E6%9C%9F%E6%9D%83%E8%82%A1%E6%8C%87%E6%9C%9F%E6%9D%83%E5%91%A8%E6%8A%A520210118.pdf",
+        "report_sha256": "5df3fcf4aaa1de1d761ef1ca02e5363c24679e2d64a7f1b8272c33a23b7e1796",
+        "pdf_page_1_based": 2,
+        "visually_inspected": true
+      },
+      {
+        "date": "2021-01-18",
+        "field": "close",
+        "contemporaneous_report_value": "5.513",
+        "sse_exact_match": true,
+        "report_url": "https://www.founderfu.com/upload/%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/files/%E6%96%B9%E6%AD%A3%E4%B8%AD%E6%9C%9F%E6%9C%9F%E8%B4%A7%E8%82%A1%E7%A5%A8%E6%9C%9F%E6%9D%83%E5%B8%82%E5%9C%BA%E5%85%A8%E6%99%AF%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%91%8A20210119.pdf",
+        "report_sha256": "0d59f2f1f9f942260c715a8a3ca63ee6a6369bd349bf59594b343199195f51d8",
+        "pdf_page_1_based": 3,
+        "visually_inspected": true
+      },
+      {
+        "date": "2022-01-18",
+        "field": "close",
+        "contemporaneous_report_value": "4.881",
+        "sse_exact_match": true,
+        "report_url": "https://www.founderfu.com/upload/%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/files/%E6%96%B9%E6%AD%A3%E4%B8%AD%E6%9C%9F%E6%9C%9F%E8%B4%A7%E8%82%A1%E7%A5%A8%E6%9C%9F%E6%9D%83%E5%B8%82%E5%9C%BA%E5%85%A8%E6%99%AF%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%91%8A20220119.pdf",
+        "report_sha256": "41e85b2ebd67963a76f9395d400158cdc1e5f24c60433fbf43acaae80eca603c",
+        "pdf_page_1_based": 3,
+        "visually_inspected": true
+      }
+    ],
+    "explicit_api_unadjusted_contract_found": false,
+    "full_qfq_hfq_semantics_certified": false
+  },
+  "integrity": {
+    "narrow_raw_sha256": "90e73d33af3a2c08218a50ddce213659d5f563b1526be5eb76e8e05af37c428e",
+    "wide_raw_sha256": "b5848ea32b81a1c5a1296a4ffe32362a7ea77428260c723094c51e5596287f7d",
+    "independent_https_repeat_same_bytes": true,
+    "narrow_wide_all_seven_rows_equal": true,
+    "exact_decimal_tolerance": "0",
+    "old_audit_git_blob": "7c63a9d4a5de690d158c35b64778d3c7c738db92",
+    "old_audit_retains_source_conflict": true
+  },
+  "limitations": {
+    "upstream_discrepancy_cause": "UNKNOWN; no signed supplier explanation or correction notice obtained.",
+    "historical_revision_history": "UNKNOWN; selects the version retrieved on 2026-10-25, not a certification of what the exchange served in 2020.",
+    "original_vendor_raw_bodies_revalidated": false,
+    "full_api_or_all_history_certified": false,
+    "raw_source_redistribution_license_verified": false,
+    "implementation_code_approved_by_this_source_review": false,
+    "strategy_or_full_history_performance_run": false,
+    "live_trading_or_promotion_authorized": false
+  },
+  "required_controls": [
+    "Preserve the complete original conflict audit, both source values, and original hashes.",
+    "Apply only to the registered exact twenty source-value tuples; changed or additional discrepancies must fail closed.",
+    "Do not treat missing secondary evidence as this source review or relax price tolerance.",
+    "Do not publish bulk raw history, source JS/HTML or broker PDFs based only on public accessibility.",
+    "Implementation verification and a separate activation commit are required; this is approval of the stated evidence-based selection policy only."
+  ]
+}
