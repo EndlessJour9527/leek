@@ -86,10 +86,17 @@ def _new_quantity(cash,nav,close,config,case):
     return q
 
 
-def simulate(bars,events,config,strategy,case):
+def simulate(bars,events,config,strategy,case,*,external_states=None):
     """Pure model. Test fixtures may call this; the file CLI requires real data."""
     checked_config(config); validate_bars(bars); checked_events(events,bars)
-    if strategy not in STRATEGIES + (H002,H003): raise DataBlocked('unknown strategy')
+    external = strategy == 'ml001_frozen_policy'
+    if strategy not in STRATEGIES + (H002,H003,'ml001_frozen_policy'): raise DataBlocked('unknown strategy')
+    if external:
+        if (not isinstance(external_states,dict) or set(external_states)!={b['date'] for b in bars}
+                or any(type(v) is not bool for v in external_states.values())):
+            raise DataBlocked('complete boolean external policy required')
+    elif external_states is not None:
+        raise DataBlocked('external policy cannot override registered strategy')
     start=config['evaluation_start']; end=config['evaluation_end']
     first=next((i for i,b in enumerate(bars) if b['date']>=start),None)
     if first is None or first<config['lookback']+2 or bars[-1]['date']>end:
@@ -170,6 +177,8 @@ def simulate(bars,events,config,strategy,case):
             state=channel.update(level)
         if reversion is not None:
             state=reversion.update(level)
+        if external:
+            state=external_states[day]
         if i>=first:
             peak=max(peak,nav); worst=min(worst,nav/peak-1)
             exposure=position['qty']*close/nav; exposure_sum+=exposure
@@ -185,10 +194,10 @@ def simulate(bars,events,config,strategy,case):
         # The final pre-start close may register the first evaluation-day order.
         if i>=first-1:
             side=None; q=D(0); qty=position['qty']
-            target_on = strategy=='buy_hold' or (strategy in ('ma120_1d','h001_3d',H002,H003) and state)
+            target_on = strategy=='buy_hold' or (strategy in ('ma120_1d','h001_3d',H002,H003,'ml001_frozen_policy') and state)
             if target_on and not qty and not (strategy=='buy_hold' and has_bought):
                 q=_new_quantity(ledger.cash,nav,close,config,case); side='BUY'
-            elif strategy in ('ma120_1d','h001_3d',H002,H003) and not state and qty:
+            elif strategy in ('ma120_1d','h001_3d',H002,H003,'ml001_frozen_policy') and not state and qty:
                 q=qty; side='SELL'
             next_day=bars[i+1]['date'] if i+1<len(bars) else None
             signals.append(dict(asof=day,available_at=day+'T17:00:00+08:00',

@@ -1,0 +1,59 @@
+name: ML001 trained-model pilot (conditional research)
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/ml001-walk-forward-pilot]
+    paths:
+      - 'research/ml001/*.py'
+      - 'research/ml001/requirements.txt'
+      - 'research/ml001/export_public_key.pem'
+      - 'tests/test_ml001.py'
+      - 'leek/real_backtest.py'
+      - '.github/workflows/ml001-pilot.yml'
+permissions:
+  contents: read
+concurrency:
+  group: ml001-pilot-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  train-evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install isolated pinned learning dependencies
+        run: python -m pip install -r research/ml001/requirements.txt
+      - name: Core and learned-model synthetic causality tests (not returns)
+        run: python -m unittest discover -s tests -v
+      - name: Acquire exact corroborated real panel, fit models, predict and replay
+        run: python -m research.ml001.run --fetch --input-dir "$RUNNER_TEMP/ml001-private-inputs" --output "$RUNNER_TEMP/ml001-evidence/results"
+      - name: Seal input snapshot to requester's public key, never publish plaintext
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/ml001-evidence"
+          if [ -f "$RUNNER_TEMP/ml001-private-inputs/dataset.json" ]; then
+            python -m research.ml001.export_private --input-dir "$RUNNER_TEMP/ml001-private-inputs" --public-key research/ml001/export_public_key.pem --output "$RUNNER_TEMP/ml001-evidence/private-inputs.envelope.json"
+          fi
+      - name: Preserve the executed public source and runtime package versions
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/ml001-evidence"
+          git archive --format=zip --output="$RUNNER_TEMP/ml001-evidence/source.zip" HEAD
+          git rev-parse HEAD > "$RUNNER_TEMP/ml001-evidence/SOURCE_COMMIT.txt"
+          python -m pip freeze > "$RUNNER_TEMP/ml001-evidence/runtime-packages.txt"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: ml001-models-forecasts-and-evidence
+          path: ${{ runner.temp }}/ml001-evidence/
+          retention-days: 30
+          if-no-files-found: error
