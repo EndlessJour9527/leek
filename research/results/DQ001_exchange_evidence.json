@@ -1,0 +1,276 @@
+{
+  "version": "DQ001.exchange-evidence.v1",
+  "instrument": "510300",
+  "original_audit_sha256": "c4790fd5fff383b959b732b02af7172c24eb6c72187d72fb34e61eaab213e763",
+  "source": {
+    "url": "https://yunhq.sse.com.cn:32042/v1/sh1/dayk/510300?begin=2005&end=2012&period=day",
+    "sha256": "90e73d33af3a2c08218a50ddce213659d5f563b1526be5eb76e8e05af37c428e",
+    "requested_at": "2026-10-25T08:37:31.932725+00:00",
+    "completed_at": "2026-10-25T08:37:39.103884+00:00",
+    "http_status": 200,
+    "response_bytes": 483,
+    "authority": "Shanghai Stock Exchange public quote service linked by its official ETF page",
+    "row_count": 7,
+    "target_rows": 5,
+    "response_code": "510300",
+    "api_period": "day",
+    "api_index_begin": 2005,
+    "api_index_end": 2012
+  },
+  "wide_source": {
+    "url": "https://yunhq.sse.com.cn:32042/v1/sh1/dayk/510300?begin=-2000&end=-1&period=day",
+    "sha256": "b5848ea32b81a1c5a1296a4ffe32362a7ea77428260c723094c51e5596287f7d",
+    "requested_at": "2026-10-25T08:36:00.320104+00:00",
+    "completed_at": "2026-10-25T08:36:07.314847+00:00",
+    "http_status": 200,
+    "response_bytes": 120231,
+    "row_count": 1999,
+    "response_total": 3500,
+    "response_begin": 1501,
+    "response_end": 3500,
+    "same_body_sha256_as_http": true
+  },
+  "cells": [
+    {
+      "date": "2020-08-21",
+      "field": "open",
+      "eastmoney": "4.768",
+      "tencent": "4.767",
+      "sse": "4.7670"
+    },
+    {
+      "date": "2020-08-21",
+      "field": "close",
+      "eastmoney": "4.784",
+      "tencent": "4.783",
+      "sse": "4.7830"
+    },
+    {
+      "date": "2020-08-21",
+      "field": "high",
+      "eastmoney": "4.808",
+      "tencent": "4.807",
+      "sse": "4.8070"
+    },
+    {
+      "date": "2020-08-21",
+      "field": "low",
+      "eastmoney": "4.745",
+      "tencent": "4.744",
+      "sse": "4.7440"
+    },
+    {
+      "date": "2020-08-24",
+      "field": "open",
+      "eastmoney": "4.806",
+      "tencent": "4.805",
+      "sse": "4.8050"
+    },
+    {
+      "date": "2020-08-24",
+      "field": "close",
+      "eastmoney": "4.814",
+      "tencent": "4.813",
+      "sse": "4.8130"
+    },
+    {
+      "date": "2020-08-24",
+      "field": "high",
+      "eastmoney": "4.832",
+      "tencent": "4.831",
+      "sse": "4.8310"
+    },
+    {
+      "date": "2020-08-24",
+      "field": "low",
+      "eastmoney": "4.779",
+      "tencent": "4.778",
+      "sse": "4.7780"
+    },
+    {
+      "date": "2020-08-25",
+      "field": "open",
+      "eastmoney": "4.827",
+      "tencent": "4.826",
+      "sse": "4.8260"
+    },
+    {
+      "date": "2020-08-25",
+      "field": "close",
+      "eastmoney": "4.823",
+      "tencent": "4.822",
+      "sse": "4.8220"
+    },
+    {
+      "date": "2020-08-25",
+      "field": "high",
+      "eastmoney": "4.871",
+      "tencent": "4.870",
+      "sse": "4.8700"
+    },
+    {
+      "date": "2020-08-25",
+      "field": "low",
+      "eastmoney": "4.804",
+      "tencent": "4.803",
+      "sse": "4.8030"
+    },
+    {
+      "date": "2020-08-26",
+      "field": "open",
+      "eastmoney": "4.820",
+      "tencent": "4.819",
+      "sse": "4.8190"
+    },
+    {
+      "date": "2020-08-26",
+      "field": "close",
+      "eastmoney": "4.764",
+      "tencent": "4.763",
+      "sse": "4.7630"
+    },
+    {
+      "date": "2020-08-26",
+      "field": "high",
+      "eastmoney": "4.850",
+      "tencent": "4.849",
+      "sse": "4.8490"
+    },
+    {
+      "date": "2020-08-26",
+      "field": "low",
+      "eastmoney": "4.748",
+      "tencent": "4.747",
+      "sse": "4.7470"
+    },
+    {
+      "date": "2020-08-27",
+      "field": "open",
+      "eastmoney": "4.770",
+      "tencent": "4.769",
+      "sse": "4.7690"
+    },
+    {
+      "date": "2020-08-27",
+      "field": "close",
+      "eastmoney": "4.800",
+      "tencent": "4.799",
+      "sse": "4.7990"
+    },
+    {
+      "date": "2020-08-27",
+      "field": "high",
+      "eastmoney": "4.802",
+      "tencent": "4.801",
+      "sse": "4.8010"
+    },
+    {
+      "date": "2020-08-27",
+      "field": "low",
+      "eastmoney": "4.741",
+      "tencent": "4.740",
+      "sse": "4.7400"
+    }
+  ],
+  "semantics": {
+    "field_order": [
+      "date_YYYYMMDD",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "unused_column_indices": [
+      6
+    ],
+    "field_mapping_proof": {
+      "url": "https://www.sse.com.cn/xhtml/home/2021public/querySearch/search_HQ_2021.js",
+      "sha256": "e2c944248245259c646f54014920795e8dff32b83ddf1d2b6f64dc465c243d96",
+      "line_ranges": [
+        "3316-3344",
+        "3379-3399"
+      ],
+      "notes": "Official drawKChart and drawKTimeChart map API elements 0..5 to date, open, high, low, close, volume. The seventh element is not needed or used in this adjudication."
+    },
+    "host_binding_proof": {
+      "url": "https://www.sse.com.cn/assortment/fund/list/etfinfo/basic/",
+      "sha256": "f69e91e43abe4f4ce7f9352c6f4688754db017ab1f6ffcdecdad5b92bb8b413c",
+      "line_ranges": [
+        "98-103",
+        "411"
+      ],
+      "notes": "Official ETF page defines yunhq.sse.com.cn ports32041/32042 and loads official search_HQ_2021.js."
+    },
+    "api_namespace_proof": {
+      "url": "https://www.sse.com.cn/xhtml/home/2021public/querySearch/search_common_2021.js",
+      "sha256": "5e30aa03c402eecc759de04b4b683548355a144861bc8cc814018150c6a6070e",
+      "line_ranges": [
+        "1-2"
+      ],
+      "notes": "hqOthUrl=v1/sh1/; main_2021.js loads search_common_2021 before per-page chart scripts."
+    },
+    "instrument_identity_proof": {
+      "url": "https://yunhq.sse.com.cn:32042/v1/sh1/snap/510300?select=name,cpxxextendname,open,high,low,last,prev_close",
+      "sha256": "252bb07cb3f6d201717627735e84f0ccade91081ec24c51d779a0cd0447b4115",
+      "requested_at": "2026-10-25T08:38:39.181702+00:00",
+      "completed_at": "2026-10-25T08:38:44.630554+00:00",
+      "http_status": 200,
+      "response_bytes": 127,
+      "select": [
+        "name",
+        "cpxxextendname",
+        "open",
+        "high",
+        "low",
+        "last",
+        "prev_close"
+      ],
+      "name": "300ETF",
+      "extended_name": "沪深300ETF华泰柏瑞",
+      "identity_snapshot_date": "20261023"
+    },
+    "price_unit": "CNY per fund unit",
+    "price_unit_proof": {
+      "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10785127/files/b39b8db2daa74eac916d8b3d6907af51.docx",
+      "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f",
+      "sections": [
+        "3.4.10",
+        "3.4.11"
+      ],
+      "notes": "Trading rules effective2020-03-13 price funds per fund unit and prescribe CNY0.001 tick. No price rescaling or rounding was applied to SSE numeric tokens."
+    },
+    "trading_rule_notice": {
+      "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/c_20200313_10785127.shtml",
+      "sha256": "702c6a4bda818bdee5ddf683149a1b146587cce3422f85292ca2b1092d74fa11",
+      "effective_date": "2020-03-13",
+      "notes": "Historical rule applicable to target dates, now displayed under repealed rules; not cited as current rule."
+    },
+    "adjustment_basis": {
+      "observed": "Official daily trading OHLC as returned by SSE; official chart does not transform price values or request an adjustment mode.",
+      "explicit_api_unadjusted_contract_found": false,
+      "client_side_adjustment_applied": false,
+      "our_adjustment_or_tolerance_applied": false,
+      "contemporaneous_corrobation": "Founder reports dated2020-08-25/26/27/28 display latest session510300 OHLC for2020-08-24/25/26/27 matching all16 corresponding SSE fields. Charts show front-adjustment and end at those dates; used as temporally pinned latest-session corroboration, not as an unadjusted API contract."
+    },
+    "date_basis": "Exchange trading-session date YYYYMMDD, not UTC timestamp; dates compared literally with original audit ISO dates."
+  },
+  "observations": {
+    "target_cells": 20,
+    "exact_matches_tencent_audit": 20,
+    "eastmoney_audit_minus_sse_for_every_cell": "0.001",
+    "boundary_sessions": [
+      "2020-08-20",
+      "2020-08-28"
+    ],
+    "narrow_equals_wide": true,
+    "root_cause_of_eastmoney_discrepancy": "UNKNOWN; no vendor correction or explanation obtained",
+    "source_vote_used": false
+  },
+  "limitations": [
+    "Eastmoney and Tencent values compared here are the frozen audit values. Original2020 provider HTTP bodies were not revalidated by this evidence package.",
+    "A primary exchange public daily-quote response establishes authority for these20 prices; it does not explain the origin of a provider discrepancy.",
+    "This file contains observations only. It does not change gates, authorize live trading, or globally endorse a vendor.",
+    "Raw downloaded sources remain outside the public repository; this compact derived report contains URLs, hashes, essential factual prices and bounded paraphrases only."
+  ]
+}
