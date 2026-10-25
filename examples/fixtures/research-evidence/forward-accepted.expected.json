@@ -1,0 +1,37 @@
+{
+  "acceptance_scope": "STRUCTURE_DECLARED_PIT_REFERENCE_AND_HASH_CONSISTENCY_ONLY",
+  "candidate_created_at": "2026-01-05T16:05:00Z",
+  "candidate_sha256": "ae33c414c9da0c0a319b9e66885e30c254a09b203ea7352f7692529ca122eba9",
+  "challenge_created_at": "2026-01-05T16:10:00Z",
+  "challenge_sha256": "141332d217c50fcf8ca9680b7fe323081c501e4ce8c116d7a9e6c8b4cc587172",
+  "clean_holdout": false,
+  "data_classification": "SYNTHETIC",
+  "data_label": "FORWARD_SHADOW_UNVERIFIED",
+  "decision_available_at": "2026-01-05T16:10:00Z",
+  "errors": [],
+  "evidence_cutoff": "2026-01-05T16:00:00Z",
+  "execution_authorized": false,
+  "independent_authorship_verified": false,
+  "limitations": [
+    "Declared timestamps and hashes are not source or time authentication.",
+    "Distinct producer IDs do not establish independent authorship or statistical independence.",
+    "Text truth, relevance, search completeness and semantic contradiction resolution are not validated.",
+    "No model, trading signal, backtest, profitability assessment or order was run."
+  ],
+  "material_contradiction_count": 0,
+  "mode": "forward_shadow",
+  "packet_created_at": "2026-01-05T16:01:00Z",
+  "packet_sha256": "bc04f2e2d4063d55d1adffc41e5a8363946acfb85f8dc8476b0303e1702937ee",
+  "profit_evidence": false,
+  "provenance_authenticated": false,
+  "reason_codes": [
+    "STRUCTURAL_CHECKS_PASSED"
+  ],
+  "report_type": "RESEARCH_EVIDENCE_BOUNDARY",
+  "research_stance": "NEUTRAL",
+  "run_id": "synthetic-boundary-run-001",
+  "schema_version": 1,
+  "statistical_independence_verified": false,
+  "status": "RESEARCH_PACKET_ACCEPTED",
+  "truth_verified": false
+}

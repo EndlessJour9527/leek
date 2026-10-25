@@ -46,6 +46,7 @@ Archived economic engines remain frozen and require nonoptimized Python.
 
 ## Research records
 
+- [TradingAgents adoption decision and isolated comparison](docs/adr-tradingagents-research-boundary.md): strict offline evidence boundary, not an LLM trading strategy.
 - [Frozen H002 protocol](research/H002_PROTOCOL.md)
 - [Frozen H003 protocol](research/H003_PROTOCOL.md)
 - [Data conflicts](research/data_conflicts.json): known conflicts are never overridden by a CLI flag.
