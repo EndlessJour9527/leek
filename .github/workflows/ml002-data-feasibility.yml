@@ -1,0 +1,34 @@
+name: ML002 three-ETF price feasibility (not backtest)
+on:
+  push:
+    branches: [feat/ml002-price-feasibility]
+    paths:
+      - 'research/ml002/**'
+      - 'tests/test_ml002_probe.py'
+      - '.github/workflows/ml002-data-feasibility.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-then-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Synthetic parser and lot contract tests (not historical returns)
+        run: python -m unittest discover -s tests -p test_ml002_probe.py -v
+      - name: One bounded real-source three-ETF check
+        run: python -m research.ml002.probe
+      - name: Archive only bounded report, never raw historical OHLC
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ml002-three-etf-data-only-evidence
+          path: ${{ runner.temp }}/ml002-multi-etf-feasibility.json
+          retention-days: 30
+          if-no-files-found: error
