@@ -1,0 +1,30 @@
+name: Bounded 2019-2025 SSE Tencent source feasibility
+on:
+  push:
+    branches: [research/sse-tencent-full-panel-probe-20261025]
+    paths: [.github/workflows/sse-full-panel-probe-20261025.yml]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Offline parser and data-gate tests
+        run: python -m unittest discover -s tests -p test_sse_full_panel_probe_20261025.py -v
+      - name: One bounded request per SSE/Tencent period; no raw upload
+        run: python research/audits/sse_full_panel_probe_20261025.py
+      - name: Retain only provider hashes, coverage counts and bounded mismatch diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: sse-tencent-full-panel-probe-20261025
+          path: ${{ runner.temp }}/sse-tencent-full-panel-probe-20261025.json
+          retention-days: 14
+          if-no-files-found: warn

@@ -1,0 +1,48 @@
+{
+  "schema": "sse-tencent-full-panel-probe-20261025.public-summary.v1",
+  "status": "SOURCE_CONSISTENCY_CANDIDATE",
+  "source_commit": "2d109e537998265ad7afcb31a8bcd5fc6846e88d",
+  "run_url": "https://github.com/EndlessJour9527/leek/actions/runs/40189345277",
+  "artifact_id": 12597468289,
+  "artifact_digest": "sha256:c87a342c5a71cadfe56e82a98ea241d2a2fdf05653fd3cf2355ca8305de20700",
+  "source_pair": "Official SSE daily trading OHLC vs Tencent unadjusted day series",
+  "instrument": "510300",
+  "window": "2019-01-01..2025-12-31",
+  "sessions": 1699,
+  "ohlc_cells": 6796,
+  "source_disagreements": 0,
+  "reviewed_20_cell_disagreements": 0,
+  "annual_sessions": {
+    "2019": 244,
+    "2020": 243,
+    "2021": 243,
+    "2022": 242,
+    "2023": 242,
+    "2024": 242,
+    "2025": 243
+  },
+  "raw_response_sha256": {
+    "SSE": "b5848ea32b81a1c5a1296a4ffe32362a7ea77428260c723094c51e5596287f7d",
+    "Tencent2019": "43f610f14f1bf6bec3cc4755fcb2feefd35d12db43ca36b5cdcd982605ce793f",
+    "Tencent2020": "cfc94ecb0d078de1485168a4f65ff3e0e13f8056cdce9b03885d7e2d60cddf36",
+    "Tencent2021": "cb3205184dfac8a61a58c18e0d4dea57d9ff968512ce08262a607ac6d9d06a80",
+    "Tencent2022": "74bb6d2a12004e382cfa72cd48e4228103fd60766e96563c0774e129cb2eda3d",
+    "Tencent2023": "894e622985f3c0f89fbd61651d3b71d75324cb3043091d6e8ff111fd3e251a73",
+    "Tencent2024": "be50e13f1ef908d6bf0a66cbac43521d89fd91c9eb3104d5fd7dcc5f79569233",
+    "Tencent2025": "cfc2cdccdbf416b90f2e42fdc3e870ecde07b1d02ceef2d7f3cae82735d192e3"
+  },
+  "scope": [
+    "Already-consumed 2019-2025 developmental sample",
+    "OHLC only; not volume, calendar independent audit or all corporate actions"
+  ],
+  "limits": [
+    "New provider pairing is UNREVIEWED for replay; do not reuse the old Eastmoney/Tencent approval",
+    "Raw bodies and full OHLC panel are NOT distributed or persisted in public GitHub",
+    "Hash-pinned reproducible private input capsule and dividend/calendar audit are still required",
+    "Historical provider revision timing and redistribution license are not certified",
+    "No strategy run, economic result, simulated fill certification or live order authorization"
+  ],
+  "h002_h003_input_approved": false,
+  "historical_backtests": 0,
+  "strategy_conclusions": 0
+}
