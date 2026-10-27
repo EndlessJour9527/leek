@@ -1,0 +1,21 @@
+# H002/H003 additional source-version experiment — preregistered 2026-10-27
+
+Status when committed: **NOT_RUN**. This is a separate, retrospective, conditional new-source study of the **existing frozen** H002 and H003 strategies. It is **not** an amendment, bypass, automatic approval or result for the original H002/H003 Eastmoney+Tencent evidence gate. No parameter tuning, new candidate identity, broker API, paid data or real orders.
+
+## Input and evidence
+
+Use the **exact** user-held ML001 private source snapshot, previously executed by GitHub Actions 40190175246, artifact 12597663265, archive SHA256 `675f92107a4e80c17bafdfbbede459227a91a7cd8777f8b8071cb548b32d73e5`. Private snapshot `dataset.json` SHA256 `7e0975c04227d0168b48f552d8e16d8313f11b1ca67dda240a03ac90dfe924e2`. Source version `ML001_SSE_TENCENT_PANEL_V1`, **not** legacy Eastmoney+Tencent. Preserve 1,699 sessions from 2019-01-02 through 2025-12-31 and 7 cash distributions. Use `research.ml001.data.load_panel` to validate all raw source responses, exact SSE/Tencent OHLC values, calendar, hashes, dividends and archived DQ001 twenty cells **before any account simulation**. No network refetch, synthetic input or reduced source checks. Failure -> `BLOCKED_INPUTS` and no returns. Do not upload raw source responses, private feature matrices, private archives or keys to public Git.
+
+Price-vintage, full corporate-action completeness and actual fills remain unqualified. The already examined history is `SEEN_DEVELOPMENT`, not untouched verification. This does not certify source equivalence to legacy H002/H003 and is never allowed to silently change their acquisition code.
+
+## Models and fixed economics
+
+Reuse `leek.real_backtest.simulate` and existing H002/H003 source IDs unchanged; no new algorithm or parameters. Original mechanisms and official reference sources are frozen in `research/H002_PROTOCOL.md` (20/10 close total-return channel) and `research/H003_PROTOCOL.md` (prior-20-day 2-sigma mean reversion). Single 510300 instrument, 2019 warmup, **2020-01-01 through 2025-12-31** account evaluation. Independent 50,000-CNY shadow account per policy, approximately 20% entry reference budget, 100-share research lot, no leverage, 0.001 tick, after-close intent to next listed opening fill, original dividend ledger, no terminal liquidation.
+
+Reuse exact `research/real_history_protocol.json`: base commission 0.02% (minimum CNY5), 5bp adverse slippage; stress commission 0.04% (minimum CNY10), 10bp adverse slippage. Six separate strategies (cash, buy_hold, MA120_1d, H001_3d, H002, H003) in both cost cases on the same validated input. No altering execution rules to make orders or prices look better.
+
+## Frozen screens and outcomes
+
+Apply the **unchanged** `research.run_h002.screen` and `research.run_h003.screen` predicates. H002 requires positive base and stress net returns, higher base return than MA120, no worse base close drawdown than MA120, stress profit factor >1 and at least 20 stress closed trades. H003 requires positive base and stress net returns, base above same-budget passive and no worse base close drawdown than passive, stress profit factor >1 and at least 20 stress closed trades. All checks mandatory; failed -> `REJECTED_DEVELOPMENT_SCREEN`; success -> `RESEARCH_SCREEN_PASS` **for this source version only**, never live approval or M2 acceptance. Record every original result, rejects, open positions, fees, exposure, annual returns, cost stress, PnL concentration and loss diagnosis. No parameter variant after observing results.
+
+This preregistration must be a separate prior Git commit before seeing H002/H003 results. Later implementation stores public aggregate derived summaries and a separate *private* detailed daily/trade artifact. No original market-price bodies in Git. Source-specific outcome is supplemental: the original seven-day acceptance requires explicit data-version review and should not be silently counted as a legacy-gate pass. ML001 rejected learners and other prior negative results are unchanged.
