@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-29",
+  "status": "DESCRIPTIVE_EX_POST_AUDIT_ONLY",
+  "data_version": "ML001_SSE_TENCENT_PANEL_V1",
+  "private_dataset_sha256": "7e0975c04227d0168b48f552d8e16d8313f11b1ca67dda240a03ac90dfe924e2",
+  "sample": "SEEN_DEVELOPMENT",
+  "new_training": 0,
+  "new_trading_backtests": 0,
+  "new_strategy_candidates": 0,
+  "automatic_promotion": false,
+  "method": "daily NAV returns versus same-cost passive; OLS constant/beta; Bartlett Newey-West HC0 with lags 20/60; 252x arithmetic annualization",
+  "limits": [
+    "single factor is not a matched-risk trade replay",
+    "post-selection CI does not correct selection bias",
+    "no new raw data or genuine forward sample",
+    "not a deployable alpha estimate"
+  ],
+  "results": {
+    "base__h002_channel_20_10": {
+      "sessions": 1455,
+      "closed_trades": 32,
+      "mean_exposure_pct": 7.375173,
+      "passive_exposure_pct": 20.037066,
+      "hac": {
+        "20": {
+          "annual_arithmetic_intercept_pct": 0.271093,
+          "beta": 0.441937,
+          "hac_approx_95pct": [
+            -1.117972,
+            1.660157
+          ],
+          "lag": 20
+        },
+        "60": {
+          "annual_arithmetic_intercept_pct": 0.271093,
+          "beta": 0.441937,
+          "hac_approx_95pct": [
+            -1.070441,
+            1.612626
+          ],
+          "lag": 60
+        }
+      }
+    },
+    "base__h003_close_tr_bb20_2": {
+      "sessions": 1455,
+      "closed_trades": 27,
+      "mean_exposure_pct": 5.234058,
+      "passive_exposure_pct": 20.037066,
+      "hac": {
+        "20": {
+          "annual_arithmetic_intercept_pct": 0.237337,
+          "beta": 0.252609,
+          "hac_approx_95pct": [
+            -0.971987,
+            1.446661
+          ],
+          "lag": 20
+        },
+        "60": {
+          "annual_arithmetic_intercept_pct": 0.237337,
+          "beta": 0.252609,
+          "hac_approx_95pct": [
+            -0.88256,
+            1.357234
+          ],
+          "lag": 60
+        }
+      }
+    },
+    "stress__h002_channel_20_10": {
+      "sessions": 1455,
+      "closed_trades": 32,
+      "mean_exposure_pct": 7.421545,
+      "passive_exposure_pct": 20.040932,
+      "hac": {
+        "20": {
+          "annual_arithmetic_intercept_pct": 0.057315,
+          "beta": 0.444613,
+          "hac_approx_95pct": [
+            -1.366923,
+            1.481552
+          ],
+          "lag": 20
+        },
+        "60": {
+          "annual_arithmetic_intercept_pct": 0.057315,
+          "beta": 0.444613,
+          "hac_approx_95pct": [
+            -1.328697,
+            1.443326
+          ],
+          "lag": 60
+        }
+      }
+    },
+    "stress__h003_close_tr_bb20_2": {
+      "sessions": 1455,
+      "closed_trades": 27,
+      "mean_exposure_pct": 5.203622,
+      "passive_exposure_pct": 20.040932,
+      "hac": {
+        "20": {
+          "annual_arithmetic_intercept_pct": 0.061102,
+          "beta": 0.252914,
+          "hac_approx_95pct": [
+            -1.124846,
+            1.24705
+          ],
+          "lag": 20
+        },
+        "60": {
+          "annual_arithmetic_intercept_pct": 0.061102,
+          "beta": 0.252914,
+          "hac_approx_95pct": [
+            -1.035897,
+            1.158101
+          ],
+          "lag": 60
+        }
+      }
+    }
+  }
+}
