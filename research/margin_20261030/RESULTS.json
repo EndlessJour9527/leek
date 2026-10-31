@@ -1,0 +1,152 @@
+{
+  "status": "DESCRIPTIVE_SOURCE_CONDITIONAL_NOT_TRADABLE",
+  "start": "2025-10-30",
+  "end": "2026-10-29",
+  "n": 242,
+  "missing_financing_dates": [
+    "2026-10-30"
+  ],
+  "publication_timestamps_verified": false,
+  "scope": "Shanghai+Shenzhen financing only; Beijing excluded",
+  "results": {
+    "SSEC": {
+      "same": {
+        "n": 242,
+        "pearson": 0.5256864535124829,
+        "groups": {
+          "positive": {
+            "n": 126,
+            "mean_return": 0.0032591948066073534,
+            "positive_return_fraction": 0.6825396825396826
+          },
+          "negative": {
+            "n": 116,
+            "mean_return": -0.004274562860157036,
+            "positive_return_fraction": 0.39655172413793105
+          },
+          "zero": {
+            "n": 0,
+            "mean_return": null,
+            "positive_return_fraction": null
+          }
+        }
+      },
+      "next": {
+        "n": 242,
+        "pearson": -0.044817398682101696,
+        "groups": {
+          "positive": {
+            "n": 126,
+            "mean_return": -0.0007321736363107617,
+            "positive_return_fraction": 0.5079365079365079
+          },
+          "negative": {
+            "n": 116,
+            "mean_return": 3.227275319487107e-07,
+            "positive_return_fraction": 0.5862068965517241
+          },
+          "zero": {
+            "n": 0,
+            "mean_return": null,
+            "positive_return_fraction": null
+          }
+        }
+      }
+    },
+    "CSI300": {
+      "same": {
+        "n": 242,
+        "pearson": 0.4956935455737935,
+        "groups": {
+          "positive": {
+            "n": 126,
+            "mean_return": 0.0038774891088716517,
+            "positive_return_fraction": 0.6507936507936508
+          },
+          "negative": {
+            "n": 116,
+            "mean_return": -0.005468700493730632,
+            "positive_return_fraction": 0.3017241379310345
+          },
+          "zero": {
+            "n": 0,
+            "mean_return": null,
+            "positive_return_fraction": null
+          }
+        }
+      },
+      "next": {
+        "n": 242,
+        "pearson": -0.0934578808094385,
+        "groups": {
+          "positive": {
+            "n": 126,
+            "mean_return": -0.0013833294965760407,
+            "positive_return_fraction": 0.4444444444444444
+          },
+          "negative": {
+            "n": 116,
+            "mean_return": 0.000194341267303043,
+            "positive_return_fraction": 0.5258620689655172
+          },
+          "zero": {
+            "n": 0,
+            "mean_return": null,
+            "positive_return_fraction": null
+          }
+        }
+      }
+    },
+    "CHINEXT": {
+      "same": {
+        "n": 242,
+        "pearson": 0.5446707393097407,
+        "groups": {
+          "positive": {
+            "n": 126,
+            "mean_return": 0.00901607986195628,
+            "positive_return_fraction": 0.6666666666666666
+          },
+          "negative": {
+            "n": 116,
+            "mean_return": -0.011685315563627736,
+            "positive_return_fraction": 0.27586206896551724
+          },
+          "zero": {
+            "n": 0,
+            "mean_return": null,
+            "positive_return_fraction": null
+          }
+        }
+      },
+      "next": {
+        "n": 242,
+        "pearson": -0.05254649039365363,
+        "groups": {
+          "positive": {
+            "n": 126,
+            "mean_return": -0.002038193559201224,
+            "positive_return_fraction": 0.46825396825396826
+          },
+          "negative": {
+            "n": 116,
+            "mean_return": 0.00012477141642358862,
+            "positive_return_fraction": 0.49137931034482757
+          },
+          "zero": {
+            "n": 0,
+            "mean_return": null,
+            "positive_return_fraction": null
+          }
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "margin.raw": "023faf8f6f9b314e31662cad68b40419c7dbf7abf06c33a787720f0550cc8d3c",
+    "margin_page2.raw": "c494f2bf8c7edc56a4aa0b4925f3937bc0fb584cf2ad76443e2ab0da3753937a",
+    "SSEC.raw": "3ad9907b7e1860db521de254a04dc464b37f1f31cf158ba6e8a9927430d1bd73",
+    "CSI300.raw": "a4b097c641bca863746c801858d10624b8c4bbb0842b164b5d37b5a2355fd691",
+    "CHINEXT.raw": "aa6c0be2e3ca0d2e92966053eb5e8497e8b25a58eac793548a1634e6919c04e3"
+  }
+}

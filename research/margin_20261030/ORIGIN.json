@@ -1,0 +1,7 @@
+{
+  "source": "retained 2026-10-30 financing study",
+  "original_analyze_sha256": "cea6b0bcf6e115163b93980be7b0c4bcbc08c57909202187554488ef5242085b",
+  "original_verify_sha256": "f2d2fb7062a87e428b978cfa70b2185ba2cf99f50b93d6601722eafc9a344d04",
+  "adaptation": "Wrap original analysis in input-dir function; suppress writes/aligned rows and latest daily record. Statistical formula unchanged.",
+  "issue": "https://github.com/EndlessJour9527/leek/issues/26#issuecomment-6520600511"
+}
