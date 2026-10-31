@@ -1,0 +1,43 @@
+{
+  "510300-early-verification.json": {
+    "collected_at": "2026-10-31T07:11:26.669120+00:00",
+    "sha256": "85d42fa96a4071b3b9cf05d5690c567f42e7c075f628c4c06c766b48f4c258a3",
+    "status": 200,
+    "url": "https://q.stock.sohu.com/hisHq?code=cn_510300&start=20211018&end=20240719&stat=1&order=A&period=d&rt=json"
+  },
+  "510300-new.json": {
+    "bytes": 44910,
+    "collected_at": "2026-10-31T07:10:55.756591+00:00",
+    "sha256": "14bd2f0b65f5a75b3265e018cd2b60a965b833c4055959bee54ccba23f0c21c9",
+    "status": 200,
+    "url": "https://q.stock.sohu.com/hisHq?code=cn_510300&start=20240720&end=20260630&stat=1&order=A&period=d&rt=json"
+  },
+  "510300-page.html": {
+    "bytes": 19246,
+    "collected_at": "2026-10-31T07:10:55.075608+00:00",
+    "sha256": "312d0de514ccfe1533e195a0f2a9ad8a89f748a2679361cc7876a22a61ff8811",
+    "status": 200,
+    "url": "https://q.stock.sohu.com/cn/510300/lshq.shtml"
+  },
+  "511010-page.html": {
+    "bytes": 19254,
+    "collected_at": "2026-10-31T07:10:55.318215+00:00",
+    "sha256": "09b418f1071ad1a9ab770891f1ae0fb00695e534a06bf79362c2d55a4ae7dd63",
+    "status": 200,
+    "url": "https://q.stock.sohu.com/cn/511010/lshq.shtml"
+  },
+  "518880-page.html": {
+    "bytes": 19254,
+    "collected_at": "2026-10-31T07:10:55.456009+00:00",
+    "sha256": "93aa09d1cf40721486e3122a0fca6c8588bf68af881633757607844ba3fbf78f",
+    "status": 200,
+    "url": "https://q.stock.sohu.com/cn/518880/lshq.shtml"
+  },
+  "mapping.js": {
+    "bytes": 20914,
+    "collected_at": "2026-10-31T07:10:55.548824+00:00",
+    "sha256": "8c57fcfd2fda59415f77a0bdfb683c68c3f568fb33eb6392bddaaf4b004ead35",
+    "status": 200,
+    "url": "https://static.k.sohu.com/static/finance/pc/qstock/v0.0.10/js/main/hq_sec-1.4.min.js?202607090945"
+  }
+}
