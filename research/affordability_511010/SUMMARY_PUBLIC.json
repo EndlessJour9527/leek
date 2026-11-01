@@ -1,0 +1,55 @@
+{
+  "status": "CONDITIONAL_M1_OVERLAP_FIXED_INITIAL_BUDGET_ONLY",
+  "start": "2021-10-18",
+  "end": "2025-12-31",
+  "budget_cny": "10000",
+  "trainable": false,
+  "historical_trade_runs": 0,
+  "input_sha256": {
+    "raw/511010_sohu.bin": "785becf38847b03871d1b452942b84117c4ad64742b0b9c2ef512d5163a47876",
+    "raw/511010_tencent.bin": "508806b05811c3e794f25352805678cdda132a13f384a42e8821b278984a6ac2",
+    "normalized/e4_sessions.json": "6cac931fc21805531a038216e60242971743c6b82e902b61f4ef38f57d190f93",
+    "raw/511010_sohu.meta.json": "d5ab94af7108e0db4596f1f9648b0293dbc2c7f82a863aa88b6bc056e1f2056a",
+    "raw/511010_tencent.meta.json": "0293f15de7f086efee33ad5d4806ad3d6ff096d859ca1f299981602142f19ccf",
+    "execution_audit/rules2023.docx": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+    "execution_audit/EXECUTION_QUALIFICATION.md": "7f8aca0bc322711ad8c7db03ccaf917f322b19321dc233e66d8ebe6b36422b08"
+  },
+  "summary": {
+    "principal": {
+      "affordable_days": 0,
+      "total_days": 1024,
+      "min_cny": "12439.500",
+      "max_cny": "14180.700",
+      "min_dates": [
+        "2021-10-20"
+      ],
+      "max_dates": [
+        "2025-01-06"
+      ]
+    },
+    "base": {
+      "affordable_days": 0,
+      "total_days": 1024,
+      "min_cny": "12450.800",
+      "max_cny": "14192.800",
+      "min_dates": [
+        "2021-10-20"
+      ],
+      "max_dates": [
+        "2025-01-06"
+      ]
+    },
+    "stress": {
+      "affordable_days": 0,
+      "total_days": 1024,
+      "min_cny": "12462.000",
+      "max_cny": "14204.900",
+      "min_dates": [
+        "2021-10-20"
+      ],
+      "max_dates": [
+        "2025-01-06"
+      ]
+    }
+  }
+}
