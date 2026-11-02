@@ -6,6 +6,12 @@ The repository contains network-capable historical acquisition tools, but no
 broker/account integration or automatic strategy promotion. Historical vendor
 panels and private original evidence are not bundled or uploaded by CI.
 
+## 本机工作台（Mac）
+
+双击仓库中的 **打开 Leek.command**，在浏览器查看中文研究摘要与资料状态，
+点击一次即可运行明确标记的合成示例。仅本机访问，不安装依赖、不运行真实历史收益。
+重复打开复用实例，退出后保留示例记录。详见[使用与撤回说明](docs/local-workbench.md)。
+
 ## Current research entrypoint
 
 ```sh
