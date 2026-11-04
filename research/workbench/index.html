@@ -1,6 +1,17 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Leek · 本机研究工作台</title><link rel="stylesheet" href="/style.css"></head><body>
 <header><a class="brand" href="/">Leek <span>研究工作台</span></a><span class="local">● 仅本机 · 无真实交易</span></header>
-<main><section class="hero"><div class="eyebrow">从一次清楚的体验开始</div><h1>把研究过程<br>看得明白，跑得起来。</h1><p>先用虚构行情体验信号、模型成交与结果。<br>真实研究单独展示，不会被示例替代。</p><div class="actions">@@DEMO_BUTTON@@<a href="#research">先看最近研究 ↓</a></div><small>无需行情、模型服务或交易账户。每次体验单独保存。</small></section>
+<main><section class="hero"><div class="eyebrow">Leek · 分层交易研究系统</div><h1>先读懂结论，<br>再逐层看依据。</h1><p>选择已完成的历史实验，看收益是否覆盖成本、风险能否接受、证据还缺什么。<br>也可以用虚构行情体验完整的模拟流程。</p><div class="actions"><a class="experiment-choice" href="#experiments">选择历史实验 ↓</a>@@DEMO_BUTTON@@</div><small>只读归档与合成体验分开。没有真实交易入口。</small></section>
+@@EXPERIMENTS@@
+@@EXPERIMENT@@
+<section id="layers" class="panel"><details><summary>系统如何分层？查看各层职责与当前范围</summary><h2>每一层，回答不同的问题</h2><ol class="layer-map">
+<li><strong>数据</strong>：来源和版本可信吗？<span>已接公开归档校验；原始输入另行预检</span></li>
+<li><strong>研究</strong>：为什么值得做？<span>可阅读规则；公司价值分析尚未接通</span></li>
+<li><strong>策略</strong>：什么条件触发操作？<span>可读冻结规则；此处不修改参数</span></li>
+<li><strong>风险</strong>：承受什么损失？<span>展示回撤、集中度和证据限制</span></li>
+<li><strong>模拟执行</strong>：按什么假设成交？<span>展示历史模型未成交；可另跑合成示例</span></li>
+<li><strong>账本</strong>：本金、成本和持仓如何形成结果？<span>核对公开派生账本，不读取私人持仓</span></li>
+<li><strong>评估</strong>：比基准好多少，下一步是什么？<span>读取既有结果；不自动升级策略</span></li>
+</ol><p class="muted">这一版贯通 CA1 归档的阅读流程；各层尚未形成通用交易流水线。SignalEnvelope、EvidenceBoundary 与 risk_signals 仍是局部接口。用户界面负责解释各层，不替代证据。</p></details></section>
 @@RESULT@@
 <section id="research"><div class="section-title"><h2>最近研究，得到什么结论？</h2><span>截至 2026-11-02 的已审摘要 · 非实时更新</span></div><div class="grid two">@@RESEARCH@@</div><p class="muted">以上链接为公开草稿研究，尚未合并到已部署主分支。已见历史不能当作新的独立盈利证据。</p></section>
 <section><div class="section-title"><h2>真实历史研究：还需要什么？</h2><a href="/">重新检查资料 ↻</a></div><p class="muted">只读核对当前入口接入的文件，不下载行情、不重跑收益。某处存在原件，不代表此入口已经配置。</p><div class="grid three">@@DATA@@</div><details class="help"><summary>如何接入已有资料？为什么这里不提供真实回测按钮？</summary><p>由本机维护者在启动配置中指定已有原件位置，再用现有预检器核对。具体缺项可在各卡片展开查看。资料完整只表示可供另行登记研究，并非盈利或实际成交认证。本工作台仅提供合成体验，避免把资料检查误作历史试验授权。</p></details></section>
