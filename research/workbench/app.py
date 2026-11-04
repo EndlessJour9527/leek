@@ -21,6 +21,7 @@ import webbrowser
 
 from leek import replay
 from research import cli
+from research.workbench import history, history_view
 
 ROOT = Path(__file__).resolve().parents[2]
 FIXTURES = ROOT / 'examples/fixtures'
@@ -151,7 +152,7 @@ class Workbench:
     def form(self, route, label, secondary=False):
         return f'<form method="post" action="{route}"><input type="hidden" name="token" value="{self.token}"><button class="{"secondary" if secondary else "primary"}" type="submit">{esc(label)}</button></form>'
 
-    def page(self, ident=None):
+    def page(self, ident=None, experiment=None):
         cards = ''
         for r in self.preflights():
             cards += f'<article class="data-card"><h3>{esc(r["title"])}</h3><span class="badge {"good" if r["ready"] else "wait"}">{"资料已接入" if r["ready"] else "等待资料核对"}</span><p>{esc(r["message"])}</p><p class="muted">{"代码已具备" if r["implemented"] else "代码文件缺失，请恢复完整版本"} · 本工作台尚未执行历史收益</p><details><summary>查看具体缺项与校验状态</summary><pre>{esc(json.dumps(r["details"],ensure_ascii=False,indent=2))}</pre></details></article>'
@@ -172,7 +173,8 @@ class Workbench:
         history.sort(key=lambda p:p.stat().st_mtime, reverse=True)
         links=''.join(f'<li><a href="/run?id={p.name}#result">合成体验 {len(history)-i} · {esc(self.demo(p.name)["status"].replace("COMPLETED","已完成").replace("UNREADABLE","需检查").replace("FAILED","未完成"))}</a></li>' for i,p in enumerate(history[:10])) or '<li>还没有体验记录。点击上方按钮即可开始。</li>'
         template=(ASSETS/'index.html').read_text()
-        return template.replace('@@DEMO_BUTTON@@',self.form('/demo','运行合成示例 →')).replace('@@RESULT@@',demo).replace('@@RESEARCH@@',research).replace('@@DATA@@',cards).replace('@@HISTORY@@',links).replace('@@STOP@@',self.form('/stop','退出工作台',True))
+        archived = history_view.render(experiment) if experiment else ''
+        return template.replace('@@EXPERIMENTS@@',history_view.catalog()).replace('@@EXPERIMENT@@',archived).replace('@@DEMO_BUTTON@@',self.form('/demo','运行合成示例 →')).replace('@@RESULT@@',demo).replace('@@RESEARCH@@',research).replace('@@DATA@@',cards).replace('@@HISTORY@@',links).replace('@@STOP@@',self.form('/stop','退出工作台',True))
 
 class Server(ThreadingHTTPServer):
     daemon_threads=True
@@ -196,7 +198,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-Security-Policy',"default-src 'none'; style-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'")
         self.send_header('Referrer-Policy','same-origin')
         if location:self.send_header('Location',location)
-        if attachment:self.send_header('Content-Disposition','attachment; filename="leek-synthetic-example.json"')
+        if attachment:self.send_header('Content-Disposition','attachment; filename="'+attachment+'"')
         self.end_headers();self.wfile.write(data)
     def trusted_host(self):
         return self.headers.get('Host') == self.server.origin.removeprefix('http://')
@@ -209,7 +211,14 @@ class Handler(BaseHTTPRequestHandler):
                 ident=parse_qs(parsed.query).get('id',[''])[0]
                 result=self.server.app.demo(ident)
                 if result['status']!='COMPLETED':raise ValueError('export unavailable')
-                self.send(200,json.dumps(dict(synthetic=True,label='合成示例；不是历史收益或真实账户',created_at=result['created_at'],report=result['report']),ensure_ascii=False,indent=2),'application/json; charset=utf-8',attachment=True);return
+                self.send(200,json.dumps(dict(synthetic=True,label='合成示例；不是历史收益或真实账户',created_at=result['created_at'],report=result['report']),ensure_ascii=False,indent=2),'application/json; charset=utf-8',attachment='leek-synthetic-example.json');return
+            if parsed.path in ('/experiment', '/experiment-export'):
+                query=parse_qs(parsed.query, keep_blank_values=True)
+                if query!={'id':['ca1']}:raise ValueError('unknown experiment')
+                if parsed.path=='/experiment-export':
+                    result=history.load_experiment('ca1')
+                    self.send(200,json.dumps(result,ensure_ascii=False,indent=2),'application/json; charset=utf-8',attachment='leek-ca1-public-archive.json');return
+                self.send(200,self.server.app.page(experiment='ca1'));return
             if parsed.path=='/style.css':self.send(200,(ASSETS/'style.css').read_text(),'text/css');return
             if parsed.path not in ('/','/run'):self.send(404,'未找到页面。<a href="/">返回工作台</a>');return
             ident=parse_qs(parsed.query).get('id',[None])[0] if parsed.path=='/run' else None
